@@ -3,11 +3,10 @@ import App from './App';
 
 test('renders home page', () => {
   render(<App />);
-  const linkElement = screen.getByText(/Centaurs/i);
+  const linkElement = screen.getByText(/landing page/i);
   expect(linkElement).toBeInTheDocument();
 });
 
 it('should prompt GitHub CI to pass', () => {
-    expect('Centaurs').toEqual('Centaurs');
-  });
-  
+  expect('Alcode').toEqual('Alcode');
+});
