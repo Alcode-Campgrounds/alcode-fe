@@ -1,16 +1,16 @@
 
-export const newUserSignUp = async ({ email, password, name }) => {
-
-    const authURL = `${process.env.BACKEND_URL}/auth/signup`;
+export const newUserSignUp = async ( name, email, password ) => {
+    console.log(name, email, password)
+    const authURL = `${process.env.REACT_APP_BACKEND_URL}`;
+    console.log(authURL)
 
     const response = await fetch(authURL, {
         method: 'POST',
         credentials: 'include',
         headers: {
-            'Content-type': 'application/json',
+            'Content-Type': 'application/json',
         },
-        body: JSON.stringify(email, password, name),
-        // body: { email, password, name },
+        body: JSON.stringify({name, email, password}),
     });
 
     const data = await response.json();
