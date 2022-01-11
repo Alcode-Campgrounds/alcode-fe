@@ -6,9 +6,9 @@ export default function SignUp({ user = false }) {
             <fieldset className='form-main'>
             <legend>{ user ? 'SignIn' : 'SignUp'}</legend>
                 <br />
-                <input type="text" placeholder='email'/>
-                <input type="text" placeholder='password'/>
-                { !user && <input type="text" placeholder='name'/>}
+                <input type="text" placeholder='email' className='input'/>
+                <input type="text" placeholder='password' className='input'/>
+                { !user && <input type="text" placeholder='name' className='input'/>}
                 <br />
                 <button type='submit' className='btn-main'>{ user ? 'SignIn' : 'SignUp'}</button>
                 <br />
