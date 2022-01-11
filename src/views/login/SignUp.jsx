@@ -1,22 +1,29 @@
 import React from 'react'
 import { useState } from 'react'
 import { newUserSignUp } from '../../utils/AuthFetch';
+import { useHistory } from 'react-router-dom';
 
 export default function SignUp({ hasUser }) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    
     const [name, setName] = useState('');
-
+    const [error, setError] = useState('');
+    const history = useHistory();
     const handleSubmitSignUp = async (e) => {
         e.preventDefault()
 
         if(hasUser) {
-            return
+            return 
         } 
           
-        const newUser = await newUserSignUp(name, email, password)
-        console.log(newUser);
+        
+        try {
+         await newUserSignUp(name, email, password)
+            history.replace()
+        } catch (error) {
+            setError(error.message)
+        }
+        
                 
         
     }
@@ -46,6 +53,7 @@ export default function SignUp({ hasUser }) {
                 <br />
                 <button type='submit' className='btn-main'>{ hasUser ? 'SignIn' : 'SignUp'}</button>
                 <br />
+                <p>{error}</p>
             </form>
             </fieldset>
         
