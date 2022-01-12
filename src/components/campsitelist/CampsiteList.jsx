@@ -1,16 +1,16 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 
 export default function CampsiteList({ campsite }) {
-  const history = useHistory();
+  // const history = useHistory();
 
-  const handleUpdate = (id) => {
-    history.push(`/campsites/update/{id}`);
-  };
+  // const handleUpdate = (id) => {
+  //   history.push(`/campsites/update/{id}`);
+  // };
 
   return (
     <div>
-      <ul>
+      {/* <ul>
         {campsite.map((CampsiteName) => {
           return (
             <li key={CampsiteName.id}>
@@ -26,7 +26,7 @@ export default function CampsiteList({ campsite }) {
             </li>
           );
         })}
-      </ul>
+      </ul> */}
     </div>
   );
 }

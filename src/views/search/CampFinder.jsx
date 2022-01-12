@@ -6,7 +6,7 @@ const handleSubmit = (event) => {
 };
 
 export default function CampFinder() {
-  const [searchResults, setSearchResults] = useState([]);
+  const [setSearchResults] = useState([]);
 
   useEffect(() => {
     const getResults = async () => {
@@ -14,7 +14,7 @@ export default function CampFinder() {
       setSearchResults(apiSearchResults);
     };
     getResults();
-  }, []);
+  });
 
   const fetchResults = async () => {
     const res = await fetch(process.env.REACT_APP_BACKEND_URL);
@@ -30,7 +30,7 @@ export default function CampFinder() {
           id="search"
           type="text"
           name="search"
-          value={search}
+          //   value={search}
           //   onChange={handleFormChange}
           required
         />

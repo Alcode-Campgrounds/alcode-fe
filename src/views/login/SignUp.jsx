@@ -1,25 +1,42 @@
 import React from 'react'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import { newUserSignUp } from '../../utils/AuthFetch';
 
 export default function SignUp({ hasUser }) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    
     const [name, setName] = useState('');
-
+    const [error, setError] = useState('');
+    let navigate = useNavigate();
+    const loginUrl = `${process.env.REACT_APP_LOGIN}`
+    
     const handleSubmitSignUp = async (e) => {
         e.preventDefault()
 
         if(hasUser) {
-            return
-        } 
-          
-        const newUser = await newUserSignUp(name, email, password)
-        console.log(newUser);
+            const data = await fetch(loginUrl, {
+            method: 'POST',
+            // credentials: 'include',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({name, email, password}),
+            }) 
+
+            const response = await data.json()
+            console.log(response)
+        } else {
                 
-        
+        try {
+         await newUserSignUp(name, email, password)
+           navigate('/')
+        } catch (error) {
+            setError(error.message)
+        }
     }
+}
+
 
     return (
             <fieldset>
@@ -46,6 +63,7 @@ export default function SignUp({ hasUser }) {
                 <br />
                 <button type='submit' className='btn-main'>{ hasUser ? 'SignIn' : 'SignUp'}</button>
                 <br />
+                <p>{error}</p>
             </form>
             </fieldset>
         
