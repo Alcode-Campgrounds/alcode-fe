@@ -8,6 +8,8 @@ import CampFinder from './views/search/CampFinder';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/layout/Header';
 import './App.css'
+import ProtectedRoutes from './components/PrivateRoute/ProtectedRoutes';
+
 
 
 
@@ -24,7 +26,9 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/search" element={<CampFinder />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route element={<ProtectedRoutes/>}>
+          <Route path="/profile" element={<Profile />} />
+        </Route>
         <Route path="/campgrounds" element={<CampList />} />
       </Routes>
     </Router>
