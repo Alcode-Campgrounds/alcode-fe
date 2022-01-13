@@ -1,11 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useUser } from '../../context/UserContext';
 
 export default function Header() {
+  const { user } = useUser()
+console.log('USER',user)
+
   return (
     <>
       <div className="header">
         <h1>Alcode</h1>
+        
+        { user.name ? 
+        <p>{`signed in as ${user.name}`}</p> 
+        : <p></p> }
+
         <ul>
           <Link to="/">
             <li>Home</li>
