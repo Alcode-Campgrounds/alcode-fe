@@ -1,17 +1,18 @@
-import React, { useEffect } from "react";
-import { useUser } from "../../context/UserContext";
+import React, { useEffect, useState } from "react";
+// import { useUser } from "../../context/UserContext";
 import { fetchAllFacilities } from "../../utils/campFetch";
 import { getStorage, setStorage } from "../../utils/localStorage";
+import States from "./States";
 
 export default function CampFinder() {
   // const [setSearchResults] = useState([]);
-  const { user } = useUser();
-  console.log(user);
-
+  // const { user } = useUser();
+  // console.log(user);
+  const [state, setState] = useState('');
+  
   useEffect(() => {
     async function getCampgrounds(){
       const existingStorage = getStorage('ALL');
-      console.log('STORE', existingStorage);
       if (existingStorage.length === 0){
         const facilities = await fetchAllFacilities();
         setStorage('ALL', facilities);
@@ -20,22 +21,16 @@ export default function CampFinder() {
     getCampgrounds();
   }, []);
 
-
+  const handleStateChange = (e) => {
+    e.preventDefault();
+    console.log(state);
+  }
   return (
     <div>
-      <h1>Search campgrounds ya dingus</h1>
-      <form>
-        <input
-          id="search"
-          type="text"
-          name="search"
-          //   value={search}
-          //   onChange={handleFormChange}
-          required
-        />
-        <button type="submit" aria-label="Search">
-          Search
-        </button>
+      <h1>Search for all campgrounds by State</h1>
+      <form onSubmit={handleStateChange}>
+        <States state={state} setState={setState}/>
+        <button type="submit" aria-label="Search">Search</button>
       </form>
     </div>
   );
