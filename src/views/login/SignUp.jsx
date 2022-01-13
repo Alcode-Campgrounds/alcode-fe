@@ -1,34 +1,31 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { newUserSignUp } from "../../utils/AuthFetch";
+import { useUser } from "../../context/UserContext";
+import { existingUserSignIn, newUserSignUp } from "../../utils/AuthFetch";
 
 export default function SignUp({ hasUser }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [error, setError] = useState("");
+  const {setUser} = useUser()
+
   let navigate = useNavigate();
-  const loginUrl = `${process.env.REACT_APP_LOGIN}`;
+  // const loginUrl = `${process.env.REACT_APP_LOGIN}`;
 
   const handleSubmitSignUp = async (e) => {
     e.preventDefault();
 
     if (hasUser) {
-      const data = await fetch(loginUrl, {
-        method: "POST",
-        // credentials: 'include',
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ name, email, password }),
-      });
-
-      const response = await data.json();
-      console.log(response);
+     const userData = await existingUserSignIn(email, password)
+     setUser({name: userData.name, email: userData.email})
+     navigate("/search");
+     
     } else {
       try {
         await newUserSignUp(name, email, password);
+        setUser({name,email});
         navigate("/search");
       } catch (error) {
         setError(error.message);
