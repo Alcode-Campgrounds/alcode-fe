@@ -41,6 +41,7 @@ export default function SignUp({ hasUser }) {
       <legend>{hasUser ? "SignIn" : "SignUp"}</legend>
       <br />
       <form className="form-main" onSubmit={handleSubmitSignUp}>
+      <a href={process.env.REACT_APP_OAUTH}>Sign in with your Google account</a>
         <label htmlFor="email-input">
           <input
             id="email-input"
