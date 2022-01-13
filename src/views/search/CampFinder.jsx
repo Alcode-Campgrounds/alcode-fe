@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useUser } from "../../context/UserContext";
 import { fetchAllFacilities } from "../../utils/campFetch";
+import { getStorage, setStorage } from "../../utils/localStorage";
 
 export default function CampFinder() {
   // const [setSearchResults] = useState([]);
@@ -9,9 +10,12 @@ export default function CampFinder() {
 
   useEffect(() => {
     async function getCampgrounds(){
-      const facilities = await fetchAllFacilities();
-      console.log('FAC', facilities)
-      // SET ALL INTO Local storage?
+      const existingStorage = getStorage('ALL');
+      console.log('STORE', existingStorage);
+      if (existingStorage.length === 0){
+        const facilities = await fetchAllFacilities();
+        setStorage('ALL', facilities);
+      }
     };
     getCampgrounds();
   }, []);
