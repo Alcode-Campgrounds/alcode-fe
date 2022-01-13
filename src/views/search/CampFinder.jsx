@@ -1,31 +1,26 @@
 import React, { useEffect, useState } from "react";
-// import useFetch from "react-fetch-hook";
-
-const handleSubmit = (event) => {
-  event.preventDefault();
-};
+import { useUser } from "../../context/UserContext";
+import { fetchAllFacilities } from "../../utils/campFetch";
 
 export default function CampFinder() {
-  const [setSearchResults] = useState([]);
+  // const [setSearchResults] = useState([]);
+  const { user } = useUser();
+  console.log(user);
 
   useEffect(() => {
-    const getResults = async () => {
-      const apiSearchResults = await fetchResults();
-      setSearchResults(apiSearchResults);
+    async function getCampgrounds(){
+      const facilities = await fetchAllFacilities();
+      console.log('FAC', facilities)
+      // SET ALL INTO Local storage?
     };
-    getResults();
-  });
+    getCampgrounds();
+  }, []);
 
-  const fetchResults = async () => {
-    const res = await fetch(process.env.REACT_APP_BACKEND_URL);
-    const data = await res.json();
-    console.log(data);
-  };
 
   return (
     <div>
       <h1>Search campgrounds ya dingus</h1>
-      <form onSubmit={handleSubmit}>
+      <form>
         <input
           id="search"
           type="text"

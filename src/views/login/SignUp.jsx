@@ -4,7 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { useUser } from "../../context/UserContext";
 import { existingUserSignIn, newUserSignUp } from "../../utils/AuthFetch";
 
-export default function SignUp({ hasUser }) {
+export default function SignUp({ hasUser = false }) {
+  console.log('HASUSER', hasUser)
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
@@ -19,14 +20,18 @@ export default function SignUp({ hasUser }) {
 
     if (hasUser) {
      const userData = await existingUserSignIn(email, password)
-     setUser({name: userData.name, email: userData.email})
-     navigate("/search");
+     if (userData){
+      setUser({name: userData.name, email: userData.email})
+      navigate("/search");
+    }
      
     } else {
       try {
-        await newUserSignUp(name, email, password);
-        setUser({name,email});
-        navigate("/search");
+        const userSignUp = await newUserSignUp(name, email, password);
+        if (userSignUp){
+          setUser({name,email});
+          navigate("/search");
+        }
       } catch (error) {
         setError(error.message);
       }
