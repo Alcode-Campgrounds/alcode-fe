@@ -7,4 +7,5 @@ export const fetchAllFacilities = async () => {
     })
     const res = await data.json();
     return res;
+    
 }
