@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { AxiosApiCall } from '../../components/authy/AxiosApiCall';
+// import { AxiosApiCall } from '../../components/authy/AxiosApiCall';
 import { newUserSignUp } from "../../utils/AuthFetch";
 
 export default function SignUp({ hasUser }) {
@@ -42,7 +42,7 @@ export default function SignUp({ hasUser }) {
       <legend>{hasUser ? "SignIn" : "SignUp"}</legend>
       <br />
       <form className="form-main" onSubmit={handleSubmitSignUp}>
-        <AxiosApiCall />
+      <a href={process.env.REACT_APP_OAUTH}>Sign in with your Google account</a>
         <label htmlFor="email-input">
           <input
             id="email-input"
