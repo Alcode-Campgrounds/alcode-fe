@@ -25,9 +25,9 @@ export default function App() {
         <Route path="/signin" element={<SignUp hasUser />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/search" element={<CampFinder />} />
         <Route element={<ProtectedRoutes/>}>
           <Route path="/profile" element={<Profile />} />
+          <Route path="/search" element={<CampFinder />} />
         </Route>
         <Route path="/campgrounds" element={<CampList />} />
       </Routes>
