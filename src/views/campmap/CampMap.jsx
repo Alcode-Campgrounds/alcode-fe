@@ -1,7 +1,7 @@
 import React from "react";
 import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
 import { useRef, useEffect, useState } from "react";
-import "./campMap.css";
+import "./mapbox.css";
 import { getStorage } from "../../utils/localStorage";
 import { useParams } from "react-router-dom";
 
