@@ -3,13 +3,15 @@ import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-load
 import { useRef, useEffect, useState } from "react";
 import "./campMap.css";
 import { getStorage } from "../../utils/localStorage";
+import { Link, useParams } from "react-router-dom";
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoidG1lY2s1NDEiLCJhIjoiY2t5ZG1hbng5MDJ1NjJudGVoaTR0b3FxZyJ9.W7t2JGrHCrQWEiWIIi64sA";
 
 export default function CampMap() {
-  const points = getStorage('ALL');
-  console.log(points[0])
+  const { state } = useParams();
+  // console.log('SEARCH', search)
+  const points = getStorage(state);
   const centerLng = points[0].facilityLongitude;
   const centerLat = points[0].facilityLatitude;
 
@@ -30,7 +32,7 @@ export default function CampMap() {
       zoom: zoom,
     });
     points.map(point => {
-      const popup = new mapboxgl.Popup({ offset: 25}).setText(point.facilityName)
+      const popup = new mapboxgl.Popup({ offset: 25}).setHTML(`<a href=http://localhost:3000/camps/${point.facilityID}>${point.facilityName}</a>`)
       return new mapboxgl.Marker()
         .setLngLat([point.facilityLongitude, point.facilityLatitude])
         .setPopup(popup)
