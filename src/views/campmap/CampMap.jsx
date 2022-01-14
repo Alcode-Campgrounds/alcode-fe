@@ -28,9 +28,11 @@ export default function CampMap() {
       center: [lng, lat],
       zoom: zoom,
     });
-    new mapboxgl.Marker()
-      .setLngLat([centerLng, centerLat])
-      .addTo(map.current);
+    points.map(point => (
+      new mapboxgl.Marker()
+        .setLngLat([point.facilityLongitude, point.facilityLatitude])
+        .addTo(map.current)
+    ))
   });
 
   useEffect(() => {
