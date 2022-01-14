@@ -6,12 +6,14 @@ import { useEffect, useState } from 'react'
 export default function About() {
     const [loading, setLoading] = useState(true)
     useEffect(() => {setLoading(false)},[])
-     if (loading) {<Loader />} 
     console.log('loading', loading)
     return (
-        <div>
+       <> 
+       { loading ? <Loader /> : 
+         (<div className='loading-container'>
             <h1>All about Alan, yo</h1>
-        </div>
+        </div>)}
+        </>
     )
 }
 

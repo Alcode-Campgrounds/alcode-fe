@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`is it here? did it render? 1`] = `
+<fieldset>
+  <legend>
+    SignUp
+  </legend>
+  <br />
+  <form
+    className="form-main"
+    onSubmit={[Function]}
+  >
+    <a
+      href="https://nameless-taiga-88760.herokuapp.com/api/alcode/auth/login"
+    >
+      Sign in with your Google account
+    </a>
+    <label
+      htmlFor="email-input"
+    >
+      <input
+        className="input"
+        id="email-input"
+        onChange={[Function]}
+        placeholder="email"
+        required={true}
+        type="text"
+        value=""
+      />
+    </label>
+    <label
+      htmlFor="password-input"
+    >
+      <input
+        className="input"
+        id="password-input"
+        onChange={[Function]}
+        placeholder="password"
+        required={true}
+        type="text"
+        value=""
+      />
+    </label>
+    <label
+      htmlFor="name-input"
+    >
+      <input
+        className="input"
+        id="name-input"
+        onChange={[Function]}
+        placeholder="name"
+        required={true}
+        type="text"
+        value=""
+      />
+    </label>
+    <br />
+    <button
+      className="btn-main"
+      type="submit"
+    >
+      SignUp
+    </button>
+    <br />
+    <p>
+      
+    </p>
+  </form>
+</fieldset>
+`;

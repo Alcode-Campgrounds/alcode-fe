@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { fetchAllFacilities, fetchStateFacility } from "../../utils/campFetch";
 import { getStorage, setStorage } from "../../utils/localStorage";
 import States from "./States";
+// import { Loader } from "../../components/loader/"
 
 export default function CampFinder() {
   const [state, setState] = useState('ALL');
@@ -36,11 +37,14 @@ export default function CampFinder() {
       }
     }
   };
+
   const handleStateChange = (e) => {
     setState(e.target.value);
   }
+
   return (
-    <div>
+    <>
+
       <h1>Search for all campgrounds by State</h1>
       <form onSubmit={handleStateSubmit}>
         <States setState={handleStateChange} />
@@ -48,6 +52,9 @@ export default function CampFinder() {
           Search
         </button>
       </form>
-    </div>
+    
+    </>
   );
 }
+     
+      
