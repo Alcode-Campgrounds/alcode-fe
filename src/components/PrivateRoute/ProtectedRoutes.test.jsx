@@ -1,5 +1,4 @@
 import * as React from "react";
-import { SignUp } from '../../views/login/SignUp'
 import { create } from  'react-test-renderer'
 import {
   MemoryRouter,
@@ -7,15 +6,16 @@ import {
   Route
 } from "react-router-dom";
 import { UserProvider } from '../../context/UserContext';
+import SignUp from '../../views/login/SignUp';
 
 describe("private route", () => {
   it("renders sign in route", () => {
  let renderer = create(
      <UserProvider>
-      <MemoryRouter>
+      <MemoryRouter initialEntries={["/signin"]}>
         <Routes>
-            <Route path="/signin" element={<SignUp />}>
-          </Route>
+            <Route path="signin" element={<SignUp hasUser />}/>
+         
         </Routes>
       </MemoryRouter>
       </UserProvider>
