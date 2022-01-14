@@ -5,7 +5,7 @@ export const Loader = () => {
     
  
     return (
-     <span className='loader'>heee</span>
+     <span className='loader'></span>
     )
 }
 
