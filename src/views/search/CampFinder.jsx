@@ -5,14 +5,20 @@ import { getStorage, setStorage } from "../../utils/localStorage";
 import States from "./States";
 
 export default function CampFinder() {
-  const [state, setState] = useState("");
+
+  const [state, setState] = useState('');
+  const [loading, setLoading] = useState(true)
+  console.log(loading)
+  
 
   useEffect(() => {
     async function getCampgrounds() {
       const existingStorage = getStorage("ALL");
       if (existingStorage.length === 0) {
         const facilities = await fetchAllFacilities();
-        setStorage("ALL", facilities);
+        setLoading(false);
+        setStorage('ALL', facilities);
+
       }
     }
     getCampgrounds();
