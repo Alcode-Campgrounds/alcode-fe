@@ -12,7 +12,7 @@ console.log('USER',user)
         <h1>Alcode</h1>
         
         { user.name ? 
-        <p>{`signed in as ${user.name}`}</p> 
+        <p className='username'>{`signed in as ${user.name}`}</p> 
         : <p></p> }
 
         <ul>
