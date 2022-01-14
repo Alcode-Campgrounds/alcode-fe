@@ -5,7 +5,6 @@ import { useUser } from "../../context/UserContext";
 import { existingUserSignIn, newUserSignUp } from "../../utils/AuthFetch";
 
 export default function SignUp({ hasUser = false }) {
-  console.log('HASUSER', hasUser)
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
@@ -13,21 +12,22 @@ export default function SignUp({ hasUser = false }) {
   const {setUser} = useUser()
 
   let navigate = useNavigate();
-  // const loginUrl = `${process.env.REACT_APP_LOGIN}`;
 
   const handleSubmitSignUp = async (e) => {
     e.preventDefault();
 
     if (hasUser) {
      const userData = await existingUserSignIn(email, password)
-     if (userData){
+     if (userData.email){
       setUser({name: userData.name, email: userData.email})
       navigate("/search");
+    } else {
+      setError('Wrong email/password')
     }
-     
     } else {
       try {
         const userSignUp = await newUserSignUp(name, email, password);
+        console.log(userSignUp.status)
         if (userSignUp){
           setUser({name,email});
           navigate("/search");
