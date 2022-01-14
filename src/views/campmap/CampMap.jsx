@@ -1,17 +1,24 @@
 import React from "react";
 import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
 import { useRef, useEffect, useState } from "react";
-import "./CampMap.css";
+import "./campMap.css";
+import { getStorage } from "../../utils/localStorage";
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoidG1lY2s1NDEiLCJhIjoiY2t5ZG1hbng5MDJ1NjJudGVoaTR0b3FxZyJ9.W7t2JGrHCrQWEiWIIi64sA";
 
 export default function CampMap() {
+  const points = getStorage('ALL');
+  const centerLng = points[0].facilityLongitude;
+  const centerLat = points[0].facilityLatitude;
+
   const mapContainer = useRef(null);
   const map = useRef(null);
-  const [lng, setLng] = useState(-70.9);
-  const [lat, setLat] = useState(42.35);
-  const [zoom, setZoom] = useState(9);
+  const [lng, setLng] = useState(centerLng);
+  const [lat, setLat] = useState(centerLat);
+  const [zoom, setZoom] = useState(5);
+
+  
 
   useEffect(() => {
     if (map.current) return; // initialize map only once
@@ -21,6 +28,9 @@ export default function CampMap() {
       center: [lng, lat],
       zoom: zoom,
     });
+    new mapboxgl.Marker()
+      .setLngLat([centerLng, centerLat])
+      .addTo(map.current);
   });
 
   useEffect(() => {
@@ -33,7 +43,7 @@ export default function CampMap() {
   });
 
   return (
-    <div>
+    <div className="map-div">
       <div className="sidebar">
         Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
       </div>
