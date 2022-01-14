@@ -9,6 +9,7 @@ mapboxgl.accessToken =
 
 export default function CampMap() {
   const points = getStorage('ALL');
+  console.log(points[0])
   const centerLng = points[0].facilityLongitude;
   const centerLat = points[0].facilityLatitude;
 
@@ -28,11 +29,13 @@ export default function CampMap() {
       center: [lng, lat],
       zoom: zoom,
     });
-    points.map(point => (
-      new mapboxgl.Marker()
+    points.map(point => {
+      const popup = new mapboxgl.Popup({ offset: 25}).setText(point.facilityName)
+      return new mapboxgl.Marker()
         .setLngLat([point.facilityLongitude, point.facilityLatitude])
+        .setPopup(popup)
         .addTo(map.current)
-    ))
+  })
   });
 
   useEffect(() => {
