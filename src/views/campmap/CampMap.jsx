@@ -3,14 +3,12 @@ import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-load
 import { useRef, useEffect, useState } from "react";
 import "./campMap.css";
 import { getStorage } from "../../utils/localStorage";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
-mapboxgl.accessToken =
-  "pk.eyJ1IjoidG1lY2s1NDEiLCJhIjoiY2t5ZG1hbng5MDJ1NjJudGVoaTR0b3FxZyJ9.W7t2JGrHCrQWEiWIIi64sA";
+mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_TOKEN;
 
 export default function CampMap() {
   const { state } = useParams();
-  // console.log('SEARCH', search)
   const points = getStorage(state);
   const centerLng = points[0].facilityLongitude;
   const centerLat = points[0].facilityLatitude;
