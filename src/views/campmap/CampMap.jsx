@@ -1,17 +1,25 @@
 import React from "react";
 import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
 import { useRef, useEffect, useState } from "react";
-import "./CampMap.css";
+import "./mapbox.css";
+import { getStorage } from "../../utils/localStorage";
+import { useParams } from "react-router-dom";
 
-mapboxgl.accessToken =
-  "pk.eyJ1IjoidG1lY2s1NDEiLCJhIjoiY2t5ZG1hbng5MDJ1NjJudGVoaTR0b3FxZyJ9.W7t2JGrHCrQWEiWIIi64sA";
+mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_TOKEN;
 
 export default function CampMap() {
+  const { state } = useParams();
+  const points = getStorage(state);
+  const centerLng = points[0].facilityLongitude;
+  const centerLat = points[0].facilityLatitude;
+
   const mapContainer = useRef(null);
   const map = useRef(null);
-  const [lng, setLng] = useState(-70.9);
-  const [lat, setLat] = useState(42.35);
-  const [zoom, setZoom] = useState(9);
+  const [lng, setLng] = useState(centerLng);
+  const [lat, setLat] = useState(centerLat);
+  const [zoom, setZoom] = useState(5);
+
+  
 
   useEffect(() => {
     if (map.current) return; // initialize map only once
@@ -21,6 +29,13 @@ export default function CampMap() {
       center: [lng, lat],
       zoom: zoom,
     });
+    points.map(point => {
+      const popup = new mapboxgl.Popup({ offset: 25}).setHTML(`<a href=http://localhost:3000/camps/${point.facilityID}>${point.facilityName}</a>`)
+      return new mapboxgl.Marker()
+        .setLngLat([point.facilityLongitude, point.facilityLatitude])
+        .setPopup(popup)
+        .addTo(map.current)
+  })
   });
 
   useEffect(() => {
@@ -33,7 +48,7 @@ export default function CampMap() {
   });
 
   return (
-    <div>
+    <div className="map-div">
       <div className="sidebar">
         Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
       </div>

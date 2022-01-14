@@ -1,17 +1,17 @@
 import { stateData } from "./stateData.js";
 
-export default function States({ state, setState }) {
+export default function States({ setState }) {
   return (
     <select
       defaultValue="ALL"
-      onChange={({ target }) => setState(target.value)}
+      onChange={setState}
     >
       <option key="ALL" value="ALL">
         ALL
       </option>
-      {stateData.map((state) => (
-        <option key={state.abbrev} value={state.abbrev}>
-          {state.state}
+      {stateData.map((statePick) => (
+        <option key={statePick.abbrev} value={statePick.abbrev}>
+          {statePick.state}
         </option>
       ))}
     </select>
