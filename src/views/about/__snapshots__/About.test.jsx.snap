@@ -2,7 +2,9 @@
 
 exports[`should render the about component 1`] = `
 <div>
-  <div>
+  <div
+    class="loading-container"
+  >
     <h1>
       All about Alan, yo
     </h1>

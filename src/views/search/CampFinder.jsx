@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { fetchAllFacilities, fetchStateFacility } from "../../utils/campFetch";
 import { getStorage, setStorage } from "../../utils/localStorage";
 import States from "./States";
+// import { Loader } from "../../components/loader/"
 
 export default function CampFinder() {
 
@@ -43,8 +44,10 @@ export default function CampFinder() {
 
     // if array.length = 0 , then fetch stateList campgrounds and set those to local storage
   };
+  
   return (
-    <div>
+    <>
+
       <h1>Search for all campgrounds by State</h1>
       <form onSubmit={handleStateChange}>
         <States state={state} setState={setState} />
@@ -52,6 +55,9 @@ export default function CampFinder() {
           Search
         </button>
       </form>
-    </div>
+    
+    </>
   );
 }
+     
+      

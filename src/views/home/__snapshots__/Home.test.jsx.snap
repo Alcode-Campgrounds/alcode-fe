@@ -2,10 +2,12 @@
 
 exports[`should render the Home component 1`] = `
 <div>
-  <div>
-    <h1>
+  <div
+    class="loading-container"
+  >
+    <h2>
       Landing Page
-    </h1>
+    </h2>
   </div>
 </div>
 `;

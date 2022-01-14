@@ -2,10 +2,12 @@
 
 exports[`should render the contact component 1`] = `
 <div>
-  <div>
-    <h2>
-      Drop us a line
-    </h2>
+  <div
+    class="loading-container"
+  >
+    <h1>
+      Contact
+    </h1>
   </div>
 </div>
 `;
