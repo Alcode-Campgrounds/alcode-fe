@@ -2,7 +2,8 @@ import React from 'react'
 import { create }from 'react-test-renderer'
 import { UserProvider } from '../../context/UserContext'
 import SignUp from './SignUp'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { MemoryRouter, Routes, Route } from 'react-router-dom'
+
  
 
 
@@ -12,9 +13,11 @@ describe('is it here?', () => {
     
     const wrapper = create(
     <UserProvider>
-        <Router>
-            <SignUp />
-        </Router>
+        <MemoryRouter initialEntries={["/signup"]}>
+        <Routes>
+           <Route path="signup" element={<SignUp />} />
+        </Routes>
+        </MemoryRouter>
     </UserProvider>
     )
 
