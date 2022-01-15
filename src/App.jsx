@@ -25,7 +25,7 @@ export default function App() {
             <Route path="/profile" element={<Profile />} />
             <Route path="/search" element={<CampFinder />} />
           </Route>
-          <Route path="/campmap" element={<CampMap />} />
+          <Route path="/campmap/:state" element={<CampMap />} />
         </Routes>
       </Router>
     </>

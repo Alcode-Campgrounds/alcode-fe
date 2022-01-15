@@ -48,12 +48,18 @@ a {
 
 
 .loader {
-    width: 8px;
-    height: 8px;
+    width: 8em;
+    height: 8em;
     position: relative;
     border-radius: 50%;
-    background: #fff;
+    background: rgb(248, 246, 246);
     animation: wave 1s ease-in infinite;
+  }
+
+  .loading-container {
+      display: flex;
+      align-content: center;
+      justify-content: center;
   }
   
   @keyframes wave {

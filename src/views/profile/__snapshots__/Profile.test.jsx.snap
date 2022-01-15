@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`is it here? did it render? 1`] = `
+<h2>
+  This is your life
+</h2>
+`;

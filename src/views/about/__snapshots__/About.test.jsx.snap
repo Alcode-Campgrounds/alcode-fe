@@ -2,10 +2,8 @@
 
 exports[`should render the about component 1`] = `
 <div>
-  <div>
-    <h1>
-      All about Alan, yo
-    </h1>
-  </div>
+  <h1>
+    All about Alan, yo
+  </h1>
 </div>
 `;
