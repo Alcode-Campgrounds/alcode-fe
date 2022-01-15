@@ -1,15 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`is it here? did it render? 1`] = `
-<fieldset>
-  <legend>
-    SignUp
-  </legend>
-  <br />
-  <form
-    className="form-main"
-    onSubmit={[Function]}
-  >
+<form
+  className="form-main"
+  onSubmit={[Function]}
+>
+  <fieldset>
+    <legend>
+      SignUp
+    </legend>
     <a
       href="https://nameless-taiga-88760.herokuapp.com/api/alcode/auth/login"
     >
@@ -54,17 +53,15 @@ exports[`is it here? did it render? 1`] = `
         value=""
       />
     </label>
-    <br />
     <button
       className="btn-main"
       type="submit"
     >
       SignUp
     </button>
-    <br />
     <p>
       
     </p>
-  </form>
-</fieldset>
+  </fieldset>
+</form>
 `;
