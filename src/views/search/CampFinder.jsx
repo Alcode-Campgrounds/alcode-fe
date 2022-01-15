@@ -30,10 +30,13 @@ export default function CampFinder() {
     } else {
       console.log(state)
       const existingStateStorage = getStorage(state);
+      console.log(existingStateStorage);
       if (existingStateStorage.length === 0) {
         const stateFacility = await fetchStateFacility(state);
         setStorage(state, stateFacility);
         navigate(`/campmap/${state}`)   
+      } else {
+        navigate(`/campmap/${state}`) 
       }
     }
   };
