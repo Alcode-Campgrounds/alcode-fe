@@ -1,0 +1,113 @@
+// THEME STYLES
+$blue: #124559;
+$dark: #01161E;
+$light: #EFF6E0;
+
+// PRIMARY BTN STYLES
+$primary-btn-bg: #ed5616dc;
+$primary-btn-txt: white;
+$primary-btn-font-sz: 2rem;
+$primary-btn-border: none;
+$primary-btn-radius: 2rem;
+$primary-btn-pad: .5rem 1.5rem;
+
+.primary-btn {
+    font-size: $primary-btn-font-sz;
+    border: $primary-btn-border;
+    border-radius: $primary-btn-radius;
+    padding: $primary-btn-pad;
+    color: $primary-btn-txt;
+    background: $primary-btn-bg;
+}
+
+// HEADER STYLES
+$header-bg: white;
+$header-font-sz: 2.5rem;
+$header-border: 1px solid black;
+$header-txt-color: $blue;
+$header-display: flex;
+$header-justify: space-between;
+$header-pad: 2rem;
+
+.header {
+    border:$header-border;
+    font-size: $header-font-sz;
+    display: $header-display;
+    justify-content: $header-justify;
+    padding: $header-pad;
+    background: $header-bg;
+    color: $header-txt-color
+   
+}
+
+// FORM STYLES
+$form-layout: center;
+$form-width: 33%;
+$form-margin: 0 auto;
+$form-font-sz: 2rem;
+$form-txt-color: $blue;
+
+.form-main {
+    text-align: $form-layout;
+    width: $form-width;
+    margin: $form-margin;
+    color: $form-font-sz;
+    font-size: $form-font-sz;
+}
+
+.input {
+    font-size: $form-font-sz;
+    margin: $form-margin 1rem;
+}
+
+
+.username {
+    color: #31361B;
+}
+
+li {
+    
+    list-style: none;
+    color: $blue;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+// LOADING SPINNER
+.loader {
+    width: 8em;
+    height: 8em;
+    position: relative;
+    border-radius: 50%;
+    background: rgb(248, 246, 246);
+    animation: wave 1s ease-in infinite;
+  }
+
+  .loading-container {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+  }
+  
+  @keyframes wave {
+   0% {  box-shadow:
+    0 0 0 0px rgba(255, 255,255, 1),
+    0 0 0 20px rgba(255, 255,255, 0.2),
+    0 0 0 40px rgba(255, 255,255, 0.6),
+    0 0 0 60px rgba(255, 255,255, 0.4),
+    0 0 0 80px rgba(255, 255,255, 0.2)
+    }
+    100% {  box-shadow:
+      0 0 0 80px rgba(255, 255,255, 0),
+      0 0 0 60px rgba(255, 255,255, 0.2),
+      0 0 0 40px rgba(255, 255,255, 0.4),
+      0 0 0 20px rgba(255, 255,255, 0.6),
+      0 0 0 0px rgba(255, 255,255, 1)
+    }
+  }
+  
+  
+    

@@ -87,7 +87,8 @@ export default function SignUp({ hasUser = false }) {
             />
           </label>
         )}
-        <button type='submit' className='btn-main'>
+        <br />
+        <button type='submit' className='primary-btn'>
           {hasUser ? 'SignIn' : 'SignUp'}
         </button>
         <p>{error}</p>

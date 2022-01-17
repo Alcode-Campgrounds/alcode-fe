@@ -1,0 +1,92 @@
+.primary-btn {
+  font-size: 2rem;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.5rem 1.5rem;
+  color: white;
+  background: #ed5616dc;
+}
+
+.header {
+  border: 1px solid black;
+  font-size: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem;
+  background: white;
+  color: #124559;
+}
+
+.form-main {
+  text-align: center;
+  width: 33%;
+  margin: 0 auto;
+  color: 2rem;
+  font-size: 2rem;
+}
+
+.input {
+  font-size: 2rem;
+  margin: 0 auto 1rem;
+}
+
+.username {
+  color: #31361B;
+}
+
+li {
+  list-style: none;
+  color: #124559;
+}
+
+a {
+  text-decoration: none;
+}
+
+.loader {
+  width: 8em;
+  height: 8em;
+  position: relative;
+  border-radius: 50%;
+  background: #f8f6f6;
+  -webkit-animation: wave 1s ease-in infinite;
+          animation: wave 1s ease-in infinite;
+}
+
+.loading-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@-webkit-keyframes wave {
+  0% {
+    -webkit-box-shadow: 0 0 0 0px white, 0 0 0 20px rgba(255, 255, 255, 0.2), 0 0 0 40px rgba(255, 255, 255, 0.6), 0 0 0 60px rgba(255, 255, 255, 0.4), 0 0 0 80px rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 0 0px white, 0 0 0 20px rgba(255, 255, 255, 0.2), 0 0 0 40px rgba(255, 255, 255, 0.6), 0 0 0 60px rgba(255, 255, 255, 0.4), 0 0 0 80px rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 80px rgba(255, 255, 255, 0), 0 0 0 60px rgba(255, 255, 255, 0.2), 0 0 0 40px rgba(255, 255, 255, 0.4), 0 0 0 20px rgba(255, 255, 255, 0.6), 0 0 0 0px white;
+            box-shadow: 0 0 0 80px rgba(255, 255, 255, 0), 0 0 0 60px rgba(255, 255, 255, 0.2), 0 0 0 40px rgba(255, 255, 255, 0.4), 0 0 0 20px rgba(255, 255, 255, 0.6), 0 0 0 0px white;
+  }
+}
+
+@keyframes wave {
+  0% {
+    -webkit-box-shadow: 0 0 0 0px white, 0 0 0 20px rgba(255, 255, 255, 0.2), 0 0 0 40px rgba(255, 255, 255, 0.6), 0 0 0 60px rgba(255, 255, 255, 0.4), 0 0 0 80px rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 0 0px white, 0 0 0 20px rgba(255, 255, 255, 0.2), 0 0 0 40px rgba(255, 255, 255, 0.6), 0 0 0 60px rgba(255, 255, 255, 0.4), 0 0 0 80px rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 80px rgba(255, 255, 255, 0), 0 0 0 60px rgba(255, 255, 255, 0.2), 0 0 0 40px rgba(255, 255, 255, 0.4), 0 0 0 20px rgba(255, 255, 255, 0.6), 0 0 0 0px white;
+            box-shadow: 0 0 0 80px rgba(255, 255, 255, 0), 0 0 0 60px rgba(255, 255, 255, 0.2), 0 0 0 40px rgba(255, 255, 255, 0.4), 0 0 0 20px rgba(255, 255, 255, 0.6), 0 0 0 0px white;
+  }
+}
+/*# sourceMappingURL=style.css.map */
