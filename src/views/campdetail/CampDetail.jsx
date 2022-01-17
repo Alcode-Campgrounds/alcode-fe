@@ -30,11 +30,20 @@ export default function CampDetail() {
     return (
         <>
             <h1>{name}</h1>
+            <h3>Description:</h3>
             <p>{description}</p>
+            <h3>Directions:</h3>
             <p>{directions}</p>
+            <h3>Phone-Number:</h3>
             <p>{phone}</p>
+            <h3>Email:</h3>
             <p>{email}</p>
-            <p>{reservable}</p>
+            {reservable && 
+            <p>Reservations are required</p>
+            }
+            {!reservable && 
+            <p>Reservations unavailable</p>
+            }
             {images.map(image => {
                 return <img key={image} src={image} alt={name} />
             })}
