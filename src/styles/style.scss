@@ -1,29 +1,70 @@
 // THEME STYLES
 $blue: #124559;
+$light-blue: #598392;
+$grey-green: #AEC3B0;
 $dark: #01161E;
 $light: #EFF6E0;
+$color-pop: #F6511D;
+
+// GLOBAL LIST STYLE
+li {
+    
+    list-style: none;
+    color: $light;
+    padding: 3%;
+    width: 33vw;
+}
+
+a {
+    text-decoration: none;
+    
+}
 
 // PRIMARY BTN STYLES
-$primary-btn-bg: #ed5616dc;
+$primary-btn-bg: $color-pop;
 $primary-btn-txt: white;
 $primary-btn-font-sz: 2rem;
 $primary-btn-border: none;
 $primary-btn-radius: 2rem;
 $primary-btn-pad: .5rem 1.5rem;
+$primary-btn-hover: #ec7753;
+
 
 .primary-btn {
+    font-family:spartan;
     font-size: $primary-btn-font-sz;
     border: $primary-btn-border;
     border-radius: $primary-btn-radius;
     padding: $primary-btn-pad;
     color: $primary-btn-txt;
     background: $primary-btn-bg;
+    font-weight: 550;
+    &:hover {
+        background: $primary-btn-hover;
+        box-shadow: 0rem .5rem .5rem gray;
+    }
 }
+
+.google-btn {
+    font-family: spartan;
+    margin-inline: 5rem;
+    font-size: $primary-btn-font-sz;
+    border: $primary-btn-border;
+    border-radius: $primary-btn-radius;
+    padding: $primary-btn-pad;
+    color: $primary-btn-txt;
+    background: $primary-btn-bg;
+    &:hover {
+        background: $primary-btn-hover;
+        box-shadow: 0rem .5rem .5rem gray;
+    }
+}
+
 
 // HEADER STYLES
 $header-bg: white;
 $header-font-sz: 2.5rem;
-$header-border: 1px solid black;
+$header-border: none;
 $header-txt-color: $blue;
 $header-display: flex;
 $header-justify: space-between;
@@ -36,9 +77,40 @@ $header-pad: 2rem;
     justify-content: $header-justify;
     padding: $header-pad;
     background: $header-bg;
-    color: $header-txt-color
-   
+    color: $header-txt-color;
 }
+
+.brand {
+    font-size: 4em;
+}
+
+.hamburger-btn {
+    background: transparent;
+    border: $primary-btn-border;
+    
+}
+
+.menuNav {
+  list-style: none;
+  position: fixed;
+  top: 25vh;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 0;
+  overflow: hidden;
+  max-width: 290px;
+  margin: 0 auto;
+  
+}
+
+.menuNav.showMenu {
+  width: 100%;
+  height: fit-content;
+  background: $dark;
+  padding: 5%;
+}
+
 
 // FORM STYLES
 $form-layout: center;
@@ -55,59 +127,59 @@ $form-txt-color: $blue;
     font-size: $form-font-sz;
 }
 
-.input {
+.input-A, .input-B, .input-C {
+    margin: 1rem;
     font-size: $form-font-sz;
-    margin: $form-margin 1rem;
+    
 }
 
+.input-A {
+    margin-top: 2rem;
+}
+
+.legend{
+    color: $form-txt-color;
+}
 
 .username {
-    color: #31361B;
-}
-
-li {
-    
-    list-style: none;
-    color: $blue;
-}
-
-a {
-    text-decoration: none;
+    color: $color-pop;
 }
 
 
 // LOADING SPINNER
-.loader {
-    width: 8em;
-    height: 8em;
-    position: relative;
-    border-radius: 50%;
-    background: rgb(248, 246, 246);
-    animation: wave 1s ease-in infinite;
-  }
+// .loader {
+//     width: 8em;
+//     height: 8em;
+//     position: relative;
+//     border-radius: 50%;
+//     background: rgb(248, 246, 246);
+//     animation: wave 1s ease-in infinite;
+//   }
 
-  .loading-container {
-      display: flex;
-      align-content: center;
-      justify-content: center;
-  }
+//   .loading-container {
+//       display: flex;
+//       align-content: center;
+//       justify-content: center;
+//   }
   
-  @keyframes wave {
-   0% {  box-shadow:
-    0 0 0 0px rgba(255, 255,255, 1),
-    0 0 0 20px rgba(255, 255,255, 0.2),
-    0 0 0 40px rgba(255, 255,255, 0.6),
-    0 0 0 60px rgba(255, 255,255, 0.4),
-    0 0 0 80px rgba(255, 255,255, 0.2)
-    }
-    100% {  box-shadow:
-      0 0 0 80px rgba(255, 255,255, 0),
-      0 0 0 60px rgba(255, 255,255, 0.2),
-      0 0 0 40px rgba(255, 255,255, 0.4),
-      0 0 0 20px rgba(255, 255,255, 0.6),
-      0 0 0 0px rgba(255, 255,255, 1)
-    }
-  }
+//   @keyframes wave {
+//    0% {  box-shadow:
+//     0 0 0 0px rgba(255, 255,255, 1),
+//     0 0 0 20px rgba(255, 255,255, 0.2),
+//     0 0 0 40px rgba(255, 255,255, 0.6),
+//     0 0 0 60px rgba(255, 255,255, 0.4),
+//     0 0 0 80px rgba(255, 255,255, 0.2)
+//     }
+//     100% {  box-shadow:
+//       0 0 0 80px rgba(255, 255,255, 0),
+//       0 0 0 60px rgba(255, 255,255, 0.2),
+//       0 0 0 40px rgba(255, 255,255, 0.4),
+//       0 0 0 20px rgba(255, 255,255, 0.6),
+//       0 0 0 0px rgba(255, 255,255, 1)
+//     }
+//   }
+  
+
+
   
   
-    
