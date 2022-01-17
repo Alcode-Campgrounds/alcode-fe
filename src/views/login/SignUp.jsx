@@ -9,6 +9,7 @@ export default function SignUp({ hasUser = false }) {
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
   const [error, setError] = useState('');
+  // const [gooBtn, setGooBtn] = useState(false)
   const { setUser } = useUser();
 
   let navigate = useNavigate();

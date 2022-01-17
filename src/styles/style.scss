@@ -7,13 +7,6 @@ $light: #EFF6E0;
 $color-pop: #F6511D;
 
 // GLOBAL LIST STYLE
-li {
-    
-    list-style: none;
-    color: $light;
-    padding: 3%;
-    width: 33vw;
-}
 
 a {
     text-decoration: none;
@@ -62,7 +55,7 @@ $primary-btn-hover: #ec7753;
 
 
 // HEADER STYLES
-$header-bg: white;
+$header-bg: $light;
 $header-font-sz: 2.5rem;
 $header-border: none;
 $header-txt-color: $blue;
@@ -70,51 +63,66 @@ $header-display: flex;
 $header-justify: space-between;
 $header-pad: 2rem;
 
+
 .header {
     border:$header-border;
     font-size: $header-font-sz;
     display: $header-display;
     justify-content: $header-justify;
-    padding: $header-pad;
-    background: $header-bg;
     color: $header-txt-color;
+    height: 25vmin;
 }
 
 .brand {
-    font-size: 4em;
+    font-size: 15vmin;
+    padding-inline: $header-pad;
+    
+
 }
 
 .hamburger-btn {
     background: transparent;
     border: $primary-btn-border;
-    
+    margin-inline: 0 5vmin;
 }
 
 .menuNav {
-  list-style: none;
-  position: fixed;
-  top: 25vh;
-  right: 0;
-  bottom: 0;
-  height: 100vh;
-  width: 0;
-  overflow: hidden;
-  max-width: 290px;
-  margin: 0 auto;
-  
+    scroll-behavior: smooth;
+    position: fixed;
+    z-index: 1;
+    top: 25vh;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 0;
+    overflow: hidden;
+    max-width: 290px;
+    transition: 0.35s;
+    &.showMenu {
+        list-style: none;
+        width: 100%;
+        height: fit-content;
+        background: $dark;
+        padding: 5%;
+    }
+}
+.nav-links {
+    color: $light;
+    list-style: none;
+    padding: 3%;
+    width: 33vw;
+    &:hover {
+        color: $color-pop;
+    }
 }
 
-.menuNav.showMenu {
-  width: 100%;
-  height: fit-content;
-  background: $dark;
-  padding: 5%;
-}
+
+
 
 
 // FORM STYLES
 $form-layout: center;
-$form-width: 33%;
+$form-width: 50vmin;
 $form-margin: 0 auto;
 $form-font-sz: 2rem;
 $form-txt-color: $blue;
@@ -143,6 +151,11 @@ $form-txt-color: $blue;
 
 .username {
     color: $color-pop;
+    margin: 3vmin;
+    font-size: $primary-btn-font-sz;
+    
+    
+
 }
 
 

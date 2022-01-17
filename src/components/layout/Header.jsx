@@ -22,9 +22,6 @@ export default function Header() {
       <div className="header">
         <h1 className='brand'>Alcode</h1>
         
-        { user.name ? 
-        <p className='username'>{`Signed in as ${user.name}`}</p> 
-        : <p></p> }
 
             <button className='hamburger-btn' onClick={handleToggle} >  
               {menuOpen ? (
@@ -39,33 +36,38 @@ export default function Header() {
                   width: "4rem", 
                   height: "4rem" 
                 }} />
-              )}
+                )}
             </button>
               <ul className={`menuNav ${menuOpen ? " showMenu" : ""}`}>
-                    <Link to="/" onClick={() => closeMenu()}>
-                      <li>Home</li>
+                <Link to="/" onClick={() => closeMenu()}>
+                  <li className='nav-links'>Home</li>
                     </Link>
                     <Link to="/about" onClick={() => closeMenu()}>
-                      <li>About</li>
+                      <li className='nav-links'>About</li>
                     </Link>
                     <Link to="/contact" onClick={() => closeMenu()}>
-                      <li>Contact</li>
+                      <li className='nav-links'>Contact</li>
                     </Link>
                     <Link to="/signup" onClick={() => closeMenu()}>
-                      <li>Sign Up</li>
+                      <li className='nav-links'>Sign Up</li>
                     </Link>
                     <Link to="/signin" onClick={() => closeMenu()}>
-                      <li>Sign In</li>
+                      <li className='nav-links'>Sign In</li>
                     </Link>
                     <Link to="/profile" onClick={() => closeMenu()}>
-                      <li>Your Profile</li>
+                      <li className='nav-links'>Your Profile</li>
                     </Link>
                     <Link to="/search" onClick={() => closeMenu()}>
-                      <li>Search</li>
+                      <li className='nav-links'>Search</li>
                     </Link>
                 </ul>
         
       </div>
+       <section className='username'>
+          { user.name ? 
+          <p>{`Signed in as ${user.name}`}</p> 
+          : <p></p> }
+        </section>
     </>
   );
 }
