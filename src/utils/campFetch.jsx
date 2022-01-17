@@ -16,3 +16,12 @@ export const fetchStateFacility = async (state) => {
   const res = await data.json();
   return res;
 };
+export const fetchCampground = async (id) => {
+  const url = `${process.env.REACT_APP_INDIVIDUAL_CAMPGROUND}/${id}`;
+  const data = await fetch(url, {
+    method: "GET",
+    credentials: "include",
+  });
+  const res = await data.json();
+  return res;
+}

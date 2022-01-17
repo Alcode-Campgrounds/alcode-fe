@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/layout/Header";
 import "./App.css";
 import ProtectedRoutes from "./components/PrivateRoute/ProtectedRoutes";
+import CampDetail from "./views/campdetail/CampDetail";
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
             <Route path="/search" element={<CampFinder />} />
           </Route>
           <Route path="/campmap/:state" element={<CampMap />} />
+          <Route path="/camps/:id" element={<CampDetail />} />
         </Routes>
       </Router>
     </>
