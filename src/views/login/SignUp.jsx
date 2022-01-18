@@ -43,13 +43,11 @@ export default function SignUp({ hasUser = false }) {
   };
 
   return (
+    <div className='form-container' >
     <form className='form-main' onSubmit={handleSubmitSignUp}>
       <fieldset>
         <legend className='legend'>{hasUser ? 'SignIn' : 'SignUp'}</legend>
       
-          <a className='google-btn' href={process.env.REACT_APP_OAUTH}>
-          Google
-          </a>
         <label htmlFor='email-input'>
           <input
             id='email-input'
@@ -97,10 +95,14 @@ export default function SignUp({ hasUser = false }) {
           {hasUser ? 'SignIn' : 'SignUp'}
         </button>
           {!hasUser && <><p>Already have an account?</p><Link to='/signin'>Sign in</Link></>}
-          {hasUser && <><p>Here by mistake?</p><Link to='/signup'>Sign up</Link></>}    
+          {hasUser && <><p>or sign in with your google account</p><a className='google-btn' href={process.env.REACT_APP_OAUTH}>
+          Google
+          </a><p>Here by mistake?</p><Link to='/signup'>Sign up</Link></>}    
         <p>{error}</p>
+          
         
       </fieldset>
     </form>
+    </div>
   );
 }

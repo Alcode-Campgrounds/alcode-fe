@@ -15,7 +15,7 @@ a {
   font-family: spartan;
   font-size: 2.5vmin;
   border: none;
-  border-radius: 2rem;
+  border-radius: 0.25rem;
   padding: 0.75rem 1.5rem;
   color: white;
   background: #F6511D;
@@ -33,7 +33,7 @@ a {
   margin-inline: 5rem;
   font-size: 2.5vmin;
   border: none;
-  border-radius: 2rem;
+  border-radius: 0.25rem;
   padding: 0.75rem 1.5rem;
   color: white;
   background: #F6511D;
@@ -49,6 +49,7 @@ a {
   font-family: spartan;
   font-size: 2.5vmin;
   border: none;
+  border-radius: 0.25rem;
   padding: 0.75rem 1.5rem;
   color: white;
   background: #F6511D;
@@ -130,21 +131,28 @@ a {
   color: #F6511D;
 }
 
-.form-main {
+.form-container {
+  width: 100vw;
   text-align: center;
+}
+
+.form-main {
   width: 50vmin;
   margin: 0 auto;
-  color: 2rem;
-  font-size: 2rem;
+}
+
+fieldset {
+  z-index: 1;
+  height: 60vh;
+  overflow: hidden;
+  max-width: 505px;
+  margin: 0 auto;
+  border-radius: .25rem;
 }
 
 .input-A, .input-B, .input-C {
-  margin: 1rem;
-  font-size: 2rem;
-}
-
-.input-A {
-  margin-top: 2rem;
+  font-size: 3vmin;
+  margin: 1vmin;
 }
 
 .legend {

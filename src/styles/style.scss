@@ -27,7 +27,7 @@ $primary-btn-bg: $color-pop;
 $primary-btn-txt: white;
 $primary-btn-font-sz: 2.5vmin;
 $primary-btn-border: none;
-$primary-btn-radius: 2rem;
+$primary-btn-radius: .25rem;
 $primary-btn-pad: .75rem 1.5rem;
 $primary-btn-hover: #ec7753;
 
@@ -66,7 +66,7 @@ $primary-btn-hover: #ec7753;
     font-family:spartan;
     font-size: $primary-btn-font-sz;
     border: $primary-btn-border;
-    // border-radius: $primary-btn-radius;
+    border-radius: $primary-btn-radius;
     padding: $primary-btn-pad;
     color: $primary-btn-txt;
     background: $primary-btn-bg;
@@ -156,25 +156,35 @@ $header-pad: 2rem;
 $form-layout: center;
 $form-width: 50vmin;
 $form-margin: 0 auto;
-$form-font-sz: 2rem;
+$form-font-sz: 1.5rem;
 $form-txt-color: $blue;
 
+
+.form-container {
+    width: 100vw;
+    text-align: center;
+    
+}
 .form-main {
-    text-align: $form-layout;
     width: $form-width;
     margin: $form-margin;
-    color: $form-font-sz;
-    font-size: $form-font-sz;
+}
+
+fieldset {
+  z-index: 1;
+  height: 60vh;
+  overflow: hidden;
+  max-width: 505px;
+  margin: $form-margin;
+  border-radius: .25rem;
+ 
 }
 
 .input-A, .input-B, .input-C {
-    margin: 1rem;
-    font-size: $form-font-sz;
     
-}
-
-.input-A {
-    margin-top: 2rem;
+    font-size: 3vmin;
+    margin: 1vmin;
+    
 }
 
 .legend{
