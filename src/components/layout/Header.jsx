@@ -8,7 +8,6 @@ import { FiMenu } from "react-icons/fi"
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const { user } = useUser()
-
   const handleToggle = () => {
     setMenuOpen(prev => !prev)
   }

@@ -15,7 +15,7 @@ const UserProvider = ({children}) => {
 const useUser = () => {
     const context = useContext(UserContext);
     if (context === undefined){
-        throw new Error('useGuest hook must be called inside of a GuessContext Provider');
+        throw new Error('useUser hook must be called inside of a GuessContext Provider');
     }
     return context;
 }
