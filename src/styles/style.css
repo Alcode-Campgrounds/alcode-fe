@@ -13,10 +13,10 @@ a {
 
 .primary-btn {
   font-family: spartan;
-  font-size: 2rem;
+  font-size: 2.5vmin;
   border: none;
   border-radius: 2rem;
-  padding: 0.5rem 1.5rem;
+  padding: 0.75rem 1.5rem;
   color: white;
   background: #F6511D;
   font-weight: 550;
@@ -31,15 +31,38 @@ a {
 .google-btn {
   font-family: spartan;
   margin-inline: 5rem;
-  font-size: 2rem;
+  font-size: 2.5vmin;
   border: none;
   border-radius: 2rem;
-  padding: 0.5rem 1.5rem;
+  padding: 0.75rem 1.5rem;
   color: white;
   background: #F6511D;
 }
 
 .google-btn:hover {
+  background: #ec7753;
+  -webkit-box-shadow: 0rem .5rem .5rem gray;
+          box-shadow: 0rem .5rem .5rem gray;
+}
+
+.hero-btn {
+  font-family: spartan;
+  font-size: 2.5vmin;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  color: white;
+  background: #F6511D;
+  font-weight: 550;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin-top: 43vmin;
+  opacity: 75%;
+}
+
+.hero-btn:hover {
   background: #ec7753;
   -webkit-box-shadow: 0rem .5rem .5rem gray;
           box-shadow: 0rem .5rem .5rem gray;
@@ -144,17 +167,17 @@ a {
 
 .hero-txt {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  color: white;
-  opacity: 85%;
-  font-size: 11vmin;
+  color: #01161E;
+  opacity: 65%;
+  font-size: 7vmin;
   font-family: 'Work Sans', sans-serif;
   font-weight: 900;
   text-align: center;
-  margin-top: 5vh;
+  width: 65vw;
 }
 
 .hero-subtxt {
@@ -163,12 +186,12 @@ a {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  color: white;
-  opacity: 85%;
+  color: #EFF6E0;
+  opacity: 65%;
   font-size: 3vmin;
+  width: 50vw;
   font-family: 'Work Sans', sans-serif;
-  font-weight: 900;
   text-align: center;
-  margin-top: 35vh;
+  margin-top: 25vmin;
 }
 /*# sourceMappingURL=style.css.map */
