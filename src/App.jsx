@@ -7,9 +7,12 @@ import Profile from "./views/profile/Profile";
 import CampFinder from "./views/search/CampFinder";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/layout/Header";
-import "./App.css";
 import ProtectedRoutes from "./components/PrivateRoute/ProtectedRoutes";
+
+import './styles/style.css'
+
 import CampDetail from "./views/campdetail/CampDetail";
+
 
 export default function App() {
   return (

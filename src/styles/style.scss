@@ -1,0 +1,269 @@
+// THEME STYLES
+$blue: #124559;
+$light-blue: #598392;
+$grey-green: #AEC3B0;
+$dark: #01161E;
+$light: #EFF6E0;
+$color-pop: #F6511D;
+
+// GLOBAL LIST STYLE
+* {
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Rokkitt', serif;
+    font-family: 'Signika Negative', sans-serif;
+    font-family: 'Spartan', sans-serif;
+    font-family: 'Bowlby One SC', cursive;
+    font-family: 'Work Sans', sans-serif;
+    // background: $light;
+}
+
+a {
+    text-decoration: none;
+    
+}
+
+// PRIMARY BTN STYLES
+$primary-btn-bg: $color-pop;
+$primary-btn-txt: white;
+$primary-btn-font-sz: 2.5vmin;
+$primary-btn-border: none;
+$primary-btn-radius: 2rem;
+$primary-btn-pad: .75rem 1.5rem;
+$primary-btn-hover: #ec7753;
+
+
+.primary-btn {
+    font-family:spartan;
+    font-size: $primary-btn-font-sz;
+    border: $primary-btn-border;
+    border-radius: $primary-btn-radius;
+    padding: $primary-btn-pad;
+    color: $primary-btn-txt;
+    background: $primary-btn-bg;
+    font-weight: 550;
+    &:hover {
+        background: $primary-btn-hover;
+        box-shadow: 0rem .5rem .5rem gray;
+    }
+}
+
+.google-btn {
+    font-family: spartan;
+    margin-inline: 5rem;
+    font-size: $primary-btn-font-sz;
+    border: $primary-btn-border;
+    border-radius: $primary-btn-radius;
+    padding: $primary-btn-pad;
+    color: $primary-btn-txt;
+    background: $primary-btn-bg;
+    &:hover {
+        background: $primary-btn-hover;
+        box-shadow: 0rem .5rem .5rem gray;
+    }
+}
+
+.hero-btn {
+    font-family:spartan;
+    font-size: $primary-btn-font-sz;
+    border: $primary-btn-border;
+    // border-radius: $primary-btn-radius;
+    padding: $primary-btn-pad;
+    color: $primary-btn-txt;
+    background: $primary-btn-bg;
+    font-weight: 550;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 43vmin;
+    opacity: 75%;
+    &:hover {
+        background: $primary-btn-hover;
+        box-shadow: 0rem .5rem .5rem gray;
+    }
+}
+
+
+// HEADER STYLES
+$header-bg: $light;
+$header-font-sz: 2.5rem;
+$header-border: none;
+$header-txt-color: $blue;
+$header-display: flex;
+$header-justify: space-between;
+$header-pad: 2rem;
+
+
+.header {
+    border:$header-border;
+    font-size: $header-font-sz;
+    display: $header-display;
+    justify-content: $header-justify;
+    color: $header-txt-color;
+    height: 25vmin;
+}
+
+.brand {
+    font-size: 15vmin;
+    padding-inline: $header-pad;
+    font-family: Spartan;
+    
+
+}
+
+.hamburger-btn {
+    background: transparent;
+    border: $primary-btn-border;
+    margin-inline: 0 5vmin;
+}
+
+.menuNav {
+    scroll-behavior: smooth;
+    position: fixed;
+    z-index: 1;
+    top: 25vh;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 0;
+    overflow: hidden;
+    max-width: 290px;
+    transition: 0.35s;
+    &.showMenu {
+        list-style: none;
+        width: 100%;
+        height: fit-content;
+        background: $dark;
+        padding: 5%;
+        opacity: 90%;
+    }
+}
+.nav-links {
+    color: $light;
+    list-style: none;
+    padding: 3%;
+    width: 33vw;
+    &:hover {
+        color: $color-pop;
+    }
+}
+
+
+
+
+
+// FORM STYLES
+$form-layout: center;
+$form-width: 50vmin;
+$form-margin: 0 auto;
+$form-font-sz: 2rem;
+$form-txt-color: $blue;
+
+.form-main {
+    text-align: $form-layout;
+    width: $form-width;
+    margin: $form-margin;
+    color: $form-font-sz;
+    font-size: $form-font-sz;
+}
+
+.input-A, .input-B, .input-C {
+    margin: 1rem;
+    font-size: $form-font-sz;
+    
+}
+
+.input-A {
+    margin-top: 2rem;
+}
+
+.legend{
+    color: $form-txt-color;
+}
+
+.username {
+    color: $color-pop;
+    margin: 3vmin;
+    font-size: 1.5rem;
+}
+
+.hero-img {
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 85%;
+    text-align: center;
+}
+
+.hero-txt {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $dark;
+    opacity: 65%;
+    font-size: 7vmin;
+    // font-family: Roboto;
+    // font-family: 'Bowlby One SC', cursive;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 900;
+    text-align: center;
+    width: 65vw;
+    
+}
+
+.hero-subtxt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $light;
+    opacity: 65%;
+    font-size: 3vmin;
+    width: 50vw;
+    // font-family: Roboto;
+    // font-family: 'Bowlby One SC', cursive;
+    // font-family: 'Rokkitt', serif;
+    font-family: 'Work Sans', sans-serif;
+    text-align: center;
+    margin-top: 25vmin;
+}
+
+// LOADING SPINNER
+// .loader {
+//     width: 8em;
+//     height: 8em;
+//     position: relative;
+//     border-radius: 50%;
+//     background: rgb(248, 246, 246);
+//     animation: wave 1s ease-in infinite;
+//   }
+
+//   .loading-container {
+//       display: flex;
+//       align-content: center;
+//       justify-content: center;
+//   }
+  
+//   @keyframes wave {
+//    0% {  box-shadow:
+//     0 0 0 0px rgba(255, 255,255, 1),
+//     0 0 0 20px rgba(255, 255,255, 0.2),
+//     0 0 0 40px rgba(255, 255,255, 0.6),
+//     0 0 0 60px rgba(255, 255,255, 0.4),
+//     0 0 0 80px rgba(255, 255,255, 0.2)
+//     }
+//     100% {  box-shadow:
+//       0 0 0 80px rgba(255, 255,255, 0),
+//       0 0 0 60px rgba(255, 255,255, 0.2),
+//       0 0 0 40px rgba(255, 255,255, 0.4),
+//       0 0 0 20px rgba(255, 255,255, 0.6),
+//       0 0 0 0px rgba(255, 255,255, 1)
+//     }
+//   }
+  
+
+
+  
+  

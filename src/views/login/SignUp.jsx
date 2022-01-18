@@ -9,6 +9,7 @@ export default function SignUp({ hasUser = false }) {
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
   const [error, setError] = useState('');
+  // const [gooBtn, setGooBtn] = useState(false)
   const { setUser } = useUser();
 
   let navigate = useNavigate();
@@ -41,10 +42,11 @@ export default function SignUp({ hasUser = false }) {
   return (
     <form className='form-main' onSubmit={handleSubmitSignUp}>
       <fieldset>
-        <legend>{hasUser ? 'SignIn' : 'SignUp'}</legend>
-        <a href={process.env.REACT_APP_OAUTH}>
-          Sign in with your Google account
-        </a>
+        <legend className='legend'>{hasUser ? 'SignIn' : 'SignUp'}</legend>
+      
+          <a className='google-btn' href={process.env.REACT_APP_OAUTH}>
+          Google
+          </a>
         <label htmlFor='email-input'>
           <input
             id='email-input'
@@ -52,7 +54,7 @@ export default function SignUp({ hasUser = false }) {
             value={email}
             type='text'
             placeholder='email'
-            className='input'
+            className='input-A'
             onChange={({ target }) => {
               setEmail(target.value);
             }}
@@ -65,7 +67,7 @@ export default function SignUp({ hasUser = false }) {
             value={password}
             type='text'
             placeholder='password'
-            className='input'
+            className='input-B'
             onChange={({ target }) => {
               setPassword(target.value);
             }}
@@ -80,14 +82,15 @@ export default function SignUp({ hasUser = false }) {
               value={name}
               type='text'
               placeholder='name'
-              className='input'
+              className='input-C'
               onChange={({ target }) => {
                 setName(target.value);
               }}
             />
           </label>
         )}
-        <button type='submit' className='btn-main'>
+        <br />
+        <button type='submit' className='primary-btn'>
           {hasUser ? 'SignIn' : 'SignUp'}
         </button>
         <p>{error}</p>
