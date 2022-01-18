@@ -1,7 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`is it here? did it render? 1`] = `
-<h2>
-  This is your life
-</h2>
+Array [
+  <h2>
+    This is your life
+  </h2>,
+  <div
+    className="fav-list-parent"
+  >
+    <ul
+      className="fav-list"
+    >
+      <li>
+        your favorite 1
+      </li>
+      <li>
+        your favorite 2
+      </li>
+      <li>
+        your favorite 3
+      </li>
+    </ul>
+  </div>,
+]
 `;
