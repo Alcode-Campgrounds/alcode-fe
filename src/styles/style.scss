@@ -7,6 +7,12 @@ $light: #EFF6E0;
 $color-pop: #F6511D;
 
 // GLOBAL LIST STYLE
+* {
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Rokkitt', serif;
+    font-family: 'Signika Negative', sans-serif;
+    font-family: 'Spartan', sans-serif;
+}
 
 a {
     text-decoration: none;
@@ -76,6 +82,7 @@ $header-pad: 2rem;
 .brand {
     font-size: 15vmin;
     padding-inline: $header-pad;
+    font-family: Spartan;
     
 
 }
@@ -152,10 +159,13 @@ $form-txt-color: $blue;
 .username {
     color: $color-pop;
     margin: 3vmin;
-    font-size: $primary-btn-font-sz;
-    
-    
+    font-size: 1.5rem;
+}
 
+.hero-img {
+    width: 100vw;
+    // height: 100vh;
+    opacity: 85%;
 }
 
 

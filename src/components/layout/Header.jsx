@@ -21,22 +21,22 @@ export default function Header() {
     <>
       <div className="header">
         <h1 className='brand'>Alcode</h1>
-        
 
             <button className='hamburger-btn' onClick={handleToggle} >  
               {menuOpen ? (
                 <MdClose style={{ 
                   color: "#124559", 
-                  width: "4rem", 
-                  height: "4rem" 
+                  width: "3rem", 
+                  height: "3rem" 
                 }} />
               ) : (
                 <FiMenu style={{ 
                   color: " #124559", 
-                  width: "4rem", 
-                  height: "4rem" 
+                  width: "3rem", 
+                  height: "3rem" 
                 }} />
                 )}
+
             </button>
               <ul className={`menuNav ${menuOpen ? " showMenu" : ""}`}>
                 <Link to="/" onClick={() => closeMenu()}>

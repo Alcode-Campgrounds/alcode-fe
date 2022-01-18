@@ -3,7 +3,7 @@ import React from 'react'
 export default function Home() {
     return (
        <> 
-            <h2>Landing Page</h2>
+            <img  className='hero-img' src='../hero.jpg' alt="serene campsite by a lake" />
         </>
         )
     }

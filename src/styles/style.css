@@ -1,3 +1,10 @@
+* {
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Rokkitt', serif;
+  font-family: 'Signika Negative', sans-serif;
+  font-family: 'Spartan', sans-serif;
+}
+
 a {
   text-decoration: none;
 }
@@ -52,6 +59,7 @@ a {
 .brand {
   font-size: 15vmin;
   padding-inline: 2rem;
+  font-family: Spartan;
 }
 
 .hamburger-btn {
@@ -120,6 +128,11 @@ a {
 .username {
   color: #F6511D;
   margin: 3vmin;
-  font-size: 2rem;
+  font-size: 1.5rem;
+}
+
+.hero-img {
+  width: 100vw;
+  opacity: 85%;
 }
 /*# sourceMappingURL=style.css.map */
