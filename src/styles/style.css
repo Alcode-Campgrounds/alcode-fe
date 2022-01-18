@@ -3,6 +3,8 @@
   font-family: 'Rokkitt', serif;
   font-family: 'Signika Negative', sans-serif;
   font-family: 'Spartan', sans-serif;
+  font-family: 'Bowlby One SC', cursive;
+  font-family: 'Work Sans', sans-serif;
 }
 
 a {
@@ -133,6 +135,40 @@ a {
 
 .hero-img {
   width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
   opacity: 85%;
+  text-align: center;
+}
+
+.hero-txt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+  opacity: 85%;
+  font-size: 11vmin;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 900;
+  text-align: center;
+  margin-top: 5vh;
+}
+
+.hero-subtxt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+  opacity: 85%;
+  font-size: 3vmin;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 900;
+  text-align: center;
+  margin-top: 35vh;
 }
 /*# sourceMappingURL=style.css.map */
