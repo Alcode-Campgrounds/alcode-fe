@@ -94,10 +94,10 @@ export default function SignUp({ hasUser = false }) {
         <button type='submit' className='primary-btn'>
           {hasUser ? 'SignIn' : 'SignUp'}
         </button>
-          {!hasUser && <><p>Already have an account?</p><Link to='/signin'>Sign in</Link></>}
-          {hasUser && <><p>or sign in with your google account</p><a className='google-btn' href={process.env.REACT_APP_OAUTH}>
+          {!hasUser && <div><p>Already have an account?</p><Link to='/signin' className='signin-txt'>Sign in</Link></div>}
+          {hasUser && <div><p>or sign in with your google account</p><a className='google-btn' href={process.env.REACT_APP_OAUTH}>
           Google
-          </a><p>Here by mistake?</p><Link to='/signup'>Sign up</Link></>}    
+          </a><p>Here by mistake?</p><Link to='/signup' className='signup-txt'>Sign up</Link></div>}    
         <p>{error}</p>
           
         
