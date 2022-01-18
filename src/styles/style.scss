@@ -1,7 +1,7 @@
 // THEME STYLES
 $blue: #124559;
 $light-blue: #598392;
-$grey-green: #aec3b0dc;
+$grey: #dfe7e9dc;
 $dark: #01161E;
 $light: #EFF6E0;
 $color-pop: #F6511D;
@@ -176,7 +176,7 @@ fieldset {
   max-width: 100%;
   margin: $form-margin;
   border-radius: .75rem;
-  background: $grey-green;
+  background: $grey;
   border: none;
 }
 
