@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useUser } from '../../context/UserContext';
@@ -29,9 +30,11 @@ export default function SignUp({ hasUser = false }) {
       try {
         const userSignUp = await newUserSignUp(name, email, password);
         console.log(userSignUp.status);
-        if (userSignUp) {
+        if (userSignUp.status !== 400) {
           setUser({ name, email });
           navigate('/search');
+        } else {
+          setError('User already exists');
         }
       } catch (error) {
         setError(error.message);
@@ -93,7 +96,10 @@ export default function SignUp({ hasUser = false }) {
         <button type='submit' className='primary-btn'>
           {hasUser ? 'SignIn' : 'SignUp'}
         </button>
+          {!hasUser && <><p>Already have an account?</p><Link to='/signin'>Sign in</Link></>}
+          {hasUser && <><p>Here by mistake?</p><Link to='/signup'>Sign up</Link></>}    
         <p>{error}</p>
+        
       </fieldset>
     </form>
   );
