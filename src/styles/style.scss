@@ -154,7 +154,7 @@ $header-pad: 2rem;
 
 // FORM STYLES
 $form-layout: center;
-$form-width: 50vmin;
+$form-width: 75vmin;
 $form-margin: 0 auto;
 $form-font-sz: 1.5rem;
 $form-txt-color: $blue;
@@ -163,8 +163,12 @@ $form-txt-color: $blue;
 .form-container {
     width: 100vw;
     text-align: center;
-    
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
 }
+
 .form-main {
     width: $form-width;
     margin: $form-margin;
@@ -173,8 +177,7 @@ $form-txt-color: $blue;
 fieldset {
   z-index: 1;
   height: 60vh;
-  overflow: hidden;
-  max-width: 505px;
+  max-width: 500px;
   margin: $form-margin;
   border-radius: .25rem;
  
@@ -184,6 +187,8 @@ fieldset {
     
     font-size: 3vmin;
     margin: 1vmin;
+
+    
     
 }
 

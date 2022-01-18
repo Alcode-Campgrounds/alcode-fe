@@ -134,18 +134,27 @@ a {
 .form-container {
   width: 100vw;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .form-main {
-  width: 50vmin;
+  width: 75vmin;
   margin: 0 auto;
 }
 
 fieldset {
   z-index: 1;
   height: 60vh;
-  overflow: hidden;
-  max-width: 505px;
+  max-width: 500px;
   margin: 0 auto;
   border-radius: .25rem;
 }
