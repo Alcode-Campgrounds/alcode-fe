@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-// import { useUser } from '../../context/UserContext';
+import { useUser } from '../../context/UserContext';
 import { existingUserSignIn, newUserSignUp } from '../../utils/AuthFetch';
 
 export default function SignUp({ hasUser = false }) {
