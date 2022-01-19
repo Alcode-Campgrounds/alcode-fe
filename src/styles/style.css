@@ -254,7 +254,6 @@ fieldset {
 }
 
 .dev-bio {
-  text-align: center;
   height: 45vmin;
 }
 
@@ -263,7 +262,9 @@ fieldset {
   height: 45vmin;
   padding: 5vmin;
   border: #EFF6E0 solid 1px;
-  border-radius: 0.5rem;
+  border-radius: 2rem;
+  -webkit-box-shadow: 1rem 1rem 1rem #e0dddd;
+          box-shadow: 1rem 1rem 1rem #e0dddd;
   margin: 3vmin;
 }
 
@@ -284,8 +285,10 @@ fieldset {
   height: 45vmin;
   padding: 5vmin;
   border: #EFF6E0 solid 1px;
-  border-radius: 0.5rem;
+  border-radius: 2rem;
   margin: 3vmin;
+  -webkit-box-shadow: 1rem 1rem 1rem #e0dddd;
+          box-shadow: 1rem 1rem 1rem #e0dddd;
 }
 
 .cristian {
@@ -305,8 +308,10 @@ fieldset {
   height: 45vmin;
   padding: 5vmin;
   border: #EFF6E0 solid 1px;
-  border-radius: 0.5rem;
+  border-radius: 2rem;
   margin: 3vmin;
+  -webkit-box-shadow: 1rem 1rem 1rem #e0dddd;
+          box-shadow: 1rem 1rem 1rem #e0dddd;
 }
 
 .tanner {
@@ -326,8 +331,10 @@ fieldset {
   height: 45vmin;
   padding: 5vmin;
   border: #EFF6E0 solid 1px;
-  border-radius: 0.5rem;
+  border-radius: 2rem;
   margin: 3vmin;
+  -webkit-box-shadow: 1rem 1rem 1rem #e0dddd;
+          box-shadow: 1rem 1rem 1rem #e0dddd;
 }
 
 .justin {

@@ -250,8 +250,9 @@ $about-border: 2px solid white;
 $sect-w: 75vw;
 $sect-h: 45vmin;
 $sect-border: $light solid 1px;
-$sect-border-radius: .5rem;
+$sect-border-radius: 2rem;
 $sect-margin: 3vmin;
+$sect-bx-shadow: 1rem 1rem 1rem rgb(224, 221, 221);
 
 .about-heading {
     color: $blue;
@@ -274,7 +275,6 @@ $sect-margin: 3vmin;
 }
 
 .dev-bio {
-    text-align: center;
     height: $sect-h;
 }
 
@@ -284,6 +284,7 @@ $sect-margin: 3vmin;
     padding: $about-pad;
     border: $sect-border;
     border-radius: $sect-border-radius;
+    box-shadow: $sect-bx-shadow;
     margin: $sect-margin;
     
 }
@@ -308,6 +309,7 @@ $sect-margin: 3vmin;
     border: $sect-border;
     border-radius: $sect-border-radius;
     margin: $sect-margin;
+    box-shadow: $sect-bx-shadow;
 }
 
 .cristian {
@@ -329,6 +331,7 @@ $sect-margin: 3vmin;
     border: $sect-border;
     border-radius: $sect-border-radius;
     margin: $sect-margin;
+    box-shadow: $sect-bx-shadow;
 }
 
 .tanner {
@@ -350,6 +353,7 @@ $sect-margin: 3vmin;
     border: $sect-border;
     border-radius: $sect-border-radius;
     margin: $sect-margin;
+    box-shadow: $sect-bx-shadow;
 }
 
 .justin {
