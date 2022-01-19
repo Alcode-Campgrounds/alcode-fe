@@ -63,7 +63,7 @@ export default function Header() {
         
       </div>
        <section className='username'>
-          { user.name ? 
+          { user?.name ? 
           <p>{`Signed in as ${user.name}`}</p> 
           : <p></p> }
         </section>

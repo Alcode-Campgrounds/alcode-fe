@@ -26,3 +26,15 @@ export const existingUserSignIn = async (email, password) => {
     const response = await data.json();
     return response;
 }
+export const getCurrentUser = async () => {
+    const url = process.env.REACT_APP_USER_VERIFY;
+    const data = await fetch(url, {
+        method: 'GET',
+        credentials: 'include',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    });
+    const res = await data.json();
+    return res;
+}
