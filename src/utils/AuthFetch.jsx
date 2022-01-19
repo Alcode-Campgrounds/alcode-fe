@@ -36,6 +36,7 @@ export const getCurrentUser = async () => {
             'Content-Type': 'application/json',
         },
     });
+    if (!data.ok) return null;
     const res = await data.json();
     return res;
 }

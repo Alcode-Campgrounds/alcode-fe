@@ -19,7 +19,7 @@ export default function SignUp({ hasUser = false }) {
     if (hasUser) {
       const userData = await existingUserSignIn(email, password);
       if (userData.email) {
-        // setUser({ name: userData.name, email: userData.email });
+        setUser({ name: userData.name, email: userData.email });
         navigate('/search');
       } else {
         setError('Wrong email/password');
