@@ -418,4 +418,72 @@ fieldset {
   margin: 0 auto;
   background-image: url("../../public/j-face.png");
 }
+
+.search-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  color: #124559;
+  font-size: 4vmin;
+}
+
+.search-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.state-dropdown {
+  width: 33vw;
+  border: 0.25rem #e6e8f3 solid;
+  border-radius: 2%;
+  background-color: rgba(230, 232, 243, 0.453);
+  font-size: 1.25rem;
+}
+
+.search-btn {
+  font-family: Spartan;
+  font-size: 2.5vmin;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.75rem 1.5rem;
+  color: white;
+  background: #f6511d;
+  font-weight: 550;
+}
+
+.search-btn:hover {
+  background: #ec7753;
+  -webkit-box-shadow: 0rem 0.5rem 0.5rem gray;
+          box-shadow: 0rem 0.5rem 0.5rem gray;
+}
+
+.camp-detail-container {
+  padding-inline: 7.5vw;
+  color: #124559;
+}
+
+.camp-detail-name {
+  color: #124559;
+  line-height: 125%;
+}
+
+.camp-detail-headings {
+  color: #f6511d;
+  font-size: 1.5vmax;
+}
+
+.camp-info {
+  font-size: 1.5vmax;
+}
 /*# sourceMappingURL=style.css.map */

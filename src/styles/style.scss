@@ -1,3 +1,4 @@
+// MIXINS
 @mixin button {
     font-family: $primary-btn-font;
     font-size: $primary-btn-font-sz;
@@ -51,9 +52,14 @@
     display: flex;
     flex: 50%;
 }
+
+@mixin input {
+    font-size: 1.5em;
+    margin: 2vmin;
+    border: none;
+    color: $light-blue;
+}
     
-
-
 // THEME STYLES
 $blue: #124559;
 $light-blue: #598392;
@@ -203,10 +209,7 @@ fieldset {
 .input-A,
 .input-B,
 .input-C {
-  font-size: 1.5em;
-  margin: 2vmin;
-  border: none;
-  color: $light-blue;
+  @include input();
 }
 
 .signup-txt,
@@ -341,6 +344,52 @@ $sect-bx-shadow: 1rem 1rem 1rem rgb(224, 221, 221);
     @include devDetail();
     background-image: url("../../public/j-face.png");
 }
+
+// SEARCH VIEW
+.search-heading {
+    @include flexCenter();
+    color: $blue;
+    font-size: 4vmin;
+}
+
+.search-form {
+    @include flexCenter();
+    
+}
+
+.state-dropdown {
+    width: 33vw;
+    border: .25rem rgb(230, 232, 243) solid;
+    border-radius: 2%;
+    background-color: rgba(230, 232, 243, 0.453);
+    font-size: 1.25rem;
+    
+}
+
+.search-btn {
+    @include button();
+}
+
+// CAMP DETAIL VIEW
+.camp-detail-container {
+    padding-inline: 7.5vw;
+    color: $blue;
+}
+
+.camp-detail-name {
+    color: $blue;
+    line-height: 125%;
+}
+
+.camp-detail-headings {
+    color: $color-pop;
+    font-size: 1.5vmax;
+}
+
+.camp-info {
+    font-size: 1.5vmax;
+}
+
 
 // LOADING SPINNER
 // .loader {
