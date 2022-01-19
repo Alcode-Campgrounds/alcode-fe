@@ -8,22 +8,23 @@ const UserProvider = ({children}) => {
     const [loading, setLoading] = useState(true)
     
     useEffect(() => { 
-        async function loadUser(){
-            await getCurrentUser()
-                .then(user => setUser({name: user.name, email: user.email}))
+            getCurrentUser()
+                .then(user => setUser(user))
+                .catch(error => console.log(error))
                 .finally(()=>setLoading(false)) 
-            }
-        loadUser();    
     }, [])
 
     return (
-        <UserContext.Provider value={{user, setUser, loading, setLoading}}>
+        <UserContext.Provider value={{user, setUser, loading}}>
             {children}
         </UserContext.Provider>
     )
 }
-
-const useUser = () => {
+const useLoadingUser = () => {
+    const { loading } = useContext(UserContext)
+    return loading
+}
+const useUser = () => { 
     const context = useContext(UserContext);
     if (context === undefined){
         throw new Error('useUser hook must be called inside of a GuessContext Provider');
@@ -31,4 +32,4 @@ const useUser = () => {
     return context;
 }
 
-export { UserProvider, useUser}
+export { UserProvider, useUser, useLoadingUser}
