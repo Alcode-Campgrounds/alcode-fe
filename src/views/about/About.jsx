@@ -4,7 +4,7 @@ export default function About() {
   return (
     <>
       <div>
-        <a href="https://github.com/Alcode-Campgrounds" alt="Contact Us">
+        <a className='about-heading'  href="https://github.com/Alcode-Campgrounds" alt="Contact Us">
           Our Organization
         </a>
       </div>

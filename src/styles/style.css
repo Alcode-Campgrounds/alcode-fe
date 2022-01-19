@@ -38,13 +38,13 @@ a {
 
 .google-btn {
   font-family: Spartan;
-  margin-inline: 5rem;
   font-size: 2.5vmin;
   border: none;
   border-radius: 0.25rem;
   padding: 0.75rem 1.5rem;
   color: white;
   background: #f6511d;
+  font-weight: 550;
 }
 
 .google-btn:hover {
@@ -68,7 +68,7 @@ a {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   margin-top: 43vmin;
-  opacity: 75%;
+  opacity: 65%;
 }
 
 .hero-btn:hover {
@@ -140,9 +140,6 @@ a {
 }
 
 .form-container {
-  width: 100vw;
-  height: 70vh;
-  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -153,6 +150,9 @@ a {
       align-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  width: 100vw;
+  height: 70vh;
+  text-align: center;
   background-image: url("../../public/stream.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -221,12 +221,12 @@ fieldset {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  color: #01161e;
   opacity: 65%;
-  font-size: 7vmin;
   font-family: "Work Sans", sans-serif;
-  font-weight: 900;
   text-align: center;
+  color: #01161e;
+  font-size: 7vmin;
+  font-weight: 900;
   width: 65vw;
 }
 
@@ -236,23 +236,25 @@ fieldset {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  color: #eff6e0;
   opacity: 65%;
-  font-size: 3vmin;
-  width: 50vw;
   font-family: "Work Sans", sans-serif;
   text-align: center;
+  color: #eff6e0;
+  font-size: 3vmin;
+  width: 50vw;
   margin-top: 25vmin;
 }
 
 .about-heading {
-  color: #124559;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  color: #124559;
   font-size: 8vmin;
 }
 
@@ -307,9 +309,9 @@ fieldset {
   padding: 5vmin;
   border: #eff6e0 solid 1px;
   border-radius: 2rem;
+  margin: 3vmin;
   -webkit-box-shadow: 1rem 1rem 1rem #e0dddd;
           box-shadow: 1rem 1rem 1rem #e0dddd;
-  margin: 3vmin;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -319,7 +321,6 @@ fieldset {
 }
 
 .alan {
-  background-image: url("../../public/a-face.png");
   z-index: 2;
   width: 35vmin;
   height: 35vmin;
@@ -328,6 +329,7 @@ fieldset {
   border-radius: 50%;
   border: 2px solid white;
   margin: 0 auto;
+  background-image: url("../../public/a-face.png");
 }
 
 .cristian-sect {
@@ -348,7 +350,6 @@ fieldset {
 }
 
 .cristian {
-  background-image: url("../../public/c-face.png");
   z-index: 2;
   width: 35vmin;
   height: 35vmin;
@@ -357,6 +358,7 @@ fieldset {
   border-radius: 50%;
   border: 2px solid white;
   margin: 0 auto;
+  background-image: url("../../public/c-face.png");
 }
 
 .tanner-sect {
@@ -377,7 +379,6 @@ fieldset {
 }
 
 .tanner {
-  background-image: url("../../public/t-face.png");
   z-index: 2;
   width: 35vmin;
   height: 35vmin;
@@ -386,6 +387,7 @@ fieldset {
   border-radius: 50%;
   border: 2px solid white;
   margin: 0 auto;
+  background-image: url("../../public/t-face.png");
 }
 
 .justin-sect {
@@ -406,7 +408,6 @@ fieldset {
 }
 
 .justin {
-  background-image: url("../../public/j-face.png");
   z-index: 2;
   width: 35vmin;
   height: 35vmin;
@@ -415,5 +416,6 @@ fieldset {
   border-radius: 50%;
   border: 2px solid white;
   margin: 0 auto;
+  background-image: url("../../public/j-face.png");
 }
 /*# sourceMappingURL=style.css.map */

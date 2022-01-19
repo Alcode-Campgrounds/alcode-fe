@@ -1,3 +1,59 @@
+@mixin button {
+    font-family: $primary-btn-font;
+    font-size: $primary-btn-font-sz;
+    border: $primary-btn-border;
+    border-radius: $primary-btn-radius;
+    padding: $primary-btn-pad;
+    color: $primary-btn-txt;
+    background: $primary-btn-bg;
+    font-weight: 550;
+    &:hover {
+        background: $primary-btn-hover;
+        box-shadow: 0rem 0.5rem 0.5rem gray;
+    }
+}
+
+@mixin heroTxt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 65%;
+    font-family: "Work Sans", sans-serif;
+    text-align: center;
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+@mixin devDetail {
+    z-index: 2;
+    width: $about-width;
+    height: $about-height;
+    background-size: $about-img-sz;
+    background-repeat: $about-repeat;
+    border-radius: $about-border-radius;
+    border: $about-border;
+    margin: $about-margin;
+}
+
+@mixin devDetailCol {
+    width: $sect-w;
+    height: $sect-h;
+    padding: $about-pad;
+    border: $sect-border;
+    border-radius: $sect-border-radius;
+    margin: $sect-margin;
+    box-shadow: $sect-bx-shadow;
+    display: flex;
+    flex: 50%;
+}
+    
+
+
 // THEME STYLES
 $blue: #124559;
 $light-blue: #598392;
@@ -24,69 +80,25 @@ $primary-btn-font: Spartan;
 
 // BUTTONS
 .logout-btn {
-  font-family: $primary-btn-font;
-  font-size: $primary-btn-font-sz;
-  border: $primary-btn-border;
-  border-radius: $primary-btn-radius;
-  padding: $primary-btn-pad;
-  color: $primary-btn-txt;
-  background: $primary-btn-bg;
-  font-weight: 550;
-  &:hover {
-    background: $primary-btn-hover;
-    box-shadow: 0rem 0.5rem 0.5rem gray;
-  }
+    @include button();
 }
 
 .primary-btn {
-  font-family: $primary-btn-font;
-  font-size: $primary-btn-font-sz;
-  border: $primary-btn-border;
-  border-radius: $primary-btn-radius;
-  padding: $primary-btn-pad;
-  color: $primary-btn-txt;
-  background: $primary-btn-bg;
-  font-weight: 550;
-  &:hover {
-    background: $primary-btn-hover;
-    box-shadow: 0rem 0.5rem 0.5rem gray;
-  }
+    @include button();
 }
 
 .google-btn {
-  font-family: $primary-btn-font;
-  margin-inline: 5rem;
-  font-size: $primary-btn-font-sz;
-  border: $primary-btn-border;
-  border-radius: $primary-btn-radius;
-  padding: $primary-btn-pad;
-  color: $primary-btn-txt;
-  background: $primary-btn-bg;
-  &:hover {
-    background: $primary-btn-hover;
-    box-shadow: 0rem 0.5rem 0.5rem gray;
-  }
+    @include button();
 }
 
 .hero-btn {
-  font-family: $primary-btn-font;
-  font-size: $primary-btn-font-sz;
-  border: $primary-btn-border;
-  border-radius: $primary-btn-radius;
-  padding: $primary-btn-pad;
-  color: $primary-btn-txt;
-  background: $primary-btn-bg;
-  font-weight: 550;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin-top: 43vmin;
-  opacity: 75%;
-  &:hover {
-    background: $primary-btn-hover;
-    box-shadow: 0rem 0.5rem 0.5rem gray;
-  }
+    @include button();
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 43vmin;
+    opacity: 65%;
 }
 
 // HEADER STYLES
@@ -115,7 +127,7 @@ $header-pad: 2rem;
 
 .hamburger-btn {
   background: transparent;
-  border: $primary-btn-border;
+  border: none;
   margin-inline: 0 5vmin;
 }
 
@@ -159,17 +171,15 @@ $form-font-sz: 3vmin;
 $form-txt-color: $blue;
 
 .form-container {
-  width: 100vw;
-  height: 70vh;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-wrap: wrap;
-  background-image: url("../../public/stream.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+    @include flexCenter();
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 70vh;
+    text-align: center;
+    background-image: url("../../public/stream.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .form-main {
@@ -227,31 +237,19 @@ fieldset {
 }
 
 .hero-txt {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: $dark;
-  opacity: 65%;
-  font-size: 7vmin;
-  font-family: "Work Sans", sans-serif;
-  font-weight: 900;
-  text-align: center;
-  width: 65vw;
+    @include heroTxt();
+    color: $dark;
+    font-size: 7vmin;
+    font-weight: 900;
+    width: 65vw;
 }
 
 .hero-subtxt {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: $light;
-  opacity: 65%;
-  font-size: 3vmin;
-  width: 50vw;
-  font-family: "Work Sans", sans-serif;
-  text-align: center;
-  margin-top: 25vmin;
+    @include heroTxt();
+    color: $light;
+    font-size: 3vmin;
+    width: 50vw;
+    margin-top: 25vmin;
 }
 
 // ABOUT US & BIOS
@@ -272,16 +270,13 @@ $sect-margin: 3vmin;
 $sect-bx-shadow: 1rem 1rem 1rem rgb(224, 221, 221);
 
 .about-heading {
-  color: $blue;
-  display: flex;
-  justify-content: center;
-  font-size: 8vmin;
+    @include flexCenter();
+    color: $blue;
+    font-size: 8vmin;
 }
 
 .about-container {
-  display: flex;
-  justify-content: center;
-  align-content: center;
+  @include flexCenter();
   margin: 0 auto;
   width: $sect-w;
 }
@@ -311,99 +306,40 @@ $sect-bx-shadow: 1rem 1rem 1rem rgb(224, 221, 221);
 }
 
 .alan-sect {
-  width: $sect-w;
-  height: $sect-h;
-  padding: $about-pad;
-  border: $sect-border;
-  border-radius: $sect-border-radius;
-  box-shadow: $sect-bx-shadow;
-  margin: $sect-margin;
-  display: flex;
-  flex: 50%;
+    @include devDetailCol();
 }
 
 .alan {
-  background-image: url("../../public/a-face.png");
-  z-index: 2;
-  width: $about-width;
-  height: $about-height;
-  background-size: $about-img-sz;
-  background-repeat: $about-repeat;
-  border-radius: $about-border-radius;
-  border: $about-border;
-  margin: $about-margin;
+    @include devDetail();
+    background-image: url("../../public/a-face.png");
+ 
 }
 
 .cristian-sect {
-  width: $sect-w;
-  height: $sect-h;
-  padding: $about-pad;
-  border: $sect-border;
-  border-radius: $sect-border-radius;
-  margin: $sect-margin;
-  box-shadow: $sect-bx-shadow;
-  display: flex;
-  flex: 50%;
+    @include devDetailCol();
 }
 
 .cristian {
-  background-image: url("../../public/c-face.png");
-  z-index: 2;
-  width: $about-width;
-  height: $about-height;
-  background-size: $about-img-sz;
-  background-repeat: $about-repeat;
-  border-radius: $about-border-radius;
-  border: $about-border;
-  margin: $about-margin;
+    @include devDetail();
+    background-image: url("../../public/c-face.png");
 }
 
 .tanner-sect {
-  width: $sect-w;
-  height: $sect-h;
-  padding: $about-pad;
-  border: $sect-border;
-  border-radius: $sect-border-radius;
-  margin: $sect-margin;
-  box-shadow: $sect-bx-shadow;
-  display: flex;
-  flex: 50%;
+    @include devDetailCol();
 }
 
 .tanner {
-  background-image: url("../../public/t-face.png");
-  z-index: 2;
-  width: $about-width;
-  height: $about-height;
-  background-size: $about-img-sz;
-  background-repeat: $about-repeat;
-  border-radius: $about-border-radius;
-  border: $about-border;
-  margin: $about-margin;
+    @include devDetail();   
+    background-image: url("../../public/t-face.png");
 }
 
 .justin-sect {
-  width: $sect-w;
-  height: $sect-h;
-  padding: $about-pad;
-  border: $sect-border;
-  border-radius: $sect-border-radius;
-  margin: $sect-margin;
-  box-shadow: $sect-bx-shadow;
-  display: flex;
-  flex: 50%;
+  @include devDetailCol();
 }
 
 .justin {
-  background-image: url("../../public/j-face.png");
-  z-index: 2;
-  width: $about-width;
-  height: $about-height;
-  background-size: $about-img-sz;
-  background-repeat: $about-repeat;
-  border-radius: $about-border-radius;
-  border: $about-border;
-  margin: $about-margin;
+    @include devDetail();
+    background-image: url("../../public/j-face.png");
 }
 
 // LOADING SPINNER
