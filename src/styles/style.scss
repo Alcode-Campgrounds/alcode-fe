@@ -8,7 +8,6 @@ $color-pop: #F6511D;
 
 // GLOBAL LIST STYLE
 
-
 a {
     text-decoration: none;
     
@@ -75,7 +74,6 @@ $primary-btn-hover: #ec7753;
     }
 }
 
-
 // HEADER STYLES
 $header-bg: $light;
 $header-font-sz: 2.5rem;
@@ -128,6 +126,7 @@ $header-pad: 2rem;
         opacity: 90%;
     }
 }
+
 .nav-links {
     color: $light;
     list-style: none;
@@ -144,7 +143,6 @@ $form-width: 75vmin;
 $form-margin: 0 auto;
 $form-font-sz: 3vmin;
 $form-txt-color: $blue;
-
 
 .form-container {
     width: 100vw;
@@ -166,8 +164,6 @@ $form-txt-color: $blue;
     font-size: $form-font-sz;
     font-family: 'Roboto', sans-serif;
     color: $blue;
-
-    
 }
 
 fieldset {
@@ -194,10 +190,9 @@ fieldset {
     }
 }
 
-.legend{
+.legend {
     color: $form-txt-color;
 }
-
 
 .username {
     color: $color-pop;
@@ -226,7 +221,6 @@ fieldset {
     font-weight: 900;
     text-align: center;
     width: 65vw;
-    
 }
 
 .hero-subtxt {
@@ -243,7 +237,118 @@ fieldset {
     margin-top: 25vmin;
 }
 
-// SEARCH MENU
+// ABOUT US
+$about-margin: 0 auto;
+$about-pad: 5vmin;
+$about-width: 35vmin;
+$about-height: 35vmin;
+$about-img-sz: cover;
+$about-repeat: no-repeat;
+$about-border-radius: 50%;
+$about-border: 2px solid white;
+
+$sect-w: 100vw;
+$sect-h: 45vmin;
+
+.about-heading {
+    color: $blue;
+    display: flex;
+    justify-content: center;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    width: $sect-w;
+}    
+
+.about-list {
+    color: $dark;
+    list-style: none;
+    color: rgb(0, 0, 0);
+}
+
+.dev-bio {
+    text-align: center;
+}
+
+.alan-sect {
+    // background: $blue;
+    width: $sect-w;
+    height: $sect-h;
+    padding: $about-pad;
+    
+}
+
+.alan {
+    background-image: url('../../public/a-face.png');
+    z-index: 2;
+    width: $about-width;
+    height: $about-height;
+    background-size: $about-img-sz;
+    background-repeat: $about-repeat;
+    border-radius: $about-border-radius;
+    border: $about-border;
+    margin: $about-margin;
+    
+}
+
+.cristian-sect {
+    // background: rgb(162, 205, 219);
+    width: $sect-w;
+    height: $sect-h;
+    padding: $about-pad;
+}
+
+.cristian {
+    background-image: url('../../public/c-face.png');
+    z-index: 2;
+    width: $about-width;
+    height: $about-height;
+    background-size: $about-img-sz;
+    background-repeat: $about-repeat;
+    border-radius: $about-border-radius;
+    border: $about-border;
+    margin: $about-margin;
+}
+
+.tanner-sect {
+    // background: $dark;
+    width: $sect-w;
+    height: $sect-h;
+    padding: $about-pad;
+}
+
+.tanner {
+    background-image: url('../../public/t-face.png');
+    z-index: 2;
+    width: $about-width;
+    height: $about-height;
+    background-size: $about-img-sz;
+    background-repeat: $about-repeat;
+    border-radius: $about-border-radius;
+    border: $about-border;
+    margin: $about-margin;
+}
+
+.justin-sect {
+    // background: $light-blue;
+    width: $sect-w;
+    height: $sect-h;
+    padding: $about-pad;
+}
+
+.justin {
+    background-image: url('../../public/j-face.png');
+    z-index: 2;
+    width: $about-width;
+    height: $about-height;
+    background-size: $about-img-sz;
+    background-repeat: $about-repeat;
+    border-radius: $about-border-radius;
+    border: $about-border;
+    margin: $about-margin;
+}
 
 
 // LOADING SPINNER

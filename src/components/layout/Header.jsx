@@ -75,7 +75,7 @@ export default function Header() {
           { user?.name ? 
           <p>{`Signed in as ${user.name}`}</p> 
           : <p></p> }
-          {user.name && <button onClick={handleLogout}>Logout</button>}
+          {user?.name && <button onClick={handleLogout}>Logout</button>}
         </section>
 
     </>

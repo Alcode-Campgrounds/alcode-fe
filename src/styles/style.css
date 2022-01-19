@@ -223,4 +223,106 @@ fieldset {
   text-align: center;
   margin-top: 25vmin;
 }
+
+.about-heading {
+  color: #124559;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+}
+
+.about-list {
+  color: #01161E;
+  list-style: none;
+  color: black;
+}
+
+.dev-bio {
+  text-align: center;
+}
+
+.alan-sect {
+  width: 100vw;
+  height: 45vmin;
+  padding: 5vmin;
+}
+
+.alan {
+  background-image: url("../../public/a-face.png");
+  z-index: 2;
+  width: 35vmin;
+  height: 35vmin;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin: 0 auto;
+}
+
+.cristian-sect {
+  width: 100vw;
+  height: 45vmin;
+  padding: 5vmin;
+}
+
+.cristian {
+  background-image: url("../../public/c-face.png");
+  z-index: 2;
+  width: 35vmin;
+  height: 35vmin;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin: 0 auto;
+}
+
+.tanner-sect {
+  width: 100vw;
+  height: 45vmin;
+  padding: 5vmin;
+}
+
+.tanner {
+  background-image: url("../../public/t-face.png");
+  z-index: 2;
+  width: 35vmin;
+  height: 35vmin;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin: 0 auto;
+}
+
+.justin-sect {
+  width: 100vw;
+  height: 45vmin;
+  padding: 5vmin;
+}
+
+.justin {
+  background-image: url("../../public/j-face.png");
+  z-index: 2;
+  width: 35vmin;
+  height: 35vmin;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin: 0 auto;
+}
 /*# sourceMappingURL=style.css.map */
