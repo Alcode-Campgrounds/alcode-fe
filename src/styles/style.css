@@ -241,7 +241,10 @@ fieldset {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100vw;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: 0 auto;
+  width: 75vw;
 }
 
 .about-list {
@@ -252,12 +255,16 @@ fieldset {
 
 .dev-bio {
   text-align: center;
+  height: 45vmin;
 }
 
 .alan-sect {
-  width: 100vw;
+  width: 75vw;
   height: 45vmin;
   padding: 5vmin;
+  border: #EFF6E0 solid 1px;
+  border-radius: 0.5rem;
+  margin: 3vmin;
 }
 
 .alan {
@@ -273,9 +280,12 @@ fieldset {
 }
 
 .cristian-sect {
-  width: 100vw;
+  width: 75vw;
   height: 45vmin;
   padding: 5vmin;
+  border: #EFF6E0 solid 1px;
+  border-radius: 0.5rem;
+  margin: 3vmin;
 }
 
 .cristian {
@@ -291,9 +301,12 @@ fieldset {
 }
 
 .tanner-sect {
-  width: 100vw;
+  width: 75vw;
   height: 45vmin;
   padding: 5vmin;
+  border: #EFF6E0 solid 1px;
+  border-radius: 0.5rem;
+  margin: 3vmin;
 }
 
 .tanner {
@@ -309,9 +322,12 @@ fieldset {
 }
 
 .justin-sect {
-  width: 100vw;
+  width: 75vw;
   height: 45vmin;
   padding: 5vmin;
+  border: #EFF6E0 solid 1px;
+  border-radius: 0.5rem;
+  margin: 3vmin;
 }
 
 .justin {

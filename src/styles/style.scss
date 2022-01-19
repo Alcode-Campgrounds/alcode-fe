@@ -247,8 +247,11 @@ $about-repeat: no-repeat;
 $about-border-radius: 50%;
 $about-border: 2px solid white;
 
-$sect-w: 100vw;
+$sect-w: 75vw;
 $sect-h: 45vmin;
+$sect-border: $light solid 1px;
+$sect-border-radius: .5rem;
+$sect-margin: 3vmin;
 
 .about-heading {
     color: $blue;
@@ -259,6 +262,8 @@ $sect-h: 45vmin;
 .about-container {
     display: flex;
     justify-content: center;
+    align-content: center;
+    margin: 0 auto;
     width: $sect-w;
 }    
 
@@ -270,13 +275,16 @@ $sect-h: 45vmin;
 
 .dev-bio {
     text-align: center;
+    height: $sect-h;
 }
 
 .alan-sect {
-    // background: $blue;
     width: $sect-w;
     height: $sect-h;
     padding: $about-pad;
+    border: $sect-border;
+    border-radius: $sect-border-radius;
+    margin: $sect-margin;
     
 }
 
@@ -294,10 +302,12 @@ $sect-h: 45vmin;
 }
 
 .cristian-sect {
-    // background: rgb(162, 205, 219);
     width: $sect-w;
     height: $sect-h;
     padding: $about-pad;
+    border: $sect-border;
+    border-radius: $sect-border-radius;
+    margin: $sect-margin;
 }
 
 .cristian {
@@ -313,10 +323,12 @@ $sect-h: 45vmin;
 }
 
 .tanner-sect {
-    // background: $dark;
     width: $sect-w;
     height: $sect-h;
     padding: $about-pad;
+    border: $sect-border;
+    border-radius: $sect-border-radius;
+    margin: $sect-margin;
 }
 
 .tanner {
@@ -332,10 +344,12 @@ $sect-h: 45vmin;
 }
 
 .justin-sect {
-    // background: $light-blue;
     width: $sect-w;
     height: $sect-h;
     padding: $about-pad;
+    border: $sect-border;
+    border-radius: $sect-border-radius;
+    margin: $sect-margin;
 }
 
 .justin {
