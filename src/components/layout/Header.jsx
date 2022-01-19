@@ -20,7 +20,7 @@ export default function Header() {
   }
 
   const handleLogout = () => {
-    setUser({})
+    setUser(null)
     logout()
     navigate('/')
   }
