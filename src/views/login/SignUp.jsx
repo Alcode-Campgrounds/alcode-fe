@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useUser } from '../../context/UserContext';
@@ -29,9 +30,11 @@ export default function SignUp({ hasUser = false }) {
       try {
         const userSignUp = await newUserSignUp(name, email, password);
         console.log(userSignUp.status);
-        if (userSignUp) {
+        if (userSignUp.status !== 400) {
           setUser({ name, email });
           navigate('/search');
+        } else {
+          setError('User already exists');
         }
       } catch (error) {
         setError(error.message);
@@ -40,13 +43,11 @@ export default function SignUp({ hasUser = false }) {
   };
 
   return (
+    <div className='form-container' >
     <form className='form-main' onSubmit={handleSubmitSignUp}>
       <fieldset>
         <legend className='legend'>{hasUser ? 'SignIn' : 'SignUp'}</legend>
       
-          <a className='google-btn' href={process.env.REACT_APP_OAUTH}>
-          Google
-          </a>
         <label htmlFor='email-input'>
           <input
             id='email-input'
@@ -93,8 +94,15 @@ export default function SignUp({ hasUser = false }) {
         <button type='submit' className='primary-btn'>
           {hasUser ? 'SignIn' : 'SignUp'}
         </button>
+          {!hasUser && <div><p>Already have an account?</p><Link to='/signin' className='signin-txt'>Sign in</Link></div>}
+          {hasUser && <div><p>or sign in with your google account</p><a className='google-btn' href={process.env.REACT_APP_OAUTH}>
+          Google
+          </a><p>Here by mistake?</p><Link to='/signup' className='signup-txt'>Sign up</Link></div>}    
         <p>{error}</p>
+          
+        
       </fieldset>
     </form>
+    </div>
   );
 }

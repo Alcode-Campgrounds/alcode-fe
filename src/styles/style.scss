@@ -1,21 +1,13 @@
 // THEME STYLES
 $blue: #124559;
 $light-blue: #598392;
-$grey-green: #AEC3B0;
+$grey: #dfe7e9dc;
 $dark: #01161E;
 $light: #EFF6E0;
 $color-pop: #F6511D;
 
 // GLOBAL LIST STYLE
-* {
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Rokkitt', serif;
-    font-family: 'Signika Negative', sans-serif;
-    font-family: 'Spartan', sans-serif;
-    font-family: 'Bowlby One SC', cursive;
-    font-family: 'Work Sans', sans-serif;
-    // background: $light;
-}
+
 
 a {
     text-decoration: none;
@@ -27,7 +19,7 @@ $primary-btn-bg: $color-pop;
 $primary-btn-txt: white;
 $primary-btn-font-sz: 2.5vmin;
 $primary-btn-border: none;
-$primary-btn-radius: 2rem;
+$primary-btn-radius: .25rem;
 $primary-btn-pad: .75rem 1.5rem;
 $primary-btn-hover: #ec7753;
 
@@ -66,7 +58,7 @@ $primary-btn-hover: #ec7753;
     font-family:spartan;
     font-size: $primary-btn-font-sz;
     border: $primary-btn-border;
-    // border-radius: $primary-btn-radius;
+    border-radius: $primary-btn-radius;
     padding: $primary-btn-pad;
     color: $primary-btn-txt;
     background: $primary-btn-bg;
@@ -107,8 +99,6 @@ $header-pad: 2rem;
     font-size: 15vmin;
     padding-inline: $header-pad;
     font-family: Spartan;
-    
-
 }
 
 .hamburger-btn {
@@ -148,38 +138,66 @@ $header-pad: 2rem;
     }
 }
 
-
-
-
-
 // FORM STYLES
 $form-layout: center;
-$form-width: 50vmin;
+$form-width: 75vmin;
 $form-margin: 0 auto;
-$form-font-sz: 2rem;
+$form-font-sz: 3vmin;
 $form-txt-color: $blue;
 
-.form-main {
-    text-align: $form-layout;
-    width: $form-width;
-    margin: $form-margin;
-    color: $form-font-sz;
-    font-size: $form-font-sz;
+
+.form-container {
+    width: 100vw;
+    height: 70vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    background-image: url('../../public/stream.png') ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
-.input-A, .input-B, .input-C {
-    margin: 1rem;
+.form-main {
+    width: $form-width;
+    margin: $form-margin;
     font-size: $form-font-sz;
+    font-family: 'Roboto', sans-serif;
+    color: $blue;
+
     
 }
 
-.input-A {
-    margin-top: 2rem;
+fieldset {
+  z-index: 1;
+  height: 60vh;
+  max-width: 100%;
+  margin: $form-margin;
+  border-radius: .75rem;
+  background: $grey;
+  border: none;
+}
+
+.input-A, .input-B, .input-C {
+    font-size: 1.5em;
+    margin: 2vmin;
+    border: none;
+    color: $light-blue;
+}
+
+.signup-txt, .signin-txt {
+    color: $blue;
+    &:hover {
+        color: $color-pop;
+    }
 }
 
 .legend{
     color: $form-txt-color;
 }
+
 
 .username {
     color: $color-pop;

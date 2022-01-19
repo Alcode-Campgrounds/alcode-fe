@@ -26,3 +26,14 @@ export const existingUserSignIn = async (email, password) => {
     const response = await data.json();
     return response;
 }
+
+export const logout = async () => {
+    const logoutUrl = `${process.env.REACT_APP_LOGOUT}`
+    const res = await fetch(logoutUrl, {
+        method: 'GET',
+        credentials: 'include',
+        
+    })
+    const result = await res.json();
+    return result;
+}
