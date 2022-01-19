@@ -258,6 +258,7 @@ $sect-bx-shadow: 1rem 1rem 1rem rgb(224, 221, 221);
     color: $blue;
     display: flex;
     justify-content: center;
+    font-size: 8vmin;
 }
 
 .about-container {
@@ -277,8 +278,19 @@ $sect-bx-shadow: 1rem 1rem 1rem rgb(224, 221, 221);
 .dev-bio {
     height: $sect-h;
     display: flex;
-    flex: 50%;
-    font-size: 2vh;
+    flex-direction: column;
+    padding: 5%;
+    text-align: center;
+    flex: 45%;
+    font-size: 3vh;
+}
+
+.social-links {
+    padding: 5%;
+    color: $blue;
+    &:hover {
+        color: $color-pop
+    }
 }
 
 .alan-sect {
