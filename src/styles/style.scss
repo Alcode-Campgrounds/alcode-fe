@@ -248,7 +248,7 @@ $about-border-radius: 50%;
 $about-border: 2px solid white;
 
 $sect-w: 75vw;
-$sect-h: 45vmin;
+$sect-h: 55vmin;
 $sect-border: $light solid 1px;
 $sect-border-radius: 2rem;
 $sect-margin: 3vmin;
@@ -276,6 +276,9 @@ $sect-bx-shadow: 1rem 1rem 1rem rgb(224, 221, 221);
 
 .dev-bio {
     height: $sect-h;
+    display: flex;
+    flex: 50%;
+    font-size: 2vh;
 }
 
 .alan-sect {
@@ -286,6 +289,8 @@ $sect-bx-shadow: 1rem 1rem 1rem rgb(224, 221, 221);
     border-radius: $sect-border-radius;
     box-shadow: $sect-bx-shadow;
     margin: $sect-margin;
+    display: flex;
+    flex: 50%;
     
 }
 
@@ -310,6 +315,8 @@ $sect-bx-shadow: 1rem 1rem 1rem rgb(224, 221, 221);
     border-radius: $sect-border-radius;
     margin: $sect-margin;
     box-shadow: $sect-bx-shadow;
+    display: flex;
+    flex: 50%;
 }
 
 .cristian {
@@ -332,6 +339,8 @@ $sect-bx-shadow: 1rem 1rem 1rem rgb(224, 221, 221);
     border-radius: $sect-border-radius;
     margin: $sect-margin;
     box-shadow: $sect-bx-shadow;
+    display: flex;
+    flex: 50%;
 }
 
 .tanner {
@@ -354,6 +363,8 @@ $sect-bx-shadow: 1rem 1rem 1rem rgb(224, 221, 221);
     border-radius: $sect-border-radius;
     margin: $sect-margin;
     box-shadow: $sect-bx-shadow;
+    display: flex;
+    flex: 50%;
 }
 
 .justin {

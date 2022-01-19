@@ -254,18 +254,31 @@ fieldset {
 }
 
 .dev-bio {
-  height: 45vmin;
+  height: 55vmin;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  font-size: 2vh;
 }
 
 .alan-sect {
   width: 75vw;
-  height: 45vmin;
+  height: 55vmin;
   padding: 5vmin;
   border: #EFF6E0 solid 1px;
   border-radius: 2rem;
   -webkit-box-shadow: 1rem 1rem 1rem #e0dddd;
           box-shadow: 1rem 1rem 1rem #e0dddd;
   margin: 3vmin;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
 }
 
 .alan {
@@ -282,13 +295,19 @@ fieldset {
 
 .cristian-sect {
   width: 75vw;
-  height: 45vmin;
+  height: 55vmin;
   padding: 5vmin;
   border: #EFF6E0 solid 1px;
   border-radius: 2rem;
   margin: 3vmin;
   -webkit-box-shadow: 1rem 1rem 1rem #e0dddd;
           box-shadow: 1rem 1rem 1rem #e0dddd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
 }
 
 .cristian {
@@ -305,13 +324,19 @@ fieldset {
 
 .tanner-sect {
   width: 75vw;
-  height: 45vmin;
+  height: 55vmin;
   padding: 5vmin;
   border: #EFF6E0 solid 1px;
   border-radius: 2rem;
   margin: 3vmin;
   -webkit-box-shadow: 1rem 1rem 1rem #e0dddd;
           box-shadow: 1rem 1rem 1rem #e0dddd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
 }
 
 .tanner {
@@ -328,13 +353,19 @@ fieldset {
 
 .justin-sect {
   width: 75vw;
-  height: 45vmin;
+  height: 55vmin;
   padding: 5vmin;
   border: #EFF6E0 solid 1px;
   border-radius: 2rem;
   margin: 3vmin;
   -webkit-box-shadow: 1rem 1rem 1rem #e0dddd;
           box-shadow: 1rem 1rem 1rem #e0dddd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
 }
 
 .justin {
