@@ -43,7 +43,7 @@ export default function SignUp({ hasUser = false }) {
     <div className='form-container' >
     <form className='form-main' onSubmit={handleSubmitSignUp}>
       <fieldset>
-        <legend className='legend'>{hasUser ? 'SignIn' : 'SignUp'}</legend>
+        <legend className='legend'>{hasUser ? 'Welcome back!' : 'New here? Please sign up'}</legend>
       
         <label htmlFor='email-input'>
           <input

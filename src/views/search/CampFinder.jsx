@@ -46,10 +46,10 @@ export default function CampFinder() {
   return (
     <>
 
-      <h1>Search for all campgrounds by State</h1>
-      <form onSubmit={handleStateSubmit}>
+      <h3 className='search-heading'>Search for all campgrounds by State</h3>
+      <form onSubmit={handleStateSubmit} className='search-form'>
         <States setState={handleStateChange} />
-        <button type="submit" aria-label="Search">
+        <button type="submit" aria-label="Search" className='search-btn'>
           Search
         </button>
       </form>
