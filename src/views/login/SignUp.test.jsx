@@ -1,7 +1,6 @@
 import {render, screen} from '@testing-library/react';
 import { UserProvider } from '../../context/UserContext';
 import SignUp from './SignUp';
-import userEvent from '@testing-library/user-event';
 import {BrowserRouter as Router} from 'react-router-dom';
 
 it('should render a new user signing up', async () => {
