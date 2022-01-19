@@ -19,23 +19,23 @@ export default function CampMap() {
   const [lat, setLat] = useState(centerLat);
   const [zoom, setZoom] = useState(5);
 
-  
-
   useEffect(() => {
     if (map.current) return; // initialize map only once
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
-      style: "mapbox://styles/mapbox/streets-v11",
+      style: "mapbox://styles/mapbox/outdoors-v11",
       center: [lng, lat],
       zoom: zoom,
     });
-    points.map(point => {
-      const popup = new mapboxgl.Popup({ offset: 25}).setHTML(`<a href=http://localhost:3000/camps/${point.facilityID}>${point.facilityName}</a>`)
+    points.map((point) => {
+      const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(
+        `<a href=http://localhost:3000/camps/${point.facilityID}>${point.facilityName}</a>`
+      );
       return new mapboxgl.Marker()
         .setLngLat([point.facilityLongitude, point.facilityLatitude])
         .setPopup(popup)
-        .addTo(map.current)
-  })
+        .addTo(map.current);
+    });
   });
 
   useEffect(() => {
