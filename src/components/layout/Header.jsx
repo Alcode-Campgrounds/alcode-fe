@@ -1,13 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useUser } from '../../context/UserContext';
 import { useState } from 'react';
 import { MdClose } from "react-icons/md"
 import { FiMenu } from "react-icons/fi"
+import { logout } from '../../utils/AuthFetch';
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const { user } = useUser()
+  const { user, setUser } = useUser()
+  let navigate = useNavigate();
 
   const handleToggle = () => {
     setMenuOpen(prev => !prev)
@@ -15,6 +17,12 @@ export default function Header() {
 
   const closeMenu = () => {
     setMenuOpen(false)
+  }
+
+  const handleLogout = () => {
+    setUser({})
+    logout()
+    navigate('/')
   }
 
   return (
@@ -64,10 +72,12 @@ export default function Header() {
         
       </div>
        <section className='username'>
-          { user.name ? 
+          { user?.name ? 
           <p>{`Signed in as ${user.name}`}</p> 
           : <p></p> }
+          {user.name && <button onClick={handleLogout}>Logout</button>}
         </section>
+
     </>
   );
 }
