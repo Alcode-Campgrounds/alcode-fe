@@ -1,5 +1,5 @@
 import { useContext, useState, createContext, useEffect } from 'react';
-// import { getCurrentUser } from '../utils/AuthFetch';
+
 
 const UserContext = createContext();
 
@@ -9,11 +9,7 @@ const UserProvider = ({children}) => {
     
     useEffect(() => { 
         setUser({name: 'fake-user', email: 'fake@email.com'})
-        setLoading(false)
-            // getCurrentUser()
-            //     .then(user => setUser(user))
-            //     .catch(error => console.log(error))
-            //     .finally(()=>setLoading(false)) 
+        setLoading(false) 
     }, [])
 
     return (
