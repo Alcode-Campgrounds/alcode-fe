@@ -10,9 +10,7 @@ export default function SignUp({ hasUser = false }) {
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
   const [error, setError] = useState('');
-  // const [gooBtn, setGooBtn] = useState(false)
   const { setUser } = useUser();
-
   let navigate = useNavigate();
 
   const handleSubmitSignUp = async (e) => {
@@ -21,7 +19,7 @@ export default function SignUp({ hasUser = false }) {
     if (hasUser) {
       const userData = await existingUserSignIn(email, password);
       if (userData.email) {
-        setUser({ name: userData.name, email: userData.email });
+        // setUser({ name: userData.name, email: userData.email });
         navigate('/search');
       } else {
         setError('Wrong email/password');
@@ -29,7 +27,6 @@ export default function SignUp({ hasUser = false }) {
     } else {
       try {
         const userSignUp = await newUserSignUp(name, email, password);
-        console.log(userSignUp.status);
         if (userSignUp.status !== 400) {
           setUser({ name, email });
           navigate('/search');

@@ -9,7 +9,6 @@ import { logout } from '../../utils/AuthFetch';
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const { user, setUser } = useUser()
-
   let navigate = useNavigate();
 
   const handleToggle = () => {
@@ -73,7 +72,7 @@ export default function Header() {
         
       </div>
        <section className='username'>
-          { user.name ? 
+          { user?.name ? 
           <p>{`Signed in as ${user.name}`}</p> 
           : <p></p> }
           {user.name && <button onClick={handleLogout}>Logout</button>}
