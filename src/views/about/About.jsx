@@ -4,7 +4,7 @@ export default function About() {
   return (
     <>
       <div>
-        <a className='about-heading'  href="https://github.com/Alcode-Campgrounds" alt="Contact Us">
+        <a className='about-heading'  href="https://github.com/Alcode-Campgrounds" >
           About Us
         </a>
       </div>
@@ -15,7 +15,7 @@ export default function About() {
                 <div className="alan"></div>
                 <p className='bio-txt'>Beast Mode</p>  
           <div className="dev-bio">
-              <a className="social-links-github" href="https://github.com/satyadvaya">
+              <a className="social-links-github" href="https://github.com/satyadvaya" >
                 
               </a>
               <a className="social-links-linkedIn"
