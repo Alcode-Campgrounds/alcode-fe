@@ -5,95 +5,92 @@ export default function About() {
     <>
       <div>
         <a className='about-heading'  href="https://github.com/Alcode-Campgrounds" alt="Contact Us">
-          Our Organization
+          About Us
         </a>
       </div>
+
       <div className="about-container">
         <div className="about-list">
           <section className="alan-sect">
-            <div className="alan"></div>
-            <div className="dev-bio">
-              <a className="social-links" href="https://github.com/satyadvaya">
-                github
+                <div className="alan"></div>
+                <p className='bio-txt'>Beast Mode</p>  
+          <div className="dev-bio">
+              <a className="social-links-github" href="https://github.com/satyadvaya">
+                
               </a>
-              <a
-                className="social-links"
+              <a className="social-links-linkedIn"
                 href="https://www.linkedin.com/in/alan-willoughby/"
               >
-                linked in
               </a>
               <a
-                className="social-links"
+                className="social-links-email"
                 href="mailto:satyadvaya@gmail.com?subject=Inquiry"
               >
-                Email me
               </a>
             </div>
           </section>
           <section className="cristian-sect">
+
             <div className="dev-bio">
               <a
-                className="social-links"
+                className="social-links-github"
                 href="https://github.com/cristi className='social-links'n-montes"
               >
-                github
               </a>
               <a
-                className="social-links"
+                className="social-links-linkedIn"
                 href="https://www.linkedin.com/in/cristianmontesmujica/"
               >
-                linked in
               </a>
               <a
-                className="social-links"
+                className="social-links-email"
                 href="mailto:cmontesmujica@gmail.com?subject=Inquiry"
               >
-                Email me
               </a>
             </div>
+            <p className='bio-txt'>the brains</p>
             <div className="cristian"></div>
+            
           </section>
           <section className="tanner-sect">
+          
             <div className="tanner"></div>
+            <p className='bio-txt'>Steve</p>
             <div className="dev-bio">
-              <a className="social-links" href="https://github.com/tannermeck">
-                github
+              <a className="social-links-github" href="https://github.com/tannermeck">
               </a>
               <a
-                className="social-links"
+                className="social-links-linkedIn"
                 href="https://www.linkedin.com/in/tanner-meck/"
               >
-                linked in
               </a>
               <a
-                className="social-links"
+                className="social-links-email"
                 href="mailto:t.meck@students.clark.edu?subject=Inquiry"
               >
-                Email me
               </a>
             </div>
           </section>
           <section className="justin-sect">
             <div className="dev-bio">
               <a
-                className="social-links"
+                className="social-links-github"
                 href="https://github.com/justin-w-soto"
-              >
-                github
+                >
               </a>
               <a
-                className="social-links"
+                className="social-links-linkedIn"
                 href="https://www.linkedin.com/in/justinwsoto/"
-              >
-                linked in
+                >
+              
               </a>
               <a
-                className="social-links"
+                className="social-links-email"
                 href="mailto:justinwsoto@gmail.com?subject=Inquiry"
-              >
-                Email me
+                >
               </a>
             </div>
+                  <p className='bio-txt'>this guy</p>
             <div className="justin"></div>
           </section>
         </div>
