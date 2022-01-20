@@ -1,16 +1,77 @@
+// MIXINS
+@mixin button {
+    font-family: $primary-btn-font;
+    font-size: $primary-btn-font-sz;
+    border: $primary-btn-border;
+    border-radius: $primary-btn-radius;
+    padding: $primary-btn-pad;
+    color: $primary-btn-txt;
+    background: $primary-btn-bg;
+    font-weight: 550;
+    &:hover {
+        background: $primary-btn-hover;
+        box-shadow: 0rem 0.5rem 0.5rem gray;
+    }
+}
+
+@mixin heroTxt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 65%;
+    font-family: "Work Sans", sans-serif;
+    text-align: center;
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+@mixin devDetail {
+    z-index: 2;
+    width: $about-width;
+    height: $about-height;
+    background-size: $about-img-sz;
+    background-repeat: $about-repeat;
+    border-radius: $about-border-radius;
+    border: $about-border;
+    margin: $about-margin;
+}
+
+@mixin devDetailCol {
+    width: $sect-w;
+    height: $sect-h;
+    padding: $about-pad;
+    border: $sect-border;
+    border-radius: $sect-border-radius;
+    margin: $sect-margin;
+    box-shadow: $sect-bx-shadow;
+    display: flex;
+    flex: 50%;
+}
+
+@mixin input {
+    font-size: 1.5em;
+    margin: 2vmin;
+    border: none;
+    color: $light-blue;
+}
+    
 // THEME STYLES
 $blue: #124559;
 $light-blue: #598392;
 $grey: #dfe7e9dc;
-$dark: #01161E;
-$light: #EFF6E0;
-$color-pop: #F6511D;
+$dark: #01161e;
+$light: #eff6e0;
+$color-pop: #f6511d;
 
 // GLOBAL LIST STYLE
 
 a {
-    text-decoration: none;
-    
+  text-decoration: none;
 }
 
 // PRIMARY BTN STYLES
@@ -18,60 +79,32 @@ $primary-btn-bg: $color-pop;
 $primary-btn-txt: white;
 $primary-btn-font-sz: 2.5vmin;
 $primary-btn-border: none;
-$primary-btn-radius: .25rem;
-$primary-btn-pad: .75rem 1.5rem;
+$primary-btn-radius: 0.25rem;
+$primary-btn-pad: 0.75rem 1.5rem;
 $primary-btn-hover: #ec7753;
+$primary-btn-font: Spartan;
 
+// BUTTONS
+.logout-btn {
+    @include button();
+}
 
 .primary-btn {
-    font-family:spartan;
-    font-size: $primary-btn-font-sz;
-    border: $primary-btn-border;
-    border-radius: $primary-btn-radius;
-    padding: $primary-btn-pad;
-    color: $primary-btn-txt;
-    background: $primary-btn-bg;
-    font-weight: 550;
-    &:hover {
-        background: $primary-btn-hover;
-        box-shadow: 0rem .5rem .5rem gray;
-    }
+    @include button();
 }
 
 .google-btn {
-    font-family: spartan;
-    margin-inline: 5rem;
-    font-size: $primary-btn-font-sz;
-    border: $primary-btn-border;
-    border-radius: $primary-btn-radius;
-    padding: $primary-btn-pad;
-    color: $primary-btn-txt;
-    background: $primary-btn-bg;
-    &:hover {
-        background: $primary-btn-hover;
-        box-shadow: 0rem .5rem .5rem gray;
-    }
+    @include button();
 }
 
 .hero-btn {
-    font-family:spartan;
-    font-size: $primary-btn-font-sz;
-    border: $primary-btn-border;
-    border-radius: $primary-btn-radius;
-    padding: $primary-btn-pad;
-    color: $primary-btn-txt;
-    background: $primary-btn-bg;
-    font-weight: 550;
+    @include button();
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin-top: 43vmin;
-    opacity: 75%;
-    &:hover {
-        background: $primary-btn-hover;
-        box-shadow: 0rem .5rem .5rem gray;
-    }
+    opacity: 65%;
 }
 
 // HEADER STYLES
@@ -83,58 +116,57 @@ $header-display: flex;
 $header-justify: space-between;
 $header-pad: 2rem;
 
-
 .header {
-    border:$header-border;
-    font-size: $header-font-sz;
-    display: $header-display;
-    justify-content: $header-justify;
-    color: $header-txt-color;
-    height: 25vmin;
+  border: $header-border;
+  font-size: $header-font-sz;
+  display: $header-display;
+  justify-content: $header-justify;
+  color: $header-txt-color;
+  height: 25vmin;
 }
 
 .brand {
-    font-size: 15vmin;
-    padding-inline: $header-pad;
-    font-family: Spartan;
+  font-size: 15vmin;
+  padding-inline: $header-pad;
+  font-family: Spartan;
 }
 
 .hamburger-btn {
-    background: transparent;
-    border: $primary-btn-border;
-    margin-inline: 0 5vmin;
+  background: transparent;
+  border: none;
+  margin-inline: 0 5vmin;
 }
 
 .menuNav {
-    scroll-behavior: smooth;
-    position: fixed;
-    z-index: 1;
-    top: 25vh;
-    right: 0;
-    bottom: 0;
-    height: 100vh;
-    width: 0;
-    overflow: hidden;
-    max-width: 290px;
-    transition: 0.35s;
-    &.showMenu {
-        list-style: none;
-        width: 100%;
-        height: fit-content;
-        background: $dark;
-        padding: 5%;
-        opacity: 90%;
-    }
+  scroll-behavior: smooth;
+  position: fixed;
+  z-index: 3;
+  top: 25vh;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 0;
+  overflow: hidden;
+  max-width: 290px;
+  transition: 0.35s;
+  &.showMenu {
+    list-style: none;
+    width: 100%;
+    height: fit-content;
+    background: $dark;
+    padding: 5%;
+    opacity: 90%;
+  }
 }
 
 .nav-links {
-    color: $light;
-    list-style: none;
-    padding: 3%;
-    width: 33vw;
-    &:hover {
-        color: $color-pop;
-    }
+  color: $light;
+  list-style: none;
+  padding: 3%;
+  width: 33vw;
+  &:hover {
+    color: $color-pop;
+  }
 }
 
 // FORM STYLES
@@ -145,25 +177,23 @@ $form-font-sz: 3vmin;
 $form-txt-color: $blue;
 
 .form-container {
+    @include flexCenter();
+    flex-wrap: wrap;
     width: 100vw;
     height: 70vh;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-    background-image: url('../../public/stream.png') ;
+    background-image: url("../../public/stream.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .form-main {
-    width: $form-width;
-    margin: $form-margin;
-    font-size: $form-font-sz;
-    font-family: 'Roboto', sans-serif;
-    color: $blue;
+  width: $form-width;
+  margin: $form-margin;
+  font-size: $form-font-sz;
+  font-family: "Roboto", sans-serif;
+  color: $blue;
 }
 
 fieldset {
@@ -171,69 +201,57 @@ fieldset {
   height: 60vh;
   max-width: 100%;
   margin: $form-margin;
-  border-radius: .75rem;
+  border-radius: 0.75rem;
   background: $grey;
   border: none;
 }
 
-.input-A, .input-B, .input-C {
-    font-size: 1.5em;
-    margin: 2vmin;
-    border: none;
-    color: $light-blue;
+.input-A,
+.input-B,
+.input-C {
+  @include input();
 }
 
-.signup-txt, .signin-txt {
-    color: $blue;
-    &:hover {
-        color: $color-pop;
-    }
+.signup-txt,
+.signin-txt {
+  color: $blue;
+  &:hover {
+    color: $color-pop;
+  }
 }
 
 .legend {
-    color: $form-txt-color;
+  color: $form-txt-color;
 }
 
 .username {
-    color: $color-pop;
-    margin: 3vmin;
-    font-size: 1.5rem;
+  color: $color-pop;
+  margin: 3vmin;
+  font-size: 1.5rem;
 }
 
 .hero-img {
-    width: 100vw;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 85%;
-    text-align: center;
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 85%;
+  text-align: center;
 }
 
 .hero-txt {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @include heroTxt();
     color: $dark;
-    opacity: 65%;
     font-size: 7vmin;
-    font-family: 'Work Sans', sans-serif;
     font-weight: 900;
-    text-align: center;
     width: 65vw;
 }
 
 .hero-subtxt {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @include heroTxt();
     color: $light;
-    opacity: 65%;
     font-size: 3vmin;
     width: 50vw;
-    font-family: 'Work Sans', sans-serif;
-    text-align: center;
     margin-top: 25vmin;
 }
 
@@ -255,128 +273,121 @@ $sect-margin: 3vmin;
 $sect-bx-shadow: 1rem 1rem 1rem rgb(224, 221, 221);
 
 .about-heading {
+    @include flexCenter();
     color: $blue;
-    display: flex;
-    justify-content: center;
+    font-size: 8vmin;
 }
 
 .about-container {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    margin: 0 auto;
-    width: $sect-w;
-}    
+  @include flexCenter();
+  margin: 0 auto;
+  width: $sect-w;
+}
 
 .about-list {
-    color: $dark;
-    list-style: none;
-    color: rgb(0, 0, 0);
+  color: $dark;
+  list-style: none;
+  color: rgb(0, 0, 0);
 }
 
 .dev-bio {
-    height: $sect-h;
-    display: flex;
-    flex: 50%;
-    font-size: 2vh;
+  height: $sect-h;
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  text-align: center;
+  flex: 45%;
+  font-size: 3vh;
+}
+
+.social-links {
+  padding: 5%;
+  color: $blue;
+  &:hover {
+    color: $color-pop;
+  }
 }
 
 .alan-sect {
-    width: $sect-w;
-    height: $sect-h;
-    padding: $about-pad;
-    border: $sect-border;
-    border-radius: $sect-border-radius;
-    box-shadow: $sect-bx-shadow;
-    margin: $sect-margin;
-    display: flex;
-    flex: 50%;
-    
+    @include devDetailCol();
 }
 
 .alan {
-    background-image: url('../../public/a-face.png');
-    z-index: 2;
-    width: $about-width;
-    height: $about-height;
-    background-size: $about-img-sz;
-    background-repeat: $about-repeat;
-    border-radius: $about-border-radius;
-    border: $about-border;
-    margin: $about-margin;
-    
+    @include devDetail();
+    background-image: url("../../public/a-face.png");
+ 
 }
 
 .cristian-sect {
-    width: $sect-w;
-    height: $sect-h;
-    padding: $about-pad;
-    border: $sect-border;
-    border-radius: $sect-border-radius;
-    margin: $sect-margin;
-    box-shadow: $sect-bx-shadow;
-    display: flex;
-    flex: 50%;
+    @include devDetailCol();
 }
 
 .cristian {
-    background-image: url('../../public/c-face.png');
-    z-index: 2;
-    width: $about-width;
-    height: $about-height;
-    background-size: $about-img-sz;
-    background-repeat: $about-repeat;
-    border-radius: $about-border-radius;
-    border: $about-border;
-    margin: $about-margin;
+    @include devDetail();
+    background-image: url("../../public/c-face.png");
 }
 
 .tanner-sect {
-    width: $sect-w;
-    height: $sect-h;
-    padding: $about-pad;
-    border: $sect-border;
-    border-radius: $sect-border-radius;
-    margin: $sect-margin;
-    box-shadow: $sect-bx-shadow;
-    display: flex;
-    flex: 50%;
+    @include devDetailCol();
 }
 
 .tanner {
-    background-image: url('../../public/t-face.png');
-    z-index: 2;
-    width: $about-width;
-    height: $about-height;
-    background-size: $about-img-sz;
-    background-repeat: $about-repeat;
-    border-radius: $about-border-radius;
-    border: $about-border;
-    margin: $about-margin;
+    @include devDetail();   
+    background-image: url("../../public/t-face.png");
 }
 
 .justin-sect {
-    width: $sect-w;
-    height: $sect-h;
-    padding: $about-pad;
-    border: $sect-border;
-    border-radius: $sect-border-radius;
-    margin: $sect-margin;
-    box-shadow: $sect-bx-shadow;
-    display: flex;
-    flex: 50%;
+  @include devDetailCol();
 }
 
 .justin {
-    background-image: url('../../public/j-face.png');
-    z-index: 2;
-    width: $about-width;
-    height: $about-height;
-    background-size: $about-img-sz;
-    background-repeat: $about-repeat;
-    border-radius: $about-border-radius;
-    border: $about-border;
-    margin: $about-margin;
+    @include devDetail();
+    background-image: url("../../public/j-face.png");
+}
+
+// SEARCH VIEW
+.search-heading {
+    @include flexCenter();
+    color: $blue;
+    font-size: 4vmin;
+}
+
+.search-form {
+    @include flexCenter();
+    
+}
+
+.state-dropdown {
+    width: 33vw;
+    border: .25rem rgb(230, 232, 243) solid;
+    border-radius: 2%;
+    background-color: rgba(230, 232, 243, 0.453);
+    font-size: 1.25rem;
+    
+}
+
+.search-btn {
+    @include button();
+}
+
+// CAMP DETAIL VIEW
+.camp-detail-container {
+    padding-inline: 7.5vw;
+    color: $blue;
+}
+
+.camp-detail-name {
+    color: $blue;
+    line-height: 125%;
+}
+
+.camp-detail-headings {
+    color: $color-pop;
+    font-size: 1.5vmax;
+}
+
+.camp-info {
+    font-size: 1.5vmax;
 }
 
 
@@ -395,7 +406,7 @@ $sect-bx-shadow: 1rem 1rem 1rem rgb(224, 221, 221);
 //       align-content: center;
 //       justify-content: center;
 //   }
-  
+
 //   @keyframes wave {
 //    0% {  box-shadow:
 //     0 0 0 0px rgba(255, 255,255, 1),
@@ -412,8 +423,3 @@ $sect-bx-shadow: 1rem 1rem 1rem rgb(224, 221, 221);
 //       0 0 0 0px rgba(255, 255,255, 1)
 //     }
 //   }
-  
-
-
-  
-  

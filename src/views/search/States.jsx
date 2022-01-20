@@ -3,6 +3,7 @@ import { stateData } from "./stateData.js";
 export default function States({ setState }) {
   return (
     <select
+      className="state-dropdown"
       defaultValue="ALL"
       onChange={setState}
     >
