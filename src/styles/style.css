@@ -296,50 +296,50 @@ fieldset {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 7%;
-  -webkit-box-flex: 50%;
-      -ms-flex: 50%;
-          flex: 50%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  margin-bottom: 5vmin;
-  max-height: 33vh;
-  max-width: 25vw;
+  -webkit-box-flex: -50%;
+      -ms-flex: -50%;
+          flex: -50%;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .social-links-github {
-  padding-right: 5%;
   width: 35vw;
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0 auto;
-  height: 25vmin;
+  height: 35vmin;
   background-image: url("/public/assets/github icon.png");
-  max-width: 17vmin;
+  max-width: 25vmin;
+  height: 55vmin;
+  margin-top: 2vmin;
+  padding: 3%;
 }
 
 .social-links-linkedIn {
-  padding-right: 5%;
   width: 35vw;
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0 auto;
-  height: 25vmin;
+  height: 35vmin;
   background-image: url("/public/assets/linkedInIcon.png");
-  max-width: 17vmin;
+  max-width: 25vmin;
+  height: 55vmin;
   margin-top: 2vmin;
+  padding: 3%;
 }
 
 .social-links-email {
-  padding-right: 5%;
   width: 35vw;
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0 auto;
-  height: 25vmin;
+  height: 35vmin;
   background-image: url("/public/assets/email.png");
-  max-width: 17vmin;
+  max-width: 25vmin;
+  height: 55vmin;
   margin-top: 2vmin;
+  padding: 3%;
 }
 
 .alan-sect {
