@@ -13,12 +13,21 @@ const fakeUser = {
     email: 'fakeUser@email.com',
     password: 'fakepassword'
 }
+const fakeUserSignIn = {
+    email: 'fakeUser@email.com',
+    password: 'fakepassword'
+}
 const worker = setupServer(
     rest.post(process.env.REACT_APP_BACKEND_URL, (req, res, ctx) => {
         return res(
             ctx.json(fakeUser)
         )
-    })
+    }),
+    rest.post(process.env.REACT_APP_LOGIN, (req, res, ctx) => {
+        return res(
+            ctx.json(fakeUserSignIn)
+        )
+    }),
 )
 beforeAll(() => {
     worker.listen()
@@ -26,13 +35,12 @@ beforeAll(() => {
 afterAll(() => {
     worker.close()
 });
-
-it('should render a new user signing up', async () => {
+it('should render a new user signing in', async () => {
     render(
         <UserProvider>
-            <MemoryRouter initialEntries={['/signup']}>
+            <MemoryRouter initialEntries={['/signin']}>
                 <Routes>
-                    <Route path="/signup" element={<SignUp />} />
+                    <Route path="/signin" element={<SignUp hasUser/>} />
                     <Route element={<ProtectedRoutes />}>
                         <Route path="/search" element={<CampFinder />} />
                     </Route>
@@ -42,19 +50,11 @@ it('should render a new user signing up', async () => {
     )
     const email = await screen.findByPlaceholderText('email');
     const password = await screen.findByPlaceholderText('password');
-    const name = await screen.findByPlaceholderText('name');
-    const signupButton = await screen.findByText('SignUp');
-    
-    expect(email).toBeInTheDocument();
-    expect(password).toBeInTheDocument();
-    expect(name).toBeInTheDocument();
-    expect(signupButton).toBeInTheDocument();
-
+    const signupButton = await screen.findByText('SignIn');
     userEvent.type(email, 'fakeUser@email.com');
     userEvent.type(password, 'fakepassword');
-    userEvent.type(name, 'fake-user');
-    userEvent.click(signupButton)
-    
+    userEvent.click(signupButton);
+
     const search = await screen.findByText(/Search for all campgrounds by State/i);
     expect(search).toBeInTheDocument();
 });

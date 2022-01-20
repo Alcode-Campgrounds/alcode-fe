@@ -4,7 +4,9 @@ import CampFinder from './CampFinder';
 import {BrowserRouter as Router} from 'react-router-dom';
 import userEvent from '@testing-library/user-event';
 
-it('should render the list of search options', () => {
+jest.mock('../../context/UserContext');
+
+it('should render the list of search options', async () => {
     render(
         <UserProvider>
             <Router>
@@ -16,5 +18,7 @@ it('should render the list of search options', () => {
         screen.getByRole('combobox'),
         screen.getByRole('option', {name: 'Washington'})
         )
-        expect(screen.getByRole('option', {name: 'Washington'}).selected).toBe(true);
+    const search = await screen.findByText('Search');
+    expect(screen.getByRole('option', {name: 'Washington'}).selected).toBe(true);
+    expect(search).toBeInTheDocument();
 });
