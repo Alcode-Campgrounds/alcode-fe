@@ -8,11 +8,19 @@ export default function About() {
           About Us
         </a>
       </div>
+
       <div className="about-container">
         <div className="about-list">
           <section className="alan-sect">
-            <div className="alan"></div>
-            <div className="dev-bio">
+            <figure>
+                <div className="alan"></div>
+              <figcaption>
+                  Alan<br/>
+                  does stuff
+              </figcaption>
+            </figure>
+
+          <div className="dev-bio">
               <a className="social-links-github" href="https://github.com/satyadvaya">
                 
               </a>
@@ -28,6 +36,7 @@ export default function About() {
             </div>
           </section>
           <section className="cristian-sect">
+
             <div className="dev-bio">
               <a
                 className="social-links-github"
@@ -45,10 +54,23 @@ export default function About() {
               >
               </a>
             </div>
+          <figure>
             <div className="cristian"></div>
+              <figcaption>
+                  Cristian<br/>
+                  does stuff
+              </figcaption>
+            </figure>
           </section>
           <section className="tanner-sect">
+
+          <figure>
             <div className="tanner"></div>
+              <figcaption>
+                  Tanner<br/>
+                  does stuff
+              </figcaption>
+            </figure>
             <div className="dev-bio">
               <a className="social-links-github" href="https://github.com/tannermeck">
               </a>
@@ -83,7 +105,13 @@ export default function About() {
               >
               </a>
             </div>
+            <figure>
             <div className="justin"></div>
+              <figcaption>
+                  Justin<br/>
+                  does stuff
+              </figcaption>
+            </figure>
           </section>
         </div>
       </div>

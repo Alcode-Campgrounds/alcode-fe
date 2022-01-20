@@ -318,10 +318,6 @@ fieldset {
   max-width: 17vmin;
 }
 
-.social-links-github:hover {
-  background-color: #f6511d;
-}
-
 .social-links-linkedIn {
   padding-right: 5%;
   width: 35vw;
@@ -334,10 +330,6 @@ fieldset {
   margin-top: 2vmin;
 }
 
-.social-links-linkedIn:hover {
-  background-color: #f6511d;
-}
-
 .social-links-email {
   padding-right: 5%;
   width: 35vw;
@@ -348,10 +340,6 @@ fieldset {
   background-image: url("/public/assets/email.png");
   max-width: 17vmin;
   margin-top: 2vmin;
-}
-
-.social-links-email:hover {
-  background-color: #f6511d;
 }
 
 .alan-sect {
