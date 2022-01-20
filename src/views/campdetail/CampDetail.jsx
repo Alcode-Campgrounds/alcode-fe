@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import { fetchCampground } from "../../utils/campFetch"
 import { addFavoriteCampGround } from "../../utils/favoritesFetch";
 
 export default function CampDetail() {
+    const navigate = useNavigate();
     const { id } = useParams();
     const [name, setName] = useState('');
     const [facilityID, setFacilityID] = useState('');
@@ -13,12 +14,10 @@ export default function CampDetail() {
     const [phone, setPhone] = useState('');
     const [reservable, setReservable] = useState(false);
     const [images, setImages] = useState([]);
-
     
     useEffect(() => {
         const loadCampground = async () => {
             const campground = await fetchCampground(id);
-
             setFacilityID(campground.facilityID);
             setName(campground.facilityName);
             setDescription(campground.facilityDescription);
@@ -46,6 +45,7 @@ export default function CampDetail() {
     }
 
     await addFavoriteCampGround(favoriteCampGround)
+    navigate('/profile')
   }
 
 

@@ -25,9 +25,9 @@ export default function App() {
           <Route element={<ProtectedRoutes />}>
             <Route path="/profile" element={<Profile />} />
             <Route path="/search" element={<CampFinder />} />
+            <Route path="/campmap/:state" element={<CampMap />} />
+            <Route path="/camps/:id" element={<CampDetail />} />
           </Route>
-          <Route path="/campmap/:state" element={<CampMap />} />
-          <Route path="/camps/:id" element={<CampDetail />} />
         </Routes>
       </Router>
     </>
