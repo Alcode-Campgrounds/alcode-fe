@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { fetchCampground } from "../../utils/campFetch"
+import { addFavoriteCampGround } from "../../utils/favoritesFetch";
 
 export default function CampDetail() {
     const { id } = useParams();
     const [name, setName] = useState('');
+    const [facilityID, setFacilityID] = useState('');
     const [description, setDescription] = useState('');
     const [directions, setDirections] = useState('');
     const [email, setEmail] = useState('');
@@ -16,6 +18,8 @@ export default function CampDetail() {
     useEffect(() => {
         const loadCampground = async () => {
             const campground = await fetchCampground(id);
+
+            setFacilityID(campground.facilityID);
             setName(campground.facilityName);
             setDescription(campground.facilityDescription);
             setDirections(campground.facilityDirections);
@@ -26,9 +30,29 @@ export default function CampDetail() {
         }
         loadCampground();
     }, [id])
+
+   const handleAddFavoriteCampGround = async (event)=>{
+    event.preventDefault()
+
+    const favoriteCampGround = {
+        facility_id: facilityID,
+        facility_name: name,
+        facility_description: description,
+        facility_directions: directions,
+        facility_phone: phone,
+        facility_email: email,
+        reservable, 
+        images
+    }
+
+    await addFavoriteCampGround(favoriteCampGround)
+  }
+
+
     return (
         <>
             <div className='camp-detail-container'>
+                <button onClick={handleAddFavoriteCampGround}>Save Your Next Adventure</button>
                 <h1 className='camp-detail-name'>{name}</h1>
                 <h2 className='camp-detail-headings'>Description:</h2>
                 <p className='camp-info'>{description}</p>

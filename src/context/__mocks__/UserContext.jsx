@@ -8,7 +8,7 @@ const UserProvider = ({children}) => {
     const [loading, setLoading] = useState(true)
     
     useEffect(() => { 
-        setUser({name: 'fake-user', email: 'fake@email.com'})
+        setUser({name: 'fake-user', email: 'fakeUser@email.com'})
         setLoading(false) 
     }, [])
 
