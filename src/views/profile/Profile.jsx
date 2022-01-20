@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { allSavedFavoriteCampGrounds } from "../../utils/favoritesFetch";
+import { allSavedFavoriteCampGrounds, deleteFavoriteFacility } from "../../utils/favoritesFetch";
 
 export default function Profile() {
     const [favorites, setFavorites] = useState([]);
@@ -12,8 +12,11 @@ export default function Profile() {
         }
         favori();
     }, []);
-    const handleDeleteFavorite = (facilityId) => {
+    const handleDeleteFavorite = async (facilityId) => {
         console.log(facilityId)
+        await deleteFavoriteFacility(facilityId)
+        const allFavorites = await allSavedFavoriteCampGrounds();
+        setFavorites(allFavorites);
     }
 
     return (
