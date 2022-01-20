@@ -4,11 +4,16 @@ import { allSavedFavoriteCampGrounds, deleteFavoriteFacility } from "../../utils
 
 export default function Profile() {
     const [favorites, setFavorites] = useState([]);
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
+        setLoading(true)
         const favori = async () => {
             const allFavorites = await allSavedFavoriteCampGrounds();
             setFavorites(allFavorites);
+            setTimeout(()=> {
+                setLoading(false);
+            }, 2000)
         }
         favori();
     }, []);
@@ -19,6 +24,7 @@ export default function Profile() {
         setFavorites(allFavorites);
     }
 
+    if (loading) return <h1>Loading. . . 🌎</h1>
     return (
        <> 
           <h2 className='saved-items-heading'>Future Camping Adventures:</h2>

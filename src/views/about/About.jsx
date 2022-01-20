@@ -55,7 +55,7 @@ export default function About() {
           <section className="tanner-sect">
           
             <div className="tanner"></div>
-            <p className='bio-txt'>Steve</p>
+            <p className='bio-txt'>Hi i'm Tanner, a full-stack software engineer from Vancouver, WA. My favorite aspect of camping is the adventure of new destinations.</p>
             <div className="dev-bio">
               <a className="social-links-github" href="https://github.com/tannermeck">
               </a>

@@ -7,8 +7,6 @@ import States from "./States";
 
 export default function CampFinder() {
   const [state, setState] = useState('ALL');
-  const [loading, setLoading] = useState(true)
-  console.log(loading)
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -16,7 +14,6 @@ export default function CampFinder() {
       const existingStorage = getStorage('ALL');
       if (existingStorage.length === 0) {
         const facilities = await fetchAllFacilities();
-        setLoading(false);
         setStorage('ALL', facilities);
       }
     }
@@ -42,10 +39,8 @@ export default function CampFinder() {
   const handleStateChange = (e) => {
     setState(e.target.value);
   }
-
   return (
     <>
-
       <h3 className='search-heading'>Search for all campgrounds by State</h3>
       <form onSubmit={handleStateSubmit} className='search-form'>
         <States setState={handleStateChange} />
