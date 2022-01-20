@@ -52,7 +52,7 @@ export default function CampDetail() {
     return (
         <>
             <div className='camp-detail-container'>
-                <button onClick={handleAddFavoriteCampGround}>Save Your Next Adventure</button>
+                <button className='favorites-btn' onClick={handleAddFavoriteCampGround}>Save Your Next Adventure</button>
                 <h1 className='camp-detail-name'>{name}</h1>
                 <h2 className='camp-detail-headings'>Description:</h2>
                 <p className='camp-info'>{description}</p>
@@ -63,13 +63,15 @@ export default function CampDetail() {
                 <h2 className='camp-detail-headings'>Email:</h2>
                 <p className='camp-info'>{email}</p>
                 {reservable && 
-                <p>Reservations are required</p>
+                <p className='camp-reservable'>Reservations are required</p>
                 }
                 {!reservable && 
-                <p className='camp-info'>Reservations unavailable</p>
+                <p className='camp-reservable'>Reservations unavailable</p>
                 }
                 {images.map(image => {
-                    return <img key={image} src={image} alt={name} />
+                    return (
+                        <div className='camp-img-container'>
+                    <img className='camp-img' key={image} src={image} alt={name} /></div>)
                 })}
             </div>
         </>

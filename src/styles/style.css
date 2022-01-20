@@ -77,6 +77,24 @@ a {
           box-shadow: 0rem 0.5rem 0.5rem gray;
 }
 
+.favorites-btn {
+  font-family: Spartan;
+  font-size: 2.5vmin;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.75rem 1.5rem;
+  color: white;
+  background: #f6511d;
+  font-weight: 550;
+  margin-inline: 10vw;
+}
+
+.favorites-btn:hover {
+  background: #ec7753;
+  -webkit-box-shadow: 0rem 0.5rem 0.5rem gray;
+          box-shadow: 0rem 0.5rem 0.5rem gray;
+}
+
 .header {
   border: none;
   font-size: 2.5rem;
@@ -202,7 +220,7 @@ fieldset {
 
 .username {
   color: #f6511d;
-  margin: 3vmin;
+  margin: 1rem 10vw;
   font-size: 1.5rem;
 }
 
@@ -469,21 +487,52 @@ fieldset {
 }
 
 .camp-detail-container {
-  padding-inline: 7.5vw;
   color: #124559;
 }
 
 .camp-detail-name {
   color: #124559;
   line-height: 125%;
+  margin-inline: 10vw;
+  font-size: 4.5vmin;
 }
 
 .camp-detail-headings {
   color: #f6511d;
-  font-size: 1.5vmax;
+  font-size: 4.5vmin;
+  margin-inline: 10vw;
 }
 
 .camp-info {
   font-size: 1.5vmax;
+  margin-inline: 10vw;
+}
+
+.camp-reservable {
+  margin-inline: 10vw;
+  font-size: 4.5vmin;
+}
+
+.camp-img-container {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.camp-img {
+  max-width: 90vw;
+  padding: 2rem;
+  border-radius: 3vmin;
 }
 /*# sourceMappingURL=style.css.map */

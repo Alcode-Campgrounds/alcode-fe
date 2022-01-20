@@ -107,6 +107,11 @@ $primary-btn-font: Spartan;
     opacity: 65%;
 }
 
+.favorites-btn {
+  @include button();
+  margin-inline: 10vw;
+}
+
 // HEADER STYLES
 $header-bg: $light;
 $header-font-sz: 2.5rem;
@@ -226,7 +231,7 @@ fieldset {
 
 .username {
   color: $color-pop;
-  margin: 3vmin;
+  margin: 1rem 10vw;
   font-size: 1.5rem;
 }
 
@@ -372,23 +377,49 @@ $sect-bx-shadow: 1rem 1rem 1rem rgb(224, 221, 221);
 
 // CAMP DETAIL VIEW
 .camp-detail-container {
-    padding-inline: 7.5vw;
     color: $blue;
 }
 
 .camp-detail-name {
     color: $blue;
     line-height: 125%;
+    margin-inline: 10vw;
+    font-size: 4.5vmin;
 }
 
 .camp-detail-headings {
     color: $color-pop;
-    font-size: 1.5vmax;
+    font-size: 4.5vmin;
+    margin-inline: 10vw;
 }
 
 .camp-info {
     font-size: 1.5vmax;
+    margin-inline: 10vw;
+    
 }
+
+.camp-reservable {
+  margin-inline: 10vw;
+  font-size: 4.5vmin;
+}
+
+.camp-img-container {
+ 
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.camp-img {
+ max-width: 90vw;
+ padding: 2rem;
+ border-radius: 3vmin;
+
+}
+
 
 
 // LOADING SPINNER
