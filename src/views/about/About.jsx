@@ -13,6 +13,7 @@ export default function About() {
         <div className="about-list">
           <section className="alan-sect">
                 <div className="alan"></div>
+                <p className='bio-txt'>Beast Mode</p>  
           <div className="dev-bio">
               <a className="social-links-github" href="https://github.com/satyadvaya">
                 
@@ -47,12 +48,14 @@ export default function About() {
               >
               </a>
             </div>
+            <p className='bio-txt'>the brains</p>
             <div className="cristian"></div>
             
           </section>
           <section className="tanner-sect">
-
+          
             <div className="tanner"></div>
+            <p className='bio-txt'>Steve</p>
             <div className="dev-bio">
               <a className="social-links-github" href="https://github.com/tannermeck">
               </a>
@@ -73,20 +76,21 @@ export default function About() {
               <a
                 className="social-links-github"
                 href="https://github.com/justin-w-soto"
-              >
+                >
               </a>
               <a
                 className="social-links-linkedIn"
                 href="https://www.linkedin.com/in/justinwsoto/"
-              >
+                >
               
               </a>
               <a
                 className="social-links-email"
                 href="mailto:justinwsoto@gmail.com?subject=Inquiry"
-              >
+                >
               </a>
             </div>
+                  <p className='bio-txt'>this guy</p>
             <div className="justin"></div>
           </section>
         </div>

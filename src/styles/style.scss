@@ -313,6 +313,12 @@ $sect-bx-shadow: 1rem 1rem 1rem rgb(224, 221, 221);
   max-width: 100%;
 }
 
+.bio-txt {
+  font-size: 2vmin;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 @mixin socialLinks {
   width: 35vw;
   background-size: cover;
