@@ -18,7 +18,6 @@ export default function CampDetail() {
     useEffect(() => {
         const loadCampground = async () => {
             const campground = await fetchCampground(id);
-
             setFacilityID(campground.facilityID);
             setName(campground.facilityName);
             setDescription(campground.facilityDescription);

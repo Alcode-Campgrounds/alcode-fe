@@ -13,13 +13,13 @@ export default function Profile() {
         }
         favori();
     }, []);
-
-    console.log('favorites', favorites);
-
+    const handleDeleteFavorite = (facilityId) => {
+        console.log(facilityId)
+    }
 
     return (
        <> 
-            <h2>This is your life</h2>
+            <h2>Future Camping Adventures:</h2>
             <div className='fav-list-parent'>
                 <ul className='fav-list'>
                     {favorites.map((favorite) =>(
@@ -29,6 +29,7 @@ export default function Profile() {
                                     <p>{favorite.facility_name}</p>
                                 </Link>
                                 <p>{favorite.facility_phone}</p>
+                                <button onClick={(()=> handleDeleteFavorite(favorite.facility_id))}>Delete</button>
                             </div>
                         </li>)
                     )}
