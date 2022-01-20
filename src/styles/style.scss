@@ -94,7 +94,11 @@ $primary-btn-font: Spartan;
 }
 
 .google-btn {
-    @include button();
+    background-image: url('../../public/btn_google_signin_dark_normal_web.png');
+    color: rgba(255, 255, 255, 0);
+    background-size: cover;
+    font-size: 7vmin;
+    
 }
 
 .hero-btn {
@@ -103,7 +107,6 @@ $primary-btn-font: Spartan;
     top: 93%;
     left: 50%;
     transform: translate(-50%, -50%);
-    // margin-top: 43vmin;
     opacity: 65%;
 }
 
@@ -143,7 +146,6 @@ $header-pad: 2rem;
 }
 
 .menuNav {
-  scroll-behavior: smooth;
   position: fixed;
   z-index: 3;
   top: 20vmin;
@@ -158,7 +160,6 @@ $header-pad: 2rem;
     list-style: none;
     width: fit-content;
     height: fit-content;
-    overflow-y: scroll;
     background: $dark;
     padding: 5%;
     opacity: 90%;
@@ -198,12 +199,11 @@ $form-txt-color: $blue;
   margin: $form-margin;
   font-size: $form-font-sz;
   font-family: "Roboto", sans-serif;
-  color: $blue;
+  color: $light-ablue;
 }
 
 fieldset {
   z-index: 1;
-  height: 60vh;
   max-width: 100%;
   margin: $form-margin;
   border-radius: 0.75rem;
@@ -219,7 +219,7 @@ fieldset {
 
 .signup-txt,
 .signin-txt {
-  color: $blue;
+  color: $light-blue;
   &:hover {
     color: $color-pop;
   }
@@ -426,9 +426,8 @@ $sect-bx-shadow: 1rem 1rem 1rem rgb(224, 221, 221);
   
 }
 
-.fav-list-parent {
-  // background-color: tomato;
-}
+// .fav-list-parent {
+// }
 
 
 

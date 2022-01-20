@@ -37,20 +37,10 @@ a {
 }
 
 .google-btn {
-  font-family: Spartan;
-  font-size: 2.5vmin;
-  border: none;
-  border-radius: 0.25rem;
-  padding: 0.75rem 1.5rem;
-  color: white;
-  background: #f6511d;
-  font-weight: 550;
-}
-
-.google-btn:hover {
-  background: #ec7753;
-  -webkit-box-shadow: 0rem 0.5rem 0.5rem gray;
-          box-shadow: 0rem 0.5rem 0.5rem gray;
+  background-image: url("../../public/btn_google_signin_dark_normal_web.png");
+  color: rgba(255, 255, 255, 0);
+  background-size: cover;
+  font-size: 7vmin;
 }
 
 .hero-btn {
@@ -120,7 +110,6 @@ a {
 }
 
 .menuNav {
-  scroll-behavior: smooth;
   position: fixed;
   z-index: 3;
   top: 20vmin;
@@ -142,7 +131,6 @@ a {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  overflow-y: scroll;
   background: #01161e;
   padding: 5%;
   opacity: 90%;
@@ -183,12 +171,11 @@ a {
   margin: 0 auto;
   font-size: 3vmin;
   font-family: "Roboto", sans-serif;
-  color: #124559;
+  color: #598392;
 }
 
 fieldset {
   z-index: 1;
-  height: 60vh;
   max-width: 100%;
   margin: 0 auto;
   border-radius: 0.75rem;
