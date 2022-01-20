@@ -8,6 +8,7 @@
     color: $primary-btn-txt;
     background: $primary-btn-bg;
     font-weight: 550;
+    opacity: 80%;
     &:hover {
         background: $primary-btn-hover;
         box-shadow: 0rem 0.5rem 0.5rem gray;
@@ -90,7 +91,8 @@ $primary-btn-font: Spartan;
 }
 
 .primary-btn {
-    // @include button();
+    @include button();
+    width: 35vmin;
 }
 
 .google-btn {
@@ -200,7 +202,7 @@ $form-txt-color: $blue;
   margin: $form-margin;
   font-size: $form-font-sz;
   font-family: "Roboto", sans-serif;
-  color: $light-ablue;
+  color: $light-blue;
 }
 
 fieldset {

@@ -11,6 +11,7 @@ a {
   color: white;
   background: #f6511d;
   font-weight: 550;
+  opacity: 80%;
 }
 
 .logout-btn:hover {
@@ -28,6 +29,8 @@ a {
   color: white;
   background: #f6511d;
   font-weight: 550;
+  opacity: 80%;
+  width: 35vmin;
 }
 
 .primary-btn:hover {
@@ -52,6 +55,7 @@ a {
   color: white;
   background: #f6511d;
   font-weight: 550;
+  opacity: 80%;
   position: absolute;
   top: 93%;
   left: 50%;
@@ -75,6 +79,7 @@ a {
   color: white;
   background: #f6511d;
   font-weight: 550;
+  opacity: 80%;
   margin-inline: 10vw;
 }
 
@@ -194,7 +199,7 @@ fieldset {
 
 .signup-txt,
 .signin-txt {
-  color: #124559;
+  color: #598392;
 }
 
 .signup-txt:hover,
@@ -466,6 +471,7 @@ fieldset {
   color: white;
   background: #f6511d;
   font-weight: 550;
+  opacity: 80%;
 }
 
 .search-btn:hover {
