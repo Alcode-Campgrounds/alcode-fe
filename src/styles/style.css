@@ -63,11 +63,10 @@ a {
   background: #f6511d;
   font-weight: 550;
   position: absolute;
-  top: 50%;
+  top: 93%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  margin-top: 43vmin;
   opacity: 65%;
 }
 
@@ -124,10 +123,10 @@ a {
   scroll-behavior: smooth;
   position: fixed;
   z-index: 3;
-  top: 25vh;
+  top: 20vmin;
   right: 0;
   bottom: 0;
-  height: 100vh;
+  max-height: 66vh;
   width: 0;
   overflow: hidden;
   max-width: 290px;
@@ -137,10 +136,13 @@ a {
 
 .menuNav.showMenu {
   list-style: none;
-  width: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  overflow-y: scroll;
   background: #01161e;
   padding: 5%;
   opacity: 90%;
@@ -150,7 +152,6 @@ a {
   color: #eff6e0;
   list-style: none;
   padding: 3%;
-  width: 33vw;
 }
 
 .nav-links:hover {
@@ -235,7 +236,7 @@ fieldset {
 
 .hero-txt {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -250,7 +251,7 @@ fieldset {
 
 .hero-subtxt {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -534,5 +535,11 @@ fieldset {
   max-width: 90vw;
   padding: 2rem;
   border-radius: 3vmin;
+}
+
+.saved-items-heading {
+  color: #124559;
+  margin: 0 10vmin;
+  font-size: 4.5vmin;
 }
 /*# sourceMappingURL=style.css.map */

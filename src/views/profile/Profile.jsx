@@ -19,7 +19,7 @@ export default function Profile() {
 
     return (
        <> 
-            <h2>This is your life</h2>
+            <h2 className='saved-items-heading'>Your Saved Campsites</h2>
             <div className='fav-list-parent'>
                 <ul className='fav-list'>
                     {favorites.map((favorite) =>(
