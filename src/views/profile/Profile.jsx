@@ -7,7 +7,6 @@ export default function Profile() {
 
     useEffect(() => {
         const favori = async () => {
-            console.log('hoa')
             const allFavorites = await allSavedFavoriteCampGrounds();
             setFavorites(allFavorites);
         }
