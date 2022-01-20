@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
-import { useRef, useEffect, useState } from "react";
 import "./mapbox.css";
 import { getStorage } from "../../utils/localStorage";
 import { useParams } from "react-router-dom";
@@ -27,6 +26,7 @@ export default function CampMap() {
       center: [lng, lat],
       zoom: zoom,
     });
+
     points.map((point) => {
       const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(
         `<a href=http://localhost:3000/camps/${point.facilityID}>${point.facilityName}</a>`
