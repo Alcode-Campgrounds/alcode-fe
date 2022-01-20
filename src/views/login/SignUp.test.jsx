@@ -1,7 +1,7 @@
 import {render, screen} from '@testing-library/react';
 import { UserProvider } from '../../context/UserContext';
 import SignUp from './SignUp';
-import {MemoryRouter, Route, Router, Routes} from 'react-router-dom';
+import {MemoryRouter, Route, Routes} from 'react-router-dom';
 import CampFinder from '../search/CampFinder';
 import userEvent from '@testing-library/user-event';
 import ProtectedRoutes from '../../components/PrivateRoute/ProtectedRoutes';
