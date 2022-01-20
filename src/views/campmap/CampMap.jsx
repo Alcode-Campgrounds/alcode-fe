@@ -29,7 +29,7 @@ export default function CampMap() {
 
     points.map((point) => {
       const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(
-        `<a href=http://localhost:3000/camps/${point.facilityID}>${point.facilityName}</a>`
+        `<a href=${process.env.REACT_APP_MAPBOX_HREF}/${point.facilityID}>${point.facilityName}</a>`
       );
       return new mapboxgl.Marker()
         .setLngLat([point.facilityLongitude, point.facilityLatitude])
