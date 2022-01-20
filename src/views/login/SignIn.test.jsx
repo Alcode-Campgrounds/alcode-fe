@@ -30,7 +30,7 @@ const worker = setupServer(
     }),
 )
 beforeAll(() => {
-    worker.listen()
+    worker.listen({ onUnhandledRequest: "bypass" })
 });
 afterAll(() => {
     worker.close()
