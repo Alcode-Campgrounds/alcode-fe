@@ -28,24 +28,26 @@ export default function CampDetail() {
     }, [id])
     return (
         <>
-            <h1>{name}</h1>
-            <h3>Description:</h3>
-            <p>{description}</p>
-            <h3>Directions:</h3>
-            <p>{directions}</p>
-            <h3>Phone-Number:</h3>
-            <p>{phone}</p>
-            <h3>Email:</h3>
-            <p>{email}</p>
-            {reservable && 
-            <p>Reservations are required</p>
-            }
-            {!reservable && 
-            <p>Reservations unavailable</p>
-            }
-            {images.map(image => {
-                return <img key={image} src={image} alt={name} />
-            })}
+            <div className='camp-detail-container'>
+                <h1 className='camp-detail-name'>{name}</h1>
+                <h2 className='camp-detail-headings'>Description:</h2>
+                <p className='camp-info'>{description}</p>
+                <h2 className='camp-detail-headings'>Directions:</h2>
+                <p className='camp-info'>{directions}</p>
+                <h2 className='camp-detail-headings'>Phone-Number:</h2>
+                <p className='camp-info'>{phone}</p>
+                <h2 className='camp-detail-headings'>Email:</h2>
+                <p className='camp-info'>{email}</p>
+                {reservable && 
+                <p>Reservations are required</p>
+                }
+                {!reservable && 
+                <p className='camp-info'>Reservations unavailable</p>
+                }
+                {images.map(image => {
+                    return <img key={image} src={image} alt={name} />
+                })}
+            </div>
         </>
     )
 }
