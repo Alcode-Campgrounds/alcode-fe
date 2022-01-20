@@ -18,7 +18,7 @@ export default function CampDetail() {
     useEffect(() => {
         const loadCampground = async () => {
             const campground = await fetchCampground(id);
-            console.log(campground);
+            // console.log(campground);
             setFacilityID(campground.facilityID);
             setName(campground.facilityName);
             setDescription(campground.facilityDescription);
@@ -45,10 +45,8 @@ export default function CampDetail() {
         images
     }
 
-   const here =  await addFavoriteCampGround(favoriteCampGround)
-
-    console.log('here', here)
-   }
+    await addFavoriteCampGround(favoriteCampGround)
+  }
 
 
     return (

@@ -1,3 +1,4 @@
+
 export const addFavoriteCampGround = async (campGroundObj) =>{
 const addFavoriteURL = `${process.env.REACT_APP_ADD_FAVORITE}`
     const response = await fetch(addFavoriteURL, {
@@ -11,3 +12,16 @@ const addFavoriteURL = `${process.env.REACT_APP_ADD_FAVORITE}`
     const data = await response.json();
     return data;
 }
+
+
+export const allSavedFavoriteCampGrounds= async () =>{
+   
+    const URL = process.env.REACT_APP_GET_FAVORITES
+    
+        const response = await fetch(URL, {
+            method: 'GET',
+            credentials: 'include',
+        });
+        const data = await response.json();
+        return data;
+    }
