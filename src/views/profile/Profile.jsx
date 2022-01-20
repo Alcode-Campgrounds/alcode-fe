@@ -23,12 +23,12 @@ export default function Profile() {
             <div className='fav-list-parent'>
                 <ul className='fav-list'>
                     {favorites.map((favorite) =>(
-                        <li key={favorite.facility_id}> 
+                        <li className='fav-list' key={favorite.facility_id}> 
                             <div>
                                 <Link to={`/camps/${favorite.facility_id}`}>
-                                    <p>{favorite.facility_name}</p>
+                                    <p className='fav-list'>{favorite.facility_name}</p>
                                 </Link>
-                                <p>{favorite.facility_phone}</p>
+                                <p className='fav-list-phone'>{favorite.facility_phone}</p>
                             </div>
                         </li>)
                     )}

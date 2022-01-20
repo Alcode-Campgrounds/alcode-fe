@@ -60,7 +60,13 @@
     border: none;
     color: $light-blue;
 }
-    
+
+@mixin favs {
+  list-style: none;
+  text-decoration: none;
+  color: $blue;
+  font-size: 1.75rem;
+}
 // THEME STYLES
 $blue: #124559;
 $light-blue: #598392;
@@ -87,16 +93,16 @@ $primary-btn-font: Spartan;
 
 // BUTTONS
 .logout-btn {
-    @include button();
+  @include button();
 }
 
 .primary-btn {
-    @include button();
+  @include button();
     width: 35vmin;
 }
 
 .google-btn {
-    background-image: url('../../public/btn_google_signin_dark_normal_web.png');
+  background-image: url('../../public/assets/btn_google_signin_dark_normal_web.png');
     color: rgba(255, 255, 255, 0);
     background-size: cover;
     font-size: 7vmin;
@@ -191,7 +197,7 @@ $form-txt-color: $blue;
     width: 100vw;
     height: 70vh;
     text-align: center;
-    background-image: url("../../public/stream.png");
+    background-image: url("../../public/assets/stream.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -253,9 +259,9 @@ fieldset {
     font-size: 7vmin;
     font-weight: 900;
     width: 65vw;
-}
-
-.hero-subtxt {
+  }
+  
+  .hero-subtxt {
     @include heroTxt();
     color: $light;
     font-size: 3vmin;
@@ -284,10 +290,10 @@ $sect-bx-shadow: 1rem 1rem 1rem rgb(224, 221, 221);
     @include flexCenter();
     color: $blue;
     font-size: 8vmin;
-}
+  }
 
-.about-container {
-  @include flexCenter();
+  .about-container {
+    @include flexCenter();
   margin: 0 auto;
   width: $sect-w;
 }
@@ -299,49 +305,75 @@ $sect-bx-shadow: 1rem 1rem 1rem rgb(224, 221, 221);
 }
 
 .dev-bio {
-  height: $sect-h;
   display: flex;
   flex-direction: column;
-  padding: 5%;
-  text-align: center;
-  flex: 45%;
-  font-size: 3vh;
+  padding: 7%;
+  flex: 50%;
+  justify-content: space-around;
+  margin-bottom: 5vmin;
+  max-height: 33vh;
+  max-width: 25vw;
 }
 
-.social-links {
-  padding: 5%;
-  color: $blue;
+@mixin socialLinks {
+  padding-right:5%;
+  width: 35vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  height: 25vmin;
   &:hover {
-    color: $color-pop;
+    background-color: $color-pop;
   }
+}
+
+.social-links-github {
+ @include socialLinks();
+  background-image: url('/public/assets/github\ icon.png');
+  max-width: 17vmin;
+}
+
+.social-links-linkedIn {
+  @include socialLinks();
+  background-image: url('/public/assets/linkedInIcon.png');
+  max-width: 17vmin;
+  margin-top: 2vmin;
+  
+}
+
+.social-links-email {
+  @include socialLinks();
+  background-image: url('/public/assets/email.png');
+  max-width: 17vmin;
+  margin-top: 2vmin;
 }
 
 .alan-sect {
     @include devDetailCol();
-}
-
-.alan {
+  }
+  
+  .alan {
     @include devDetail();
-    background-image: url("../../public/a-face.png");
- 
+    background-image: url("../../public/assets/a-face.png");
+    
 }
 
 .cristian-sect {
-    @include devDetailCol();
+  @include devDetailCol();
 }
 
 .cristian {
     @include devDetail();
-    background-image: url("../../public/c-face.png");
-}
+    background-image: url("../../public/assets/c-face.png");
+  }
 
-.tanner-sect {
+  .tanner-sect {
     @include devDetailCol();
-}
-
+  }
+  
 .tanner {
-    @include devDetail();   
-    background-image: url("../../public/t-face.png");
+  @include devDetail();   
+  background-image: url("../../public/assets/t-face.png");
 }
 
 .justin-sect {
@@ -349,20 +381,20 @@ $sect-bx-shadow: 1rem 1rem 1rem rgb(224, 221, 221);
 }
 
 .justin {
-    @include devDetail();
-    background-image: url("../../public/j-face.png");
+  @include devDetail();
+  background-image: url("../../public/assets/j-face.png");
 }
 
 // SEARCH VIEW
 .search-heading {
-    @include flexCenter();
-    color: $blue;
+  @include flexCenter();
+  color: $blue;
     font-size: 4vmin;
-}
-
+  }
+  
 .search-form {
-    @include flexCenter();
-    
+  @include flexCenter();
+  
 }
 
 .state-dropdown {
@@ -372,18 +404,18 @@ $sect-bx-shadow: 1rem 1rem 1rem rgb(224, 221, 221);
     background-color: rgba(230, 232, 243, 0.453);
     font-size: 1.25rem;
     
-}
+  }
 
-.search-btn {
+  .search-btn {
     @include button();
 }
 
 // CAMP DETAIL VIEW
 .camp-detail-container {
     color: $blue;
-}
+  }
 
-.camp-detail-name {
+  .camp-detail-name {
     color: $blue;
     line-height: 125%;
     margin-inline: 10vw;
@@ -391,48 +423,64 @@ $sect-bx-shadow: 1rem 1rem 1rem rgb(224, 221, 221);
 }
 
 .camp-detail-headings {
-    color: $color-pop;
+  color: $color-pop;
     font-size: 4.5vmin;
     margin-inline: 10vw;
-}
+  }
 
 .camp-info {
-    font-size: 1.5vmax;
+  font-size: 1.5vmax;
     margin-inline: 10vw;
     
-}
-
+  }
+  
 .camp-reservable {
-    margin-inline: 10vw;
-    font-size: 4.5vmin;
+  margin-inline: 10vw;
+  font-size: 4.5vmin;
 }
 
 .camp-img-container {
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+  }
 
-.camp-img {
+  .camp-img {
     max-width: 90vw;
     padding: 2rem;
     border-radius: 3vmin;
 
-}
+  }
 
-.saved-items-heading {
-  color: $blue;
-  margin: 0 10vmin;
-  font-size: 4.5vmin;
+  .saved-items-heading {
+    color: $blue;
+    margin: 0 10vmin;
+    font-size: 2.25rem;
   
-}
+  }
 
-// .fav-list-parent {
-// }
-
-
+  
+  .fav-list-parent {
+    @include flexCenter();
+    box-shadow: 0rem 1rem 1rem rgba(223, 220, 220, 0.897);
+    max-width: 90vw;
+    margin: 2vmin auto;
+    border-radius: 1vmin;
+  }
+  .fav-list-phone {
+    @include favs()
+  }
+  
+  .fav-list {
+   @include favs();
+    &:hover {
+       color: $color-pop;
+    }
+  
+  }
+  
 
 // LOADING SPINNER
 // .loader {
