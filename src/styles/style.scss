@@ -1,64 +1,141 @@
+
+// GLOBALS 
+
+a {
+  text-decoration: none;
+}
+
 // MIXINS
+
 @mixin button {
-    font-family: $primary-btn-font;
-    font-size: $primary-btn-font-sz;
-    border: $primary-btn-border;
-    border-radius: $primary-btn-radius;
-    padding: $primary-btn-pad;
-    color: $primary-btn-txt;
-    background: $primary-btn-bg;
-    font-weight: 550;
-    opacity: 80%;
-    &:hover {
-        background: $primary-btn-hover;
-        box-shadow: 0rem 0.5rem 0.5rem gray;
-    }
+  font-family: $primary-btn-font;
+  font-size: $primary-btn-font-sz;
+  border: $primary-btn-border;
+  border-radius: $primary-btn-radius;
+  padding: $primary-btn-pad;
+  color: $primary-btn-txt;
+  background: $primary-btn-bg;
+  font-weight: 550;
+  opacity: 80%;
+  &:hover {
+    background: $primary-btn-hover;
+    box-shadow: 0rem 0.5rem 0.5rem gray;
+  }
+  // THEME STYLES
+  
+  $blue: #124559;
+  $light-blue: #598392;
+  $grey: #dfe7e9dc;
+  $dark: #01161e;
+  $light: #eff6e0;
+  $color-pop: #f6511d;
+  
+  // HEADER THEME
+  
+  $header-bg: $light;
+  $header-font-sz: 2.5rem;
+  $header-border: none;
+  $header-txt-color: $blue;
+  $header-display: flex;
+  $header-justify: space-between;
+  $header-pad: 2rem;
+  
+  // PRIMARY BTN THEME
+  
+  $primary-btn-bg: $color-pop;
+  $primary-btn-txt: white;
+  $primary-btn-font-sz: 2.5vmin;
+  $primary-btn-border: none;
+  $primary-btn-radius: 0.25rem;
+  $primary-btn-pad: 0.75rem 1.5rem;
+  $primary-btn-hover: #ec7753;
+  $primary-btn-font: Spartan;
+  
+  // FORM THEME
+  
+  $form-layout: center;
+  $form-width: 75vmin;
+  $form-margin: 0 auto;
+  $form-font-sz: 3vmin;
+  $form-txt-color: $blue;
+  
+  // BIO THEME
+  
+  $about-margin: 0 auto;
+  $about-pad: 5vmin;
+  $about-width: 35vmin;
+  $about-height: 35vmin;
+  $about-img-sz: cover;
+  $about-repeat: no-repeat;
+  $about-border-radius: 50%;
+  $about-border: 2px solid white;
+  $sect-w: 75vw;
+  $sect-h: 55vmin;
+  $sect-border: $light solid 1px;
+  $sect-border-radius: 2rem;
+  $sect-margin: 3vmin;
+  $sect-bx-shadow: 1rem 1rem 1rem rgb(224, 221, 221);
 }
 
 @mixin heroTxt {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 65%;
-    font-family: "Work Sans", sans-serif;
-    text-align: center;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 65%;
+  font-family: "Work Sans", sans-serif;
+  text-align: center;
 }
-
+  
 @mixin flexCenter {
-    display: flex;
-    justify-content: center;
-    align-content: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 @mixin devDetail {
-    z-index: 2;
-    width: $about-width;
-    height: $about-height;
-    background-size: $about-img-sz;
-    background-repeat: $about-repeat;
-    border-radius: $about-border-radius;
-    border: $about-border;
-    margin: $about-margin;
+  z-index: 2;
+  width: $about-width;
+  height: $about-height;
+  background-size: $about-img-sz;
+  background-repeat: $about-repeat;
+  border-radius: $about-border-radius;
+  border: $about-border;
+  margin: $about-margin;
 }
 
 @mixin devDetailCol {
-    width: $sect-w;
-    height: $sect-h;
-    padding: $about-pad;
-    border: $sect-border;
-    border-radius: $sect-border-radius;
-    margin: $sect-margin;
-    box-shadow: $sect-bx-shadow;
-    display: flex;
-    flex: 50%;
+  width: $sect-w;
+  height: $sect-h;
+  padding: $about-pad;
+  border: $sect-border;
+  border-radius: $sect-border-radius;
+  margin: $sect-margin;
+  box-shadow: $sect-bx-shadow;
+  display: flex;
+  flex: 50%;
+}
+
+@mixin socialLinks {
+  width: 35vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  height: 35vmin;
+}
+
+@mixin social-links {
+  max-width: 25vmin;
+  height: 55vmin;
+  margin-top: 2vmin;
+  padding: 3%
 }
 
 @mixin input {
-    font-size: 1.5em;
-    margin: 2vmin;
-    border: none;
-    color: $light-blue;
+  font-size: 1.5em;
+  margin: 2vmin;
+  border: none;
+  color: $light-blue;
 }
 
 @mixin favs {
@@ -67,53 +144,21 @@
   color: $blue;
   font-size: 1.75rem;
 }
-// THEME STYLES
-$blue: #124559;
-$light-blue: #598392;
-$grey: #dfe7e9dc;
-$dark: #01161e;
-$light: #eff6e0;
-$color-pop: #f6511d;
-
-// GLOBAL LIST STYLE
-
-
-a {
-  text-decoration: none;
-}
-
-// PRIMARY BTN STYLES
-$primary-btn-bg: $color-pop;
-$primary-btn-txt: white;
-$primary-btn-font-sz: 2.5vmin;
-$primary-btn-border: none;
-$primary-btn-radius: 0.25rem;
-$primary-btn-pad: 0.75rem 1.5rem;
-$primary-btn-hover: #ec7753;
-$primary-btn-font: Spartan;
 
 // BUTTONS
+
 .logout-btn {
-  @include button();
+    @include button();
 }
 
 .delete-btn {
-  @include button();
+    @include button();
 }
 
 .primary-btn {
-  @include button();
+    @include button();
     width: 35vmin;
 }
-
-.google-btn {
-  background-image: url('../../public/assets/btn_google_signin_dark_normal_web.png');
-    color: rgba(255, 255, 255, 0);
-    background-size: cover;
-    font-size: 7vmin;
-    
-}
-
 
 .hero-btn {
     @include button();
@@ -125,76 +170,73 @@ $primary-btn-font: Spartan;
 }
 
 .favorites-btn {
-  @include button();
-  margin-inline: 10vw;
+    @include button();
+    margin-inline: 10vw;
+}
+
+.google-btn {
+    background-image: url('../../public/assets/btn_google_signin_dark_normal_web.png');
+    color: rgba(255, 255, 255, 0);
+    background-size: cover;
+    font-size: 7vmin;
 }
 
 // HEADER STYLES
-$header-bg: $light;
-$header-font-sz: 2.5rem;
-$header-border: none;
-$header-txt-color: $blue;
-$header-display: flex;
-$header-justify: space-between;
-$header-pad: 2rem;
 
 .header {
-  border: $header-border;
-  font-size: $header-font-sz;
-  display: $header-display;
-  justify-content: $header-justify;
-  color: $header-txt-color;
-  height: 25vmin;
+    border: $header-border;
+    font-size: $header-font-sz;
+    display: $header-display;
+    justify-content: $header-justify;
+    color: $header-txt-color;
+    height: 25vmin;
 }
 
 .brand {
-  font-size: 15vmin;
-  padding-inline: $header-pad;
-  font-family: Spartan;
+    font-size: 15vmin;
+    padding-inline: $header-pad;
+    font-family: Spartan;
 }
 
 .hamburger-btn {
-  background: transparent;
-  border: none;
-  margin-inline: 0 5vmin;
+    background: transparent;
+    border: none;
+    margin-inline: 0 5vmin;
 }
 
+// NAV MENU
+
 .menuNav {
-  position: fixed;
-  z-index: 3;
-  top: 20vmin;
-  right: 0;
-  bottom: 0;
-  max-height: 66vh;
-  width: 0;
-  overflow: hidden;
-  max-width: 290px;
-  transition: 0.35s;
-  &.showMenu {
-    list-style: none;
-    width: fit-content;
-    height: fit-content;
-    background: $dark;
-    padding: 5%;
-    opacity: 90%;
+    position: fixed;
+    z-index: 3;
+    top: 20vmin;
+    right: 0;
+    bottom: 0;
+    max-height: 66vh;
+    width: 0;
+    overflow: hidden;
+    max-width: 290px;
+    transition: 0.35s;
+    &.showMenu {
+      list-style: none;
+      width: fit-content;
+      height: fit-content;
+      background: $dark;
+      padding: 5%;
+      opacity: 90%;
   }
 }
 
 .nav-links {
-  color: $light;
-  list-style: none;
-  padding: 3%;
-  &:hover {
-    color: $color-pop;
-  }
+    color: $light;
+    list-style: none;
+    padding: 3%;
+    &:hover {
+      color: $color-pop;
+    }
 }
 
 // FORM STYLES
-$form-layout: center;
-$form-width: 75vmin;
-$form-margin: 0 auto;
-$form-font-sz: 3vmin;
-$form-txt-color: $blue;
 
 .form-container {
     @include flexCenter();
@@ -209,20 +251,20 @@ $form-txt-color: $blue;
 }
 
 .form-main {
-  width: $form-width;
-  margin: $form-margin;
-  font-size: $form-font-sz;
-  font-family: "Roboto", sans-serif;
-  color: $light-blue;
+    width: $form-width;
+    margin: $form-margin;
+    font-size: $form-font-sz;
+    font-family: "Roboto", sans-serif;
+    color: $light-blue;
 }
 
 fieldset {
-  z-index: 1;
-  max-width: 100%;
-  margin: $form-margin;
-  border-radius: 0.75rem;
-  background: $grey;
-  border: none;
+    z-index: 1;
+    max-width: 100%;
+    margin: $form-margin;
+    border-radius: 0.75rem;
+    background: $grey;
+    border: none;
 }
 
 .input-A,
@@ -233,29 +275,29 @@ fieldset {
 
 .signup-txt,
 .signin-txt {
-  color: $light-blue;
-  &:hover {
-    color: $color-pop;
+    color: $light-blue;
+    &:hover {
+      color: $color-pop;
   }
 }
 
 .legend {
-  color: $form-txt-color;
+    color: $form-txt-color;
 }
 
 .username {
-  color: $color-pop;
-  margin: 1rem 10vw;
-  font-size: 1.5rem;
+    color: $color-pop;
+    margin: 1rem 10vw;
+    font-size: 1.5rem;
 }
 
 .hero-img {
-  width: 100vw;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 85%;
-  text-align: center;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 85%;
+    text-align: center;
 }
 
 .hero-txt {
@@ -264,7 +306,7 @@ fieldset {
     font-size: 7vmin;
     font-weight: 900;
     width: 65vw;
-  }
+}
   
   .hero-subtxt {
     @include heroTxt();
@@ -275,121 +317,79 @@ fieldset {
 }
 
 // ABOUT US & BIOS
-$about-margin: 0 auto;
-$about-pad: 5vmin;
-$about-width: 35vmin;
-$about-height: 35vmin;
-$about-img-sz: cover;
-$about-repeat: no-repeat;
-$about-border-radius: 50%;
-$about-border: 2px solid white;
-
-$sect-w: 75vw;
-$sect-h: 55vmin;
-$sect-border: $light solid 1px;
-$sect-border-radius: 2rem;
-$sect-margin: 3vmin;
-$sect-bx-shadow: 1rem 1rem 1rem rgb(224, 221, 221);
 
 .about-heading {
     @include flexCenter();
     color: $blue;
     font-size: 8vmin;
-  }
+}
 
   .about-container {
     @include flexCenter();
-  margin: 0 auto;
-  width: $sect-w;
+    margin: 0 auto;
+    width: $sect-w;
 }
 
 .about-list {
-  color: $dark;
-  list-style: none;
-  color: rgb(0, 0, 0);
+    color: $dark;
+    list-style: none;
+    color: rgb(0, 0, 0);
 }
 
 .dev-bio {
-  display: flex;
-  flex-direction: column;
-  flex: -50%;
-  max-height: 100%;
-  max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: -50%;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .bio-txt {
-  font-size: 2vmin;
-  width: 10vmin;
-  display: flex;
+    font-size: 2vmin;
+    width: 10vmin;
+    display: flex;
 }
 
-@mixin socialLinks {
-  width: 35vw;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin: 0 auto;
-  height: 35vmin;
-}
 
 .social-links-github {
- @include socialLinks();
-  background-image: url('/public/assets/github\ icon.png');
-  max-width: 25vmin;
-  height: 55vmin;
-  margin-top: 2vmin;
-  padding: 3%
+  @include socialLinks();
+  @include social-links();
+    background-image: url('/public/assets/github\ icon.png');
 }
 
 .social-links-linkedIn {
-  @include socialLinks();
-  background-image: url('/public/assets/linkedInIcon.png');
-  max-width: 25vmin;
-  height: 55vmin;
-  margin-top: 2vmin;
-  padding: 3%
-  
+    @include socialLinks();
+    @include social-links();
+    background-image: url('/public/assets/linkedInIcon.png');
 }
 
 .social-links-email {
   @include socialLinks();
+  @include social-links();
   background-image: url('/public/assets/email.png');
-  max-width: 25vmin;
-  height: 55vmin;
-  margin-top: 2vmin;
-  padding: 3%;
 }
 
-.alan-sect {
+.alan-sect, 
+.cristian-sect, 
+.tanner-sect, 
+.justin-sect {
     @include devDetailCol();
-  }
+}
   
-  .alan {
+.alan {
     @include devDetail();
     background-image: url("../../public/assets/a-face.png");
-    
-}
-
-.cristian-sect {
-  @include devDetailCol();
 }
 
 .cristian {
     @include devDetail();
     background-image: url("../../public/assets/c-face.png");
-  }
+}
 
-  .tanner-sect {
-    @include devDetailCol();
-  }
-  
 .tanner {
   @include devDetail();   
   background-image: url("../../public/assets/t-face.png");
   overflow-wrap:break-word
-}
-
-.justin-sect {
-  @include devDetailCol();
 }
 
 .justin {
@@ -398,15 +398,15 @@ $sect-bx-shadow: 1rem 1rem 1rem rgb(224, 221, 221);
 }
 
 // SEARCH VIEW
+
 .search-heading {
-  @include flexCenter();
-  color: $blue;
+    @include flexCenter();
+    color: $blue;
     font-size: 4vmin;
-  }
+}
   
 .search-form {
-  @include flexCenter();
-  
+    @include flexCenter();
 }
 
 .state-dropdown {
@@ -415,17 +415,17 @@ $sect-bx-shadow: 1rem 1rem 1rem rgb(224, 221, 221);
     border-radius: 2%;
     background-color: rgba(230, 232, 243, 0.453);
     font-size: 1.25rem;
-    
-  }
+}
 
   .search-btn {
-    @include button();
+      @include button();
 }
 
 // CAMP DETAIL VIEW
+
 .camp-detail-container {
     color: $blue;
-  }
+}
 
   .camp-detail-name {
     color: $blue;
@@ -435,94 +435,59 @@ $sect-bx-shadow: 1rem 1rem 1rem rgb(224, 221, 221);
 }
 
 .camp-detail-headings {
-  color: $color-pop;
+    color: $color-pop;
     font-size: 4.5vmin;
     margin-inline: 10vw;
-  }
+}
 
 .camp-info {
-  font-size: 1.5vmax;
+    font-size: 1.5vmax;
     margin-inline: 10vw;
     
-  }
+}
   
 .camp-reservable {
-  margin-inline: 10vw;
-  font-size: 4.5vmin;
+    margin-inline: 10vw;
+    font-size: 4.5vmin;
 }
 
 .camp-img-container {
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  .camp-img {
+.camp-img {
     max-width: 90vw;
     padding: 2rem;
     border-radius: 3vmin;
+}
 
-  }
-
-  .saved-items-heading {
+.saved-items-heading {
     color: $blue;
     margin: 0 10vmin;
     font-size: 2.25rem;
+}
   
-  }
-
-  
-  .fav-list-parent {
+.fav-list-parent {
     @include flexCenter();
     box-shadow: 0rem 1rem 1rem rgba(223, 220, 220, 0.897);
     max-width: 90vw;
     margin: 2vmin 5vmin;
     border-radius: 1vmin;
-  }
-  .fav-list-phone {
+}
+
+.fav-list-phone {
     @include favs()
-  }
+}
   
-  .fav-list {
-   @include favs();
+.fav-list {
+    @include favs();
     &:hover {
-       color: $color-pop;
+      color: $color-pop;
     }
+}
   
-  }
-  
 
-// LOADING SPINNER
-// .loader {
-//     width: 8em;
-//     height: 8em;
-//     position: relative;
-//     border-radius: 50%;
-//     background: rgb(248, 246, 246);
-//     animation: wave 1s ease-in infinite;
-//   }
-
-//   .loading-container {
-//       display: flex;
-//       align-content: center;
-//       justify-content: center;
-//   }
-
-//   @keyframes wave {
-//    0% {  box-shadow:
-//     0 0 0 0px rgba(255, 255,255, 1),
-//     0 0 0 20px rgba(255, 255,255, 0.2),
-//     0 0 0 40px rgba(255, 255,255, 0.6),
-//     0 0 0 60px rgba(255, 255,255, 0.4),
-//     0 0 0 80px rgba(255, 255,255, 0.2)
-//     }
-//     100% {  box-shadow:
-//       0 0 0 80px rgba(255, 255,255, 0),
-//       0 0 0 60px rgba(255, 255,255, 0.2),
-//       0 0 0 40px rgba(255, 255,255, 0.4),
-//       0 0 0 20px rgba(255, 255,255, 0.6),
-//       0 0 0 0px rgba(255, 255,255, 1)
-//     }
-//   }
