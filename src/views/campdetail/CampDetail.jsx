@@ -50,7 +50,6 @@ export default function CampDetail() {
     await addFavoriteCampGround(favoriteCampGround)
     navigate('/profile')
   }
-
     if (loading) return <h1>Loading. . . 🌎</h1>
     return (
         <>
