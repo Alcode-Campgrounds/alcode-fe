@@ -37,7 +37,7 @@ export default function Profile() {
                       <p className='fav-list'>{favorite.facility_name}</p>
                   </Link>
                   <p className='fav-list-phone'>{favorite.facility_phone}</p>
-                  <button onClick={(()=> handleDeleteFavorite(favorite.facility_id))}>Delete</button>
+                  <button className='delete-btn' onClick={(()=> handleDeleteFavorite(favorite.facility_id))}>Delete</button>
               </div>
             </li>)
           )}
