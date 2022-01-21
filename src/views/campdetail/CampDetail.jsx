@@ -24,7 +24,8 @@ export default function CampDetail() {
             setName(campground.facilityName);
             const description = campground.facilityDescription.replace(/(&nbsp;|<([^>]+)>)/ig, "");
             setDescription(description);
-            setDirections(campground.facilityDirections);
+            const directions = campground.facilityDirections.replace(/(&nbsp;|<([^>]+)>)/ig, "");
+            setDirections(directions);
             setEmail(campground.facilityEmail);
             setPhone(campground.facilityPhone);
             setReservable(campground.reservable);
