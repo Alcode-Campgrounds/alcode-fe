@@ -97,6 +97,10 @@ $primary-btn-font: Spartan;
   @include button();
 }
 
+.delete-btn {
+  @include button();
+}
+
 .primary-btn {
   @include button();
     width: 35vmin;
@@ -315,8 +319,8 @@ $sect-bx-shadow: 1rem 1rem 1rem rgb(224, 221, 221);
 
 .bio-txt {
   font-size: 2vmin;
+  width: 10vmin;
   display: flex;
-  flex-direction: column-reverse;
 }
 
 @mixin socialLinks {
@@ -381,6 +385,7 @@ $sect-bx-shadow: 1rem 1rem 1rem rgb(224, 221, 221);
 .tanner {
   @include devDetail();   
   background-image: url("../../public/assets/t-face.png");
+  overflow-wrap:break-word
 }
 
 .justin-sect {
@@ -473,7 +478,7 @@ $sect-bx-shadow: 1rem 1rem 1rem rgb(224, 221, 221);
     @include flexCenter();
     box-shadow: 0rem 1rem 1rem rgba(223, 220, 220, 0.897);
     max-width: 90vw;
-    margin: 2vmin auto;
+    margin: 2vmin 5vmin;
     border-radius: 1vmin;
   }
   .fav-list-phone {

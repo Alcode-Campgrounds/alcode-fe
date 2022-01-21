@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+## Project Description:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Alcode Campgrounds is a single-page web application designed to help people identify locations where they’d like to camp within the United States. Accessing campsite and facility data contained within Recreation.gov through their public API, we offer sign-in through Google OAuth and deploy our website through Netflify. Users are able to search for campgrounds by US states, pan around a MapBox view rendering all returned sites, click on a marker to show campground details and photos, and store favorites within their user profile.
 
-## Available Scripts
+## Dev Team:
 
-In the project directory, you can run:
+Tanner Meck, Cristian Montes, Justin Soto, Alan Willoughby
 
-### `npm start`
+## Overall Architectural Pattern:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Alcode Campgrounds was built using the models-views-controllers architecture to follow the separation of concerns principle. This form of architecture allows the view functions on the frontend to use the endpoints, models, and services to interact with the PostgreSQL database on the backend.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Database Design:
 
-### `npm test`
+Our PostgreSQL tables are named users, favorites, and images – our users table stores the name, email, and password of each user, our favorites table references our users table via the email key and holds data relating to various facilities key data, and our images table references the favorites table’s facility id and stores the images relating to each campsite.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Image of Tables:
 
-### `npm run build`
+Insert table here ...
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Frontend Architecture:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The frontend of our code was designed using the principles of flux architecture and utilizes context API to manage global state needed across the app. Alcode has seven views for the user to interact with and five reusable components rendered within them.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Frontend Tech:
 
-### `npm run eject`
+MSW
+React
+React-router-dom v6
+Mapbox-gl
+Axios
+Jest
+Netlify
+Sass
+HTML
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Backend Tech:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Express
+CORS
+Cookie-parser
+bcryptjs
+Axios
+SuperTest
+Jest
+Heroku
+Node
+PostgreSQL

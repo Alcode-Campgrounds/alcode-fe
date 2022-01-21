@@ -4,7 +4,7 @@ export default function About() {
   return (
     <>
       <div>
-        <a className='about-heading'  href="https://github.com/Alcode-Campgrounds" alt="Contact Us">
+        <a className='about-heading'  href="https://github.com/Alcode-Campgrounds" >
           About Us
         </a>
       </div>
@@ -13,9 +13,9 @@ export default function About() {
         <div className="about-list">
           <section className="alan-sect">
                 <div className="alan"></div>
-                <p className='bio-txt'>Beast Mode</p>  
+                <p className='bio-txt'>Hi, I'm Alan "Verbose Beast Mode" Willoughby!</p>  
           <div className="dev-bio">
-              <a className="social-links-github" href="https://github.com/satyadvaya">
+              <a className="social-links-github" href="https://github.com/satyadvaya" >
                 
               </a>
               <a className="social-links-linkedIn"
@@ -48,14 +48,14 @@ export default function About() {
               >
               </a>
             </div>
-            <p className='bio-txt'>the brains</p>
+            <aside className='bio-txt'>Hi, I'm Cristian Montes!</aside>
             <div className="cristian"></div>
             
           </section>
           <section className="tanner-sect">
           
             <div className="tanner"></div>
-            <p className='bio-txt'>Steve</p>
+            <aside className='bio-txt'>Hi, I'm Tanner Meck!</aside>
             <div className="dev-bio">
               <a className="social-links-github" href="https://github.com/tannermeck">
               </a>
@@ -90,7 +90,7 @@ export default function About() {
                 >
               </a>
             </div>
-                  <p className='bio-txt'>this guy</p>
+                  <p className='bio-txt'>Hi, I'm Justin Soto!</p>
             <div className="justin"></div>
           </section>
         </div>
