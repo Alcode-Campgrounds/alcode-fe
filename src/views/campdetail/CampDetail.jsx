@@ -14,25 +14,30 @@ export default function CampDetail() {
     const [phone, setPhone] = useState('');
     const [reservable, setReservable] = useState(false);
     const [images, setImages] = useState([]);
+    const [loading, setLoading] = useState(true)
     
     useEffect(() => {
+        setLoading(true)
         const loadCampground = async () => {
             const campground = await fetchCampground(id);
             setFacilityID(campground.facilityID);
             setName(campground.facilityName);
-            setDescription(campground.facilityDescription);
+            const description = campground.facilityDescription.replace(/(&nbsp;|<([^>]+)>)/ig, "");
+            setDescription(description);
             setDirections(campground.facilityDirections);
             setEmail(campground.facilityEmail);
             setPhone(campground.facilityPhone);
             setReservable(campground.reservable);
             setImages(campground.imageArray);
+            setTimeout(()=> {
+                setLoading(false);
+            }, 2000)
         }
         loadCampground();
     }, [id])
 
    const handleAddFavoriteCampGround = async (event)=>{
     event.preventDefault()
-
     const favoriteCampGround = {
         facility_id: facilityID,
         facility_name: name,
@@ -43,12 +48,10 @@ export default function CampDetail() {
         reservable, 
         images
     }
-
     await addFavoriteCampGround(favoriteCampGround)
     navigate('/profile')
   }
-
-
+    if (loading) return <h1>Loading. . . 🌎</h1>
     return (
         <>
             <div className='camp-detail-container'>
@@ -70,7 +73,7 @@ export default function CampDetail() {
                 }
                 {images.map(image => {
                     return (
-                        <div className='camp-img-container'>
+                        <div className='camp-img-container' key={image}>
                     <img className='camp-img' key={image} src={image} alt={name} /></div>)
                 })}
             </div>

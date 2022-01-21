@@ -20,6 +20,24 @@ a {
           box-shadow: 0rem 0.5rem 0.5rem gray;
 }
 
+.delete-btn {
+  font-family: Spartan;
+  font-size: 2.5vmin;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.75rem 1.5rem;
+  color: white;
+  background: #f6511d;
+  font-weight: 550;
+  opacity: 80%;
+}
+
+.delete-btn:hover {
+  background: #ec7753;
+  -webkit-box-shadow: 0rem 0.5rem 0.5rem gray;
+          box-shadow: 0rem 0.5rem 0.5rem gray;
+}
+
 .primary-btn {
   font-family: Spartan;
   font-size: 2.5vmin;
@@ -305,13 +323,10 @@ fieldset {
 
 .bio-txt {
   font-size: 2vmin;
+  width: 10vmin;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
 }
 
 .social-links-github {
@@ -438,6 +453,7 @@ fieldset {
   border: 2px solid white;
   margin: 0 auto;
   background-image: url("../../public/assets/t-face.png");
+  overflow-wrap: break-word;
 }
 
 .justin-sect {
@@ -587,7 +603,7 @@ fieldset {
   -webkit-box-shadow: 0rem 1rem 1rem rgba(223, 220, 220, 0.897);
           box-shadow: 0rem 1rem 1rem rgba(223, 220, 220, 0.897);
   max-width: 90vw;
-  margin: 2vmin auto;
+  margin: 2vmin 5vmin;
   border-radius: 1vmin;
 }
 
