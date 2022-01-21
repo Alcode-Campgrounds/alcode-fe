@@ -63,7 +63,7 @@ export default function SignUp({ hasUser = false }) {
             id='password-input'
             required
             value={password}
-            type='text'
+            type='password'
             placeholder='password'
             className='input-B'
             onChange={({ target }) => {
