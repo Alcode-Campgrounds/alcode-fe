@@ -16,11 +16,24 @@ Our PostgreSQL tables are named users, favorites, and images – our users table
 
 ## Image of Tables:
 
-Insert table here ...
+![Alcode Tables](src/images/Alcode_Tables.png)
 
 ## Frontend Architecture:
 
 The frontend of our code was designed using the principles of flux architecture and utilizes context API to manage global state needed across the app. Alcode has seven views for the user to interact with and five reusable components rendered within them.
+
+| Frontend Tech       | Backend Tech  |
+| ------------------- | ------------- |
+| MSW                 | Express       |
+| React               | CORS          |
+| React-router-dom v6 | cookie-parser |
+| Mapbox-gl           | bcryptjs      |
+| Jest                | Axios         |
+| Netlify             | SuperTest     |
+| Sass                | Jest          |
+| HTML                | Heroku        |
+|                     | Node          |
+|                     | PostgreSQL    |
 
 ## Frontend Tech:
 
@@ -38,7 +51,7 @@ HTML
 
 Express
 CORS
-Cookie-parser
+cookie-parser
 bcryptjs
 Axios
 SuperTest
