@@ -22,7 +22,8 @@ export default function CampDetail() {
             const campground = await fetchCampground(id);
             setFacilityID(campground.facilityID);
             setName(campground.facilityName);
-            setDescription(campground.facilityDescription);
+            const description = campground.facilityDescription.replace(/(&nbsp;|<([^>]+)>)/ig, "");
+            setDescription(description);
             setDirections(campground.facilityDirections);
             setEmail(campground.facilityEmail);
             setPhone(campground.facilityPhone);
