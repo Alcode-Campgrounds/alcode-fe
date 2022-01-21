@@ -117,27 +117,33 @@ a {
 }
 
 @mixin socialLinks {
-    width: 35vw;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 0 auto;
-    height: 35vmin;
+  width: 35vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  height: 35vmin;
+}
+
+@mixin social-links {
+  max-width: 25vmin;
+  height: 55vmin;
+  margin-top: 2vmin;
+  padding: 3%
 }
 
 @mixin input {
-    font-size: 1.5em;
-    margin: 2vmin;
-    border: none;
-    color: $light-blue;
+  font-size: 1.5em;
+  margin: 2vmin;
+  border: none;
+  color: $light-blue;
 }
 
 @mixin favs {
-    list-style: none;
-    text-decoration: none;
-    color: $blue;
-    font-size: 1.75rem;
+  list-style: none;
+  text-decoration: none;
+  color: $blue;
+  font-size: 1.75rem;
 }
-
 
 // BUTTONS
 
@@ -347,43 +353,32 @@ fieldset {
 
 .social-links-github {
   @include socialLinks();
+  @include social-links();
     background-image: url('/public/assets/github\ icon.png');
-    max-width: 25vmin;
-    height: 55vmin;
-    margin-top: 2vmin;
-    padding: 3%
 }
 
 .social-links-linkedIn {
     @include socialLinks();
+    @include social-links();
     background-image: url('/public/assets/linkedInIcon.png');
-    max-width: 25vmin;
-    height: 55vmin;
-    margin-top: 2vmin;
-    padding: 3%
 }
 
 .social-links-email {
   @include socialLinks();
+  @include social-links();
   background-image: url('/public/assets/email.png');
-  max-width: 25vmin;
-  height: 55vmin;
-  margin-top: 2vmin;
-  padding: 3%;
 }
 
-.alan-sect {
+.alan-sect, 
+.cristian-sect, 
+.tanner-sect, 
+.justin-sect {
     @include devDetailCol();
 }
   
 .alan {
     @include devDetail();
     background-image: url("../../public/assets/a-face.png");
-    
-}
-
-.cristian-sect {
-  @include devDetailCol();
 }
 
 .cristian {
@@ -391,18 +386,10 @@ fieldset {
     background-image: url("../../public/assets/c-face.png");
 }
 
-.tanner-sect {
-    @include devDetailCol();
-}
-  
 .tanner {
   @include devDetail();   
   background-image: url("../../public/assets/t-face.png");
   overflow-wrap:break-word
-}
-
-.justin-sect {
-  @include devDetailCol();
 }
 
 .justin {
@@ -420,7 +407,6 @@ fieldset {
   
 .search-form {
     @include flexCenter();
-  
 }
 
 .state-dropdown {
@@ -473,35 +459,35 @@ fieldset {
     align-items: center;
 }
 
-  .camp-img {
+.camp-img {
     max-width: 90vw;
     padding: 2rem;
     border-radius: 3vmin;
 }
 
-  .saved-items-heading {
+.saved-items-heading {
     color: $blue;
     margin: 0 10vmin;
     font-size: 2.25rem;
-  
 }
   
-  .fav-list-parent {
+.fav-list-parent {
     @include flexCenter();
     box-shadow: 0rem 1rem 1rem rgba(223, 220, 220, 0.897);
     max-width: 90vw;
     margin: 2vmin 5vmin;
     border-radius: 1vmin;
 }
-  .fav-list-phone {
-      @include favs()
+
+.fav-list-phone {
+    @include favs()
 }
   
-  .fav-list {
-      @include favs();
-      &:hover {
-        color: $color-pop;
-      }
+.fav-list {
+    @include favs();
+    &:hover {
+      color: $color-pop;
+    }
 }
   
 
