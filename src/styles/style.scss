@@ -319,9 +319,8 @@ $sect-bx-shadow: 1rem 1rem 1rem rgb(224, 221, 221);
 
 .bio-txt {
   font-size: 2vmin;
-  width: 10vw;
+  width: 10vmin;
   display: flex;
-  flex-direction: column-reverse;
 }
 
 @mixin socialLinks {
@@ -386,6 +385,7 @@ $sect-bx-shadow: 1rem 1rem 1rem rgb(224, 221, 221);
 .tanner {
   @include devDetail();   
   background-image: url("../../public/assets/t-face.png");
+  overflow-wrap:break-word
 }
 
 .justin-sect {
