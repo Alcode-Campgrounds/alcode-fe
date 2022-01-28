@@ -11,7 +11,7 @@ export default function Profile() {
         const favori = async () => {
             const allFavorites = await allSavedFavoriteCampGrounds();
             setFavorites(allFavorites);
-            setTimeout(()=> {
+            setTimeout(() => {
                 setLoading(false);
             }, 2000)
         }
@@ -26,23 +26,23 @@ export default function Profile() {
 
     if (loading) return <h1>Loading. . . 🌎</h1>
     return (
-       <> 
-          <h2 className='saved-items-heading'>Future Camping Adventures:</h2>
-          <div className='fav-list-parent'>
-          <ul className='fav-list'>
-          {favorites.map((favorite) =>(
-            <li className='fav-list' key={favorite.facility_id}> 
-              <div>
-                  <Link to={`/camps/${favorite.facility_id}`}>
-                      <p className='fav-list'>{favorite.facility_name}</p>
-                  </Link>
-                  <p className='fav-list-phone'>{favorite.facility_phone}</p>
-                  <button className='delete-btn' onClick={(()=> handleDeleteFavorite(favorite.facility_id))}>Delete</button>
-              </div>
-            </li>)
-          )}
-          </ul>
-          </div>            
+        <>
+            <h2 className='saved-items-heading'>Future Camping Adventures:</h2>
+            <div className='fav-list-parent'>
+                <ul className='fav-list'>
+                    {favorites.map((favorite) => (
+                        <li className='fav-list' key={favorite.facility_id}>
+                            <div>
+                                <Link to={`/camps/${favorite.facility_id}`}>
+                                    <p className='fav-list'>{favorite.facility_name}</p>
+                                </Link>
+                                <p className='fav-list-phone'>{favorite.facility_phone}</p>
+                                <button className='delete-btn' onClick={(() => handleDeleteFavorite(favorite.facility_id))}>Delete</button>
+                            </div>
+                        </li>)
+                    )}
+                </ul>
+            </div>
         </>
-        )
-    }
+    )
+}

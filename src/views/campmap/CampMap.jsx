@@ -36,7 +36,7 @@ export default function CampMap() {
         .setPopup(popup)
         .addTo(map.current);
     });
-    
+
   });
 
   useEffect(() => {

@@ -23,15 +23,15 @@ export default function CampFinder() {
   const handleStateSubmit = async (e) => {
     e.preventDefault();
     if (state === 'ALL') {
-      navigate(`/campmap/${state}`)    
+      navigate(`/campmap/${state}`)
     } else {
       const existingStateStorage = getStorage(state);
       if (existingStateStorage.length === 0) {
         const stateFacility = await fetchStateFacility(state);
         setStorage(state, stateFacility);
-        navigate(`/campmap/${state}`)   
+        navigate(`/campmap/${state}`)
       } else {
-        navigate(`/campmap/${state}`) 
+        navigate(`/campmap/${state}`)
       }
     }
   };
@@ -48,9 +48,9 @@ export default function CampFinder() {
           Search
         </button>
       </form>
-    
+
     </>
   );
 }
-     
-      
+
+

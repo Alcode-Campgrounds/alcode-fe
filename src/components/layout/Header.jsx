@@ -71,6 +71,7 @@ export default function Header() {
         </ul>
       </div>
       <section className="username">
+        {/* Optional Chaining with a ternary my boys?! */}
         {user?.name ? <p>{`Signed in as ${user.name}`}</p> : <p></p>}
         {user?.name && (
           <button className="logout-btn" onClick={handleLogout}>

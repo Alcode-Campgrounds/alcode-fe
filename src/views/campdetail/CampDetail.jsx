@@ -15,7 +15,7 @@ export default function CampDetail() {
     const [reservable, setReservable] = useState(false);
     const [images, setImages] = useState([]);
     const [loading, setLoading] = useState(true)
-    
+
     useEffect(() => {
         setLoading(true)
         const loadCampground = async () => {
@@ -30,32 +30,33 @@ export default function CampDetail() {
             setPhone(campground.facilityPhone);
             setReservable(campground.reservable);
             setImages(campground.imageArray);
-            setTimeout(()=> {
+            setTimeout(() => {
                 setLoading(false);
             }, 2000)
         }
         loadCampground();
     }, [id])
 
-   const handleAddFavoriteCampGround = async (event)=>{
-    event.preventDefault()
-    const favoriteCampGround = {
-        facility_id: facilityID,
-        facility_name: name,
-        facility_description: description,
-        facility_directions: directions,
-        facility_phone: phone,
-        facility_email: email,
-        reservable, 
-        images
+    const handleAddFavoriteCampGround = async (event) => {
+        event.preventDefault()
+        const favoriteCampGround = {
+            facility_id: facilityID,
+            facility_name: name,
+            facility_description: description,
+            facility_directions: directions,
+            facility_phone: phone,
+            facility_email: email,
+            reservable,
+            images
+        }
+        await addFavoriteCampGround(favoriteCampGround)
+        navigate('/profile')
     }
-    await addFavoriteCampGround(favoriteCampGround)
-    navigate('/profile')
-  }
     if (loading) return <h1>Loading. . . 🌎</h1>
     return (
         <>
             <div className='camp-detail-container'>
+                {/* Should be a component most likely */}
                 <button className='favorites-btn' onClick={handleAddFavoriteCampGround}>Save Your Next Adventure</button>
                 <h1 className='camp-detail-name'>{name}</h1>
                 <h2 className='camp-detail-headings'>Description:</h2>
@@ -66,16 +67,16 @@ export default function CampDetail() {
                 <p className='camp-info'>{phone}</p>
                 <h2 className='camp-detail-headings'>Email:</h2>
                 <p className='camp-info'>{email}</p>
-                {reservable && 
-                <p className='camp-reservable'>Reservations are required</p>
+                {reservable &&
+                    <p className='camp-reservable'>Reservations are required</p>
                 }
-                {!reservable && 
-                <p className='camp-reservable'>Reservations unavailable</p>
+                {!reservable &&
+                    <p className='camp-reservable'>Reservations unavailable</p>
                 }
                 {images.map(image => {
                     return (
                         <div className='camp-img-container' key={image}>
-                    <img className='camp-img' key={image} src={image} alt={name} /></div>)
+                            <img className='camp-img' key={image} src={image} alt={name} /></div>)
                 })}
             </div>
         </>
